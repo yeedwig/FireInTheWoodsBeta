@@ -85,5 +85,17 @@ public class FarAwayAttack : MonoBehaviour
             health.Damage(damage);
             Debug.Log("Damaged!!");
         }
+        if(other.GetComponent<ShadowSoldier>() != null)
+        {
+            ShadowSoldier health = other.GetComponent<ShadowSoldier>();
+            health.Damage(damage);
+            Debug.Log("Damaged!!");
+        }
+        if(other.GetComponent<ShadowGate>() != null)
+        {
+            ShadowGate health = other.GetComponent<ShadowGate>();
+            health.Damage(damage);
+            Debug.Log("Damaged!!");
+        }
     }
 }
