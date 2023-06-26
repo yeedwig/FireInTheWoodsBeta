@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public float health=100.0f;
+    public float health=300.0f;
     public int kills;
     public int level;
-    public float maxHealth = 100.0f;
+    public float maxHealth = 300.0f;
     public float executeDamage = 1000.0f;
 
     public bool invincible = false;
@@ -116,25 +116,25 @@ public class GameManager : MonoBehaviour
             {
                 level=1;
             }
-            else if(kills<20)
+            else if(kills<30)
             {
                 if(level!=2){
                     level=2;
                 }
             }
-            else if(kills<30)
+            else if(kills<50)
             {
                 if(level!=3){
                     level=3;
                 }
             }
-            else if(kills<40)
+            else if(kills<70)
             {
                 if(level!=4){
                     level=4;
                 }
             }
-            else if(kills<50)
+            else if(kills<90)
             {
                 if(level!=5){
                     level=5;
@@ -142,13 +142,13 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            else if(kills<60)
+            else if(kills<110)
             {
                 if(level!=6){
                     level=6;
                 }
             }
-            else if(kills<70)
+            else if(kills<130)
             {
                 if(level!=7){
                     level=7;

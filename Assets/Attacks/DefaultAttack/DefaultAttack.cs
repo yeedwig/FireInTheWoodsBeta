@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DefaultAttack : MonoBehaviour
 {
-    [SerializeField] private float damage = 10.0f;
+    private float damage = 50.0f;
     public GameObject mainCharacter;
 
     private void OnTriggerEnter2D(Collider2D other)

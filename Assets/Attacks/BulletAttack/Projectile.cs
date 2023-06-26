@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float lifeTime;
-    [SerializeField] private float damage = 20;
+    private float damage = 50;
 
     public float dirX;
     public float dirY;

@@ -136,50 +136,50 @@ public class EnemyManager : MonoBehaviour
         lv6Timer+=Time.deltaTime;
         lv7Timer+=Time.deltaTime;
         if(level==1){
-            level1Gen(15.0f);
+            level1Gen(10.0f);
         }
 
         else if(level==2){
             level1Gen(12.0f);
-            level2Gen(20.0f);
+            level2Gen(24.0f);
         }
 
         else if(level==3){
-            level1Gen(10.0f);
-            level2Gen(20.0f);
+            level1Gen(13.0f);
+            level2Gen(25.0f);
             level3Gen(30.0f);
         }
 
         else if(level==4){
-            level1Gen(10.0f);
-            level2Gen(20.0f);
-            level3Gen(30.0f);
-            level4Gen(30.0f);
+            level1Gen(14.0f);
+            level2Gen(26.0f);
+            level3Gen(40.0f);
+            level4Gen(40.0f);
         }
 
         else if(level==5){
-            level1Gen(10.0f);
-            level2Gen(20.0f);
-            level3Gen(30.0f);
-            level4Gen(30.0f);
+            level1Gen(15.0f);
+            level2Gen(26.0f);
+            level3Gen(42.0f);
+            level4Gen(42.0f);
             level5Gen(30.0f);
         }
         else if(level==6){
-            level1Gen(10.0f);
-            level2Gen(20.0f);
-            level3Gen(30.0f);
-            level4Gen(30.0f);
-            level5Gen(30.0f);
-            level6Gen(30.0f);
+            level1Gen(15.0f);
+            level2Gen(26.0f);
+            level3Gen(44.0f);
+            level4Gen(44.0f);
+            level5Gen(32.0f);
+            level6Gen(32.0f);
         }
         else if(level==7){
-            level1Gen(10.0f);
-            level2Gen(20.0f);
-            level3Gen(30.0f);
-            level4Gen(30.0f);
-            level5Gen(30.0f);
-            level6Gen(30.0f);
-            level7Gen(30.0f);
+            level1Gen(15.0f);
+            level2Gen(26.0f);
+            level3Gen(46.0f);
+            level4Gen(46.0f);
+            level5Gen(40.0f);
+            level6Gen(40.0f);
+            level7Gen(40.0f);
         }
 
 

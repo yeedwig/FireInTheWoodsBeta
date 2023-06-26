@@ -395,7 +395,7 @@ public class MainCharacter : MonoBehaviour
             {
                 //달리면서 공격을쓰면 달리는 모션이 그래도 됨
                 attackAppearTime = 2.0f;
-                attackWaitTime = 1.5f - attackSpeedUp;
+                attackWaitTime = 1.0f - attackSpeedUp;
                 RayAttack();
             }
             if(attackType == 2) //Sword
@@ -413,7 +413,7 @@ public class MainCharacter : MonoBehaviour
             if(attackType == 4) //Shooting
             {
                 attackAppearTime = 0.25f;
-                attackWaitTime = 2.0f - attackSpeedUp;
+                attackWaitTime = 0.5f - attackSpeedUp;
                 ShootingAttack();
             }
             
@@ -421,7 +421,7 @@ public class MainCharacter : MonoBehaviour
             {
                 canMove = true;
                 attackAppearTime = 5.0f;
-                attackWaitTime = 4.0f - attackSpeedUp;
+                attackWaitTime = 3.0f - attackSpeedUp;
                 TornadoAttack();
             }
 

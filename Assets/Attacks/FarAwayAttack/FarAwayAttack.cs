@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FarAwayAttack : MonoBehaviour
 {
-    [SerializeField] private float damage = 10;
+    private float damage = 50;
     // Start is called before the first frame update
     
     public GameObject mainCharacter;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
 
-    [SerializeField] private float damage = 20.0f;
+    private float damage = 75.0f;
     
     public GameObject mainCharacter;
     // Start is called before the first frame update

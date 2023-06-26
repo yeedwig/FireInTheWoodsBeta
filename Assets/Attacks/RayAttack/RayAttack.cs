@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RayAttack : MonoBehaviour
 {
-    [SerializeField] private float damage = 10;
+    private float damage = 75;
 
     public GameObject mainCharacter;
     
