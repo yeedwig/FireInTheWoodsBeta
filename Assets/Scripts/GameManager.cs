@@ -126,13 +126,37 @@ public class GameManager : MonoBehaviour
             {
                 if(level!=3){
                     level=3;
-                    SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
                 }
             }
-            else if(kills>40)
+            else if(kills<40)
             {
                 if(level!=4){
                     level=4;
+                }
+            }
+            else if(kills<50)
+            {
+                if(level!=5){
+                    level=5;
+                    SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
+                }
+            }
+
+            else if(kills<60)
+            {
+                if(level!=6){
+                    level=6;
+                }
+            }
+            else if(kills<70)
+            {
+                if(level!=7){
+                    level=7;
+                }
+            }
+            else{
+                if(level!=8){
+                    level=8;
                     SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[2]);
                 }
             }

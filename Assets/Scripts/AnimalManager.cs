@@ -84,10 +84,10 @@ public class AnimalManager : MonoBehaviour
                     animalInstance.typeAppeared[typeSelect]=true;
 
                     //객체 save(게임 종료시 저장하는 방식이 좋을 것 같음 나중에 수정 예정)
-                    string json = JsonUtility.ToJson(animalInstance);
+                    /*string json = JsonUtility.ToJson(animalInstance);
                     string fileName=animalInstance.name;
                     string path = Application.dataPath + "/GameData/" + fileName + ".Json";
-                    File.WriteAllText(path,json);
+                    File.WriteAllText(path,json);*/
                     
                     animalInstance.currentState=true;
                     seats[animalInstance.arrivingPosition]=true;
