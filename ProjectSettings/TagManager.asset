@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Animal
+  - Item
+  - Inventory
+  - Fire
+  - Execute
+  - Barrier
+  - AngelChangeBorder
+  - HandBorder
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - PathPoint
+  - Fire
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Border
+    uniqueID: 9736943
+    locked: 0
+  - name: TreeBackground
+    uniqueID: 2417957085
+    locked: 0
+  - name: BushBackground
+    uniqueID: 3454116365
+    locked: 0
+  - name: Background
+    uniqueID: 2740552289
+    locked: 0
+  - name: Item
+    uniqueID: 2069426397
+    locked: 0
+  - name: Characters
+    uniqueID: 1318453721
+    locked: 0
+  - name: MainCharacter
+    uniqueID: 691164663
+    locked: 0
+  - name: Attack
+    uniqueID: 1649167497
+    locked: 0
+  - name: UI
+    uniqueID: 3435576231
+    locked: 0

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HummaDefault
+  m_Controller: {fileID: 9100000, guid: b4c69d5b6cd7ef04c9ed41cde44a08b5, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 13831079a863d1345a1628764d2b0de2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 13831079a863d1345a1628764d2b0de2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4155c310813879f4fa1f0d08a4cadf95, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4155c310813879f4fa1f0d08a4cadf95, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 74d96119f3fac3443bfd90863694c191, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 74d96119f3fac3443bfd90863694c191, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c317c176a75520a46905cd2a4ff2b527, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c317c176a75520a46905cd2a4ff2b527, type: 2}

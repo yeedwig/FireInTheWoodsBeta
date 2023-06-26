@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WeaselDefault
+  m_Controller: {fileID: 9100000, guid: 4e397e545f9a0d943928e844b08b2298, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ce52670ffb257ff4682b3aa6bcfada83, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ce52670ffb257ff4682b3aa6bcfada83, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e58cb4e5615a38a42b79458ff998b533, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e58cb4e5615a38a42b79458ff998b533, type: 2}

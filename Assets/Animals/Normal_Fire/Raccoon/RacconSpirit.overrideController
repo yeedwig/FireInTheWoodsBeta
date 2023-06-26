@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RacconSpirit
+  m_Controller: {fileID: 9100000, guid: 2acab28f16d10ff4d8cd9dfa5e5aa7db, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 2581a95978549b540b790194a8cb6280, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ce70b238750614541bde45787b49b764, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1eb4cac1165965d42a280ca3db31fb36, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 42c2f0f3c0918754f8a815e44dbeb758, type: 2}

@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MagpieSpirit
+  m_Controller: {fileID: 9100000, guid: e6724b8cdcf68bb4aa576b911e6ebedd, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0d71b7942542e7d4ca238ebacc24b1bc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 48a94a4ad262ee14489e4a250366ca7c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fd8014f7a6714e74d95f16829a2319c9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2db3dfa600cb9b1469d6a9e6062c2e81, type: 2}

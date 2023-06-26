@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HedgeHogDefault
+  m_Controller: {fileID: 9100000, guid: f7a57aab5c79ab44fafb7d8d9abed111, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 806118436b6118e49a4aeace0092f6b1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 806118436b6118e49a4aeace0092f6b1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ca2b17806b425c240baf214199b1cdea, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ca2b17806b425c240baf214199b1cdea, type: 2}

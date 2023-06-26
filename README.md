@@ -1,2 +1,2 @@
-# FireInTheWoodsBeta
-대망의 10억 버그나서 깃 바꿈
+# Fire-In-The-Woods
+대망의 시작 (10억)

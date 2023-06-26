@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WartHogDefault
+  m_Controller: {fileID: 9100000, guid: bfa8fb5a0996bbc40ab373b6b601c79a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 98d6bb40f174cf24286f183635c78f05, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 98d6bb40f174cf24286f183635c78f05, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3250065587b42d5499c9a2bddb41c648, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3250065587b42d5499c9a2bddb41c648, type: 2}
