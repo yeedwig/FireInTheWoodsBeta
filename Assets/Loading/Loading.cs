@@ -7,15 +7,12 @@ using UnityEngine.UI;
 public class Loading : MonoBehaviour
 {
     [SerializeField] private Image loadBar;
-    // Start is called before the first frame update
+    
     void Start()
     {
         StartCoroutine(LoadAsyncScene());
     }
-    void update(){
-        
-    }
-
+    
     IEnumerator LoadAsyncScene(){
         yield return null;
         AsyncOperation asyncScene;
@@ -26,7 +23,6 @@ public class Loading : MonoBehaviour
         {
             asyncScene = SceneManager.LoadSceneAsync("FireScene");
         }
-        
         asyncScene.allowSceneActivation = false;
         float timeC = 0;
         while(!asyncScene.isDone){
