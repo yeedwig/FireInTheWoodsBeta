@@ -11056,8 +11056,7 @@ MonoBehaviour:
   cutSceneFront: {fileID: 304580660}
   panel: {fileID: 649919765}
   dialogue: {fileID: 466367527}
-  tutorialAnimals:
-  - {fileID: 1817875461}
+  tutorialAnimals: {fileID: 1817875461}
   inventory: {fileID: 1996360746}
   encyclopediaArrow: {fileID: 338757380}
   mainCharacter: {fileID: 37344552}

@@ -18,7 +18,7 @@ public class ItemBook : MonoBehaviour
     public string[] texts;
     
     private bool itemBookChange=true;
-    [SerializeField] private int itemType=0;
+    public int itemType=0;
     
     // Start is called before the first frame update
     void Start()
