@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//최적화 완료
 public class TutorialManager : MonoBehaviour
 {
 
@@ -25,6 +26,13 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject itemDummy;
     [SerializeField] private GameObject itemBook;
     [SerializeField] private GameObject itemBookArrow;
+    [SerializeField] private GameObject cameraModeArrow;
+    [SerializeField] private GameObject healthArrow;
+    [SerializeField] private GameObject itemDummyArrow;
+    [SerializeField] private GameObject timerArrow;
+    [SerializeField] private GameObject yellowArrow;
+    [SerializeField] private GameObject killsArrow;
+
 
     public GameObject item1;
     public GameObject fire;
@@ -169,10 +177,12 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==13){
+                healthArrow.SetActive(true);
                 dialogue.text="좌측 위를 보시면 불 모양이 점차 줄어드는 것이 보일 꺼에요. 저 표시가 불의 생명력을 의미해요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==14){
+                healthArrow.SetActive(false);
                 dialogue.text="지금부터 불의 생명력을 유지할 수 있는 방법을 알려드릴께요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
@@ -185,6 +195,7 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==17){
+                itemDummyArrow.SetActive(true);
                 panel.SetActive(false);
                 itemDummy.SetActive(true);
                 if(!item1.activeInHierarchy) tutorialLevel++;
@@ -192,6 +203,7 @@ public class TutorialManager : MonoBehaviour
             else if(tutorialLevel==18){
                 panel.SetActive(true);
                 itemDummy.SetActive(false);
+                itemDummyArrow.SetActive(false);
                 dialogue.text="숲의 불은 다양한 아이템들을 조합하여 상호작용을 할 수 있어요. 그럼 어떤 상호작용들이 가능할까요?";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
@@ -224,10 +236,12 @@ public class TutorialManager : MonoBehaviour
             }
             else if(tutorialLevel==25){
                 panel.SetActive(false);
+                yellowArrow.SetActive(true);
                 if(itemBook.GetComponent<ItemBook>().itemType==1) tutorialLevel++;
             }
             else if(tutorialLevel==26){
                 panel.SetActive(true);
+                yellowArrow.SetActive(false);
                 dialogue.text="제일 위를 보시면 불의 체력을 회복하기 위한 조합이 보이실 꺼에요. 해당 조합을 기억하시고 우측 위의 x 버튼을 눌러 아이템 조합 두루마리를 닫아주세요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
@@ -241,10 +255,12 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==29){
+                timerArrow.SetActive(true);
                 dialogue.text="아이템을 넣기 시작하면 왼쪽 위의 타이머가 시작되는데 아이템을 3개를 넣거나 시간이 다되면 넣고 있던 조합이 초기화되요!";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==30){
+                timerArrow.SetActive(false);
                 dialogue.text="아이템을 넣는 순서도 조합에 영향을 미친다는 것과 아이템을 넣으면 조합에 실패해도 소모된다는 점에 주의해 주세요!";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
@@ -274,10 +290,12 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==37){
+                cameraModeArrow.SetActive(true);
                 panel.SetActive(false);
                 if(Input.GetKeyDown(KeyCode.E)) tutorialLevel++;
             }
             else if(tutorialLevel==38){
+                cameraModeArrow.SetActive(false);
                 panel.SetActive(true);
                 dialogue.text="스페이스바로 그림자를 공격할 수 있어요. 그림자가 불에 닿으면 불의 생명력이 떨어지니 조심하세요!";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
@@ -298,10 +316,12 @@ public class TutorialManager : MonoBehaviour
             }
             else if(tutorialLevel==41){
                 panel.SetActive(true);
+                killsArrow.SetActive(true);
                 dialogue.text="좌측 위의 작은 그림자 표시는 지금까지 제거한 그림자 수를 나타내요. 제거한 그림자가 많아질수록 강한 그림자가 나오기 시작하니까 조심하세요!";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==42){
+                killsArrow.SetActive(false);
                 dialogue.text="이제 숲을 지킬 자격이 되시는 것 같군요! 불의 영혼이 되살아날때까지 숲을 잘 부탁드릴꼐요!";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
