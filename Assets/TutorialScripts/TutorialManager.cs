@@ -106,7 +106,7 @@ public class TutorialManager : MonoBehaviour
                 cutScene[7].SetActive(false);
                 cutSceneBackground.SetActive(false);
                 cutSceneFront.SetActive(false);
-                dialogue.text = "숲의 세계에 오신 것을 환영해요, 모험가님.";
+                dialogue.text = "숲에 오신 것을 환영해요, 모험가님.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==1){
@@ -114,7 +114,7 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==2){
-                dialogue.text = "숲에는 많은 동물들이 살고 있어요. 이 친구들은 종종 불로 와서 휴식을 즐기다 돌아가요.";
+                dialogue.text = "숲에는 많은 동물들이 살고 있어요. 이 친구들은 종종 불 근처로 와서 휴식을 즐기다 돌아가요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==3){
@@ -126,7 +126,7 @@ public class TutorialManager : MonoBehaviour
             }
             else if(tutorialLevel==4){
                 panel.SetActive(true);
-                dialogue.text="해당 동물 근처에 가셔서 SPACE 키를 누르시면 동물 사진을 찍으실 수 있어요. 사진이 찍혔을 경우 우측 아래 빨간색 동물 도감에 표시돼요.";
+                dialogue.text="동물 근처에 가서 스페이스바를 누르면 동물 사진을 찍을 수 있어요. 사진이 찍혔을 경우 우측 아래 빨간색 동물 도감에 표시돼요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==5){
@@ -145,7 +145,7 @@ public class TutorialManager : MonoBehaviour
             }
             else if(tutorialLevel==8){
                 panel.SetActive(true);
-                dialogue.text="곰의 사진을 찍으셨네요! 우측 아래의 빨간 책 모양을 클릭해보시면 찍으신 동물의 사진과 정보가 담겨 있을꺼에요.";
+                dialogue.text="곰의 사진을 찍으셨네요! 오른쪽 아래의 빨간 책 모양을 클릭해보시면 찍으신 동물의 사진과 정보가 담겨 있을꺼에요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==9){
@@ -177,7 +177,7 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==15){
-                dialogue.text="우선 동물들은 불에서 돌아가는 길에 다양한 아이템들을 떨어뜨려요. 이번에 처음 오신거니까 제가 선물을 드릴께요.";
+                dialogue.text="우선 동물들은 불에서 돌아가는 길에 다양한 아이템들을 떨어뜨려요. 이번엔 처음 오신거니까 제가 선물을 드릴께요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==16){
@@ -192,11 +192,11 @@ public class TutorialManager : MonoBehaviour
             else if(tutorialLevel==18){
                 panel.SetActive(true);
                 itemDummy.SetActive(false);
-                dialogue.text="숲의 불은 다양한 아이템들을 조합하여 다양한 상호작용을 할 수 있어요. 그럼 어떤 상호작용들이 가능할까요?";
+                dialogue.text="숲의 불은 다양한 아이템들을 조합하여 상호작용을 할 수 있어요. 그럼 어떤 상호작용들이 가능할까요?";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==19){
-                dialogue.text="우측 아래 두루마리에는 불에서 조합할 수 있는 조합들이 나와있어요. 아이템 조합 두루마리를 클릭해보세요.";
+                dialogue.text="오른쪽 아래 두루마리에는 불에서 조합할 수 있는 조합들이 나와있어요. 아이템 조합 두루마리를 클릭해보세요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==20){
@@ -207,7 +207,7 @@ public class TutorialManager : MonoBehaviour
             else if(tutorialLevel==21){
                 panel.SetActive(true);
                 itemBookArrow.SetActive(false);
-                dialogue.text="해당 슬롯들에는 필요한 아이템들과 우측에는 아이템들을 넣었을 때 발생하는 효과가 나와있어요.";
+                dialogue.text="왼쪽 슬롯들에는 필요한 아이템들과 오른쪽에는 아이템들을 넣었을 때 발생하는 효과가 나와있어요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==22){
@@ -215,7 +215,7 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==23){
-                dialogue.text="두루마리의 우측 위를 보시면 3개의 표시가 나오는데 각각 공격 방식, 불 관련 상호작용, 동물 영혼과의 계약에 대한 조합을 확인할 수 있어요.";
+                dialogue.text="두루마리의 오른쪽 위를 보시면 3개의 표시가 나오는데 각각 공격 방식, 불 관련 상호작용, 동물 영혼과의 계약에 대한 조합을 확인할 수 있어요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==24){
@@ -237,11 +237,11 @@ public class TutorialManager : MonoBehaviour
             }
             else if(tutorialLevel==28){
                 panel.SetActive(true);
-                dialogue.text="이제 불의 체력을 회복시켜볼께요.아래 인벤토리를 보시면 방금 제가 드린 아이템들이 보일꺼에요. 해당 아이템들을 드래그하여 불에 조합에 따라 넣어주면 생명력이 회복된답니다!";
+                dialogue.text="이제 불의 체력을 회복시켜볼께요.아래 인벤토리의 아이템들을 드래그하여 불에 조합에 따라 넣어주면 생명력이 회복된답니다!";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==29){
-                dialogue.text="아이템을 넣기 시작하면 우측 위의 타이머가 시작되는데 아이템을 3개를 넣거나 시간이 다되면 넣고 있던 조합이 초기화되요!";
+                dialogue.text="아이템을 넣기 시작하면 왼쪽 위의 타이머가 시작되는데 아이템을 3개를 넣거나 시간이 다되면 넣고 있던 조합이 초기화되요!";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==30){
@@ -270,7 +270,7 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==36){
-                dialogue.text="e 키를 누르면 우측에 표시된 카메라의 모습이 붉게 변할꺼에요. 노란색은 동물들을 찍는 모드, 붉은색은 그림자를 공격하는 모드에요. 한번 바꿔보세요.";
+                dialogue.text="e 키를 누르면 우른쪽에 표시된 카메라의 모습이 붉게 변할꺼에요. 노란색은 동물들을 찍는 모드, 붉은색은 그림자를 공격하는 모드에요. 한번 바꿔보세요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==37){
