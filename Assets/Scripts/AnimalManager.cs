@@ -12,7 +12,8 @@ public class AnimalManager : MonoBehaviour
 
     //시간 간격을 확인하기 위한 변수들
     private float currTime;
-    [SerializeField] int timeDelay = 10;
+    //10으로변경할것
+    [SerializeField] int timeDelay = 1;
     public int RandomAnimalID = -1;
 
     private Animals animalInstance; //객체를 가져오기 위한 변수
@@ -25,7 +26,7 @@ public class AnimalManager : MonoBehaviour
     void Update()
     {
         currTime +=Time.deltaTime; //시간 계산
-        if(currTime>timeDelay)
+        if(currTime>timeDelay) //변경
         {
             currTime=0;
             
