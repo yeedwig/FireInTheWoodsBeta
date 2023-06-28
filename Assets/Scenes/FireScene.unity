@@ -5273,7 +5273,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uC774 \uB3D9\uBB3C \uB610\uD55C \uB2E4\uC74C\uACFC \uAC19\uC740 \uD2B9\uC131\uC744
+    \uAC00\uC9C0\uACE0 \uC788\uB294 \uAC83\uC774 \uD2B9\uC131\uC774\uBA70"
 --- !u!222 &157246420
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5299,7 +5300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137, y: -99}
+  m_AnchoredPosition: {x: 141.63, y: -95}
   m_SizeDelta: {x: 192.8688, y: 69.891}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &163629785
@@ -9278,18 +9279,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e86b904b363d2154eb9676ca4f7fa863, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 13
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uBD89\uC740 \uAC70\uBD81\uC774"
 --- !u!222 &350660954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9315,8 +9316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199, y: -13}
-  m_SizeDelta: {x: 110.6968, y: 24.5219}
+  m_AnchoredPosition: {x: -201.08, y: -20}
+  m_SizeDelta: {x: 83.638, y: 24.522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &354630277
 GameObject:
@@ -14499,8 +14500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257.69, y: -143}
-  m_SizeDelta: {x: 37.6551, y: 33.6521}
+  m_AnchoredPosition: {x: 248.74, y: -138.949}
+  m_SizeDelta: {x: 30.619, y: 27.294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640098687
 MonoBehaviour:
@@ -14525,17 +14526,17 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: e86b904b363d2154eb9676ca4f7fa863, type: 3}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 99
 --- !u!222 &640098688
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34823,8 +34824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -249.17249, y: -143}
-  m_SizeDelta: {x: 37.6551, y: 33.6521}
+  m_AnchoredPosition: {x: -247.63, y: -146.89}
+  m_SizeDelta: {x: 32.458, y: 25.881}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495617434
 MonoBehaviour:
@@ -34849,19 +34850,17 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: e86b904b363d2154eb9676ca4f7fa863, type: 3}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 99
 --- !u!222 &1495617435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36298,59 +36297,59 @@ MonoBehaviour:
   ver2Background: {fileID: 748575284}
   irochiBackground: {fileID: 104430917}
   animalSprites:
-  - {fileID: 21300000, guid: 2ffc87da192c7de4b9900227a738c0dc, type: 3}
-  - {fileID: 21300000, guid: a925ed2c0cb43e3468459eb972642667, type: 3}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: 5c8f4c2e1154189469a506d462a61535, type: 3}
-  - {fileID: 21300000, guid: 24c25a2aded72cb4fa657f0490bdb72e, type: 3}
-  - {fileID: 21300000, guid: 14ab539ff37922040988b95d32f458d4, type: 3}
-  - {fileID: 21300000, guid: ebd655dd4e40c9d4082b84478e6078e0, type: 3}
-  - {fileID: 21300000, guid: a2df1a2cc1aa39649b2032b136a6121a, type: 3}
-  - {fileID: 21300000, guid: 16dc267767eaf7f449cfdb9a3d4493fd, type: 3}
-  - {fileID: 21300000, guid: fff1802bb75dc174586d964c1604f0a4, type: 3}
-  - {fileID: 21300000, guid: 0001a5678aaf9de41869b2fd419df856, type: 3}
-  - {fileID: 21300000, guid: 3fcfca6dcf411e14cbb74711fcd3de35, type: 3}
-  - {fileID: 21300000, guid: 2e8a194a33f5d75458c8ea27bae237f5, type: 3}
-  - {fileID: 21300000, guid: 5ab1ddc61196fdb4da19539378c41156, type: 3}
-  - {fileID: 21300000, guid: fead6c4e08656764b9b04d1c8ad037c7, type: 3}
-  - {fileID: 21300000, guid: 64dc85d5144c8b5468c56d95383ee7a9, type: 3}
-  - {fileID: 21300000, guid: ef71a3ac26b5975479ccb99e9b0836f7, type: 3}
-  - {fileID: 21300000, guid: 1277e19c938a627499d7dcbf750f0287, type: 3}
-  - {fileID: 21300000, guid: 55de0d28748c88340ae9f4fdcf0b4540, type: 3}
-  - {fileID: 21300000, guid: 3257a6fcf1b3ab646b997e2be33fa873, type: 3}
-  - {fileID: 21300000, guid: 6ead1d6fde79436498d1597e3f0d5370, type: 3}
-  - {fileID: 21300000, guid: bbeff36a62469d544b10579b1b75d77c, type: 3}
+  - {fileID: 21300000, guid: 24370c9eea9d1144f962f813e4ccffd2, type: 3}
+  - {fileID: 21300000, guid: d03ab8b92f12a0440a7a83c14a5cabcc, type: 3}
+  - {fileID: 21300000, guid: aae654096dc850642882be898e7934a2, type: 3}
+  - {fileID: 21300000, guid: af7929e820b28c448b0bdfe26469cf81, type: 3}
+  - {fileID: 21300000, guid: fd84aa5c960966648a90957fd1512093, type: 3}
+  - {fileID: 21300000, guid: 2fa6f7fe58673284caa068acf3e17766, type: 3}
+  - {fileID: 21300000, guid: cce2a355aa334114187f50e34fb436dd, type: 3}
+  - {fileID: 21300000, guid: 6861d691dd13ee04498eb5abb2617093, type: 3}
+  - {fileID: 21300000, guid: 16140900a79bfa04c8a174a88bc667c4, type: 3}
+  - {fileID: 21300000, guid: 69dcbeaadcc7c97449d925a0e90a80cd, type: 3}
+  - {fileID: 21300000, guid: c05f30766483e094aac0a392dd4baaa2, type: 3}
+  - {fileID: 21300000, guid: 247b033c77cf8884ca37de9d132463b4, type: 3}
+  - {fileID: 21300000, guid: 470435e1c2e2e6c4da59839087c5598e, type: 3}
+  - {fileID: 21300000, guid: a6a56f255f10ff944999212992e6da56, type: 3}
+  - {fileID: 21300000, guid: a796502b45fb91743b2f2cfbf3beb562, type: 3}
+  - {fileID: 21300000, guid: c31e3f3ef8c1808438a1aeb92538cf7a, type: 3}
+  - {fileID: 21300000, guid: b12f84bb9abf88048bddc015d22a3dcf, type: 3}
+  - {fileID: 21300000, guid: 7a37dd028bd6b5f4b810e0090e9814eb, type: 3}
+  - {fileID: 21300000, guid: 1ede71d15495d0346b8992f2c976f7b8, type: 3}
+  - {fileID: 21300000, guid: 3558dae1f47d94d4184581a878561df0, type: 3}
+  - {fileID: 21300000, guid: 2bf9c0424ac7bdd41a572d47bb2736c5, type: 3}
+  - {fileID: 21300000, guid: e52a8460992902945b2c3ce5ff4b434f, type: 3}
   - {fileID: 21300000, guid: e83921954f4c7634093099f0c3470c2c, type: 3}
-  - {fileID: 21300000, guid: eeff23c8bb8f0f64f8cdee3f62db2e1a, type: 3}
+  - {fileID: 21300000, guid: 1c96f2ee664c7a04db8634ef14490786, type: 3}
   - {fileID: 21300000, guid: 6be408dbe6e531043bd5a75fd216289b, type: 3}
   - {fileID: 21300000, guid: 15c22739886b7034ebeaafd09ea1b2f3, type: 3}
   - {fileID: 21300000, guid: 6bf0d424fb54fe946be37c4271ee65e6, type: 3}
-  - {fileID: 21300000, guid: f9904756351865946a04407b32553146, type: 3}
-  - {fileID: 21300000, guid: 7d4bfc02e70f7a54aa1242a0d67c6645, type: 3}
-  - {fileID: 21300000, guid: 0877897e7eea38e4f9f51b3c982b014a, type: 3}
-  - {fileID: 21300000, guid: 4edc0524bbca9994ea30e1e12c2489e4, type: 3}
-  - {fileID: 21300000, guid: f1aa222154f14f648a79580b907be7ef, type: 3}
-  - {fileID: 21300000, guid: eb9d6f747c493bb41adf6cd5249283b4, type: 3}
-  - {fileID: 21300000, guid: f1755802380cba44faad748d02d8bdce, type: 3}
-  - {fileID: 21300000, guid: 07d1d8e971621a3458e0521c41b4d67e, type: 3}
-  - {fileID: 21300000, guid: 17116da3f5a454d4fbd74adc1d17a6a1, type: 3}
-  - {fileID: 21300000, guid: 32808acb68bb52f48b97e7ee1b556ba3, type: 3}
-  - {fileID: 21300000, guid: 31214f51304e7814795943c0960e5045, type: 3}
-  - {fileID: 21300000, guid: 38b366d0b3dcfa94189b6df91eecc1d3, type: 3}
-  - {fileID: 21300000, guid: 0ffd7ccfffcc3854da4e771e0a53471b, type: 3}
-  - {fileID: 21300000, guid: 99b812828fdba704ba2c00f7009f6e71, type: 3}
-  - {fileID: 21300000, guid: e48dd58ba4927d642b4de39697a3d8f9, type: 3}
-  - {fileID: 21300000, guid: 32d9039094a633c4baf42de14291024b, type: 3}
-  - {fileID: 21300000, guid: 21f76c3b36cb9f14a80944f8b66f6bb4, type: 3}
-  - {fileID: 21300000, guid: 997e1fcc1a29e0d41b80bbb9c3d87b08, type: 3}
-  - {fileID: 21300000, guid: 352ef49db519cf24ca268b6f50957292, type: 3}
-  - {fileID: 21300000, guid: 2747a753e4b64d243a91ad42b2195e67, type: 3}
-  - {fileID: 21300000, guid: 26ab107421497d645a1dbf3ae67cbfc2, type: 3}
-  - {fileID: 21300000, guid: ade3a18dfaacb2a44a1cb4eb10868370, type: 3}
-  - {fileID: 21300000, guid: ef9a999e47089c24186d5981345cb13d, type: 3}
-  - {fileID: 21300000, guid: 1793f4439d8f72746b0a53f0030d3d45, type: 3}
-  - {fileID: 21300000, guid: 928e888f3fd662a498c88e4bb0e84f85, type: 3}
-  - {fileID: 21300000, guid: bb22b33457ce4b4409578e9d53af32cd, type: 3}
+  - {fileID: 21300000, guid: cbba45349362b964b8121a11e235d2f5, type: 3}
+  - {fileID: 21300000, guid: aeae6103e3df5264bb6983d06c658275, type: 3}
+  - {fileID: 21300000, guid: dcb03abf29b2664489083a44517b248e, type: 3}
+  - {fileID: 21300000, guid: fa58a979f794d8f448d49141249cb4ed, type: 3}
+  - {fileID: 21300000, guid: 7b671b30de584b7418626380870fe8d4, type: 3}
+  - {fileID: 21300000, guid: eec333397c81d57409f2652aeec6470d, type: 3}
+  - {fileID: 21300000, guid: cf5d49e0c6b0c0b4cb1b61cf0b43e8bf, type: 3}
+  - {fileID: 21300000, guid: 95c707ff494c36c43800175e4fa6173a, type: 3}
+  - {fileID: 21300000, guid: 1bc6cb8a18c02764b845826541df1820, type: 3}
+  - {fileID: 21300000, guid: 48e83fdbe0fce824ba8254b3a64dbce1, type: 3}
+  - {fileID: 21300000, guid: 66143b80cd9b9164da2c780f9a439ad4, type: 3}
+  - {fileID: 21300000, guid: 44945e90cb159054a801b36ccd3431fd, type: 3}
+  - {fileID: 21300000, guid: 310412bfa7e31d642a2dd410389723c1, type: 3}
+  - {fileID: 21300000, guid: 5289bd96df7216f459599378949aef7a, type: 3}
+  - {fileID: 21300000, guid: 63e5a43c9f8fe404b9b113ecec402d51, type: 3}
+  - {fileID: 21300000, guid: 5a343ce149610654ea5d8125afc8e18a, type: 3}
+  - {fileID: 21300000, guid: b3614746b262f944e994465dc18e2f2a, type: 3}
+  - {fileID: 21300000, guid: 48b860822abbc5b49813b7065fb21e2e, type: 3}
+  - {fileID: 21300000, guid: e4fa48253a27fdc4c9aa2c5e7ea6be3c, type: 3}
+  - {fileID: 21300000, guid: 327caf34921ca8f4e808fb6fdec4b70c, type: 3}
+  - {fileID: 21300000, guid: 1677c9aa66ba1f2469d11f130c066b54, type: 3}
+  - {fileID: 21300000, guid: b6ce7cf87a2829447845874ac0312e47, type: 3}
+  - {fileID: 21300000, guid: 0c0a0bb6b79ab6c4b9ddf52ffe06a94f, type: 3}
+  - {fileID: 21300000, guid: 3ca1a445cb3096a418a7dcb30b61fe8f, type: 3}
+  - {fileID: 21300000, guid: 66bdba912e387b9448a24e41bf129ad6, type: 3}
+  - {fileID: 21300000, guid: 6422ef3e32998c94b93924faf8ce30ec, type: 3}
   - {fileID: 21300000, guid: b0c9453b3df67c74185419ee35d5867f, type: 3}
   leftPage: {fileID: 1495617434}
   rightPage: {fileID: 640098687}
@@ -36414,20 +36413,33 @@ MonoBehaviour:
   - "\uC815\uB839 \uC2A4\uCEF9\uD06C"
   - "\uB179\uC0C9 \uAC70\uBD81\uC774"
   - "\uB178\uB780\uC0C9 \uAC70\uBD81\uC774"
-  - 
+  - "\uC815\uB839 \uAC70\uBD81\uC774"
   details:
-  - "\uC7A0\uC774 \uCC38 \uB9CE\uC740 \uB3D9\uBB3C. \uC0AC\uC9C4 \uCC0D\uC744 \uB54C
-    \uAE70\uAE4C\uBD10 \uB180\uB790\uB2E4."
-  - "\uBC8C\uAFC0, \uAE43\uD138, \uB098\uBB47\uAC00\uC9C0\uB97C \uC21C\uC11C\uB300\uB85C
-    \uB123\uC73C\uBA74 \uC815\uB839\uC744 \uC18C\uD658\uD560 \uC218 \uC788\uB2E4\uACE0\uD55C\uB2E4.."
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "\uC7A0\uC744 \uC88B\uC544\uD558\uBA70 \uC7A0\uC744 \uAE68\uC6B0\uC9C0\uB9CC
+    \uC54A\uB294 \uC774\uC0C1 \uC628\uC21C\uD568."
+  - "\uC885\uC885 \uC790\uAE30\uAC00 \uBA39\uB358 \uAFC0\uC744 \uB5A8\uC5B4\uB728\uB9AC\uACE4
+    \uD558\uB294\uB370 \uBCF4\uAD00\uD574\uB450\uB294\uAC8C \uC88B\uC74C!"
+  - "\uC218 \uB9CE\uC740 \uC804\uD22C\uB97C \uCE58\uB8EC \uC601\uC6C5\uACFC \uACC4\uC57D\uD55C
+    \uACF0\uC73C\uB85C \uB098\uBB47\uAC00\uC9C0, \uAE43\uD138, \uAFC0\uC744 \uC870\uD569\uD558\uBA74
+    \uACF5\uACA9\uB825\uC744 \uB192\uC5EC\uC8FC\uB294 \uACC4\uC57D\uC744 \uD560 \uC218
+    \uC788\uB2E4."
+  - "\uC232\uC744 \uCC45\uC784\uC9C0\uB294 \uADC0\uC694\uBBF8\uB85C \uD56D\uC0C1
+    \uBD88 \uC55E\uC5D0\uC11C \uB3CC\uC744 \uAC00\uC9C0\uACE0 \uB180\uACE0 \uC788\uB2E4."
+  - "?? \uCD94\uCC9C \uC880"
+  - "\uC544\uC8FC \uAC00\uB054\uC529 \uB3CC\uC774 \uC544\uB2CC \uC120\uBB3C \uAFB8\uB7EC\uBBF8\uB97C
+    \uB4E4\uACE0 \uC624\uB294\uB370 \uC548\uC5D0\uB294 \uC5B4\uB9C8\uC5B4\uB9C8\uD55C
+    \uAC83\uB4E4\uC774 \uC788\uB2E4\uACE0 \uD55C\uB2E4.."
+  - "\uC544\uC8FC \uADC0\uC5EC\uC6CC \uBCF4\uC774\uB294 \uCE5C\uAD6C\uC9C0\uB9CC
+    \uC815\uB839\uACFC \uACC4\uC57D\uD55C \uC0AC\uC2B4\uC744 \uBCF4\uBA74 \uB300\uBD80\uBD84
+    \uB180\uB77C\uC11C \uB3C4\uB9DD\uAC04\uB2E4\uB294 \uC18C\uBB38\uC774 \uC788\uB2E4."
+  - "\uC0AC\uC2B4\uB4E4\uC740 \uC790\uC2E0\uB4E4\uC744 \uC9C0\uCF1C\uC8FC\uB294 \uAC83\uC5D0
+    \uAC10\uC0AC\uD574\uD558\uBA70 \uC885\uC885 \uBFD4\uC744 \uC120\uBB3C\uB85C \uC8FC\uACE0
+    \uAC00\uAE30\uB3C4 \uD55C\uB2E4."
+  - "\uC18D\uB3C4\uAC00 \uB9E4\uC6B0 \uBE60\uB978 \uC815\uB839\uC73C\uB85C \uB098\uBB47\uAC00\uC9C0,
+    \uAE43\uD138, \uBFD4\uC744 \uC870\uD569\uD558\uBA74 \uC0AC\uC2B4\uACFC \uAC19\uC774
+    \uBE68\uB77C\uC9C8 \uC218 \uC788\uB2E4\uACE0 \uD55C\uB2E4.."
+  - "\uB108\uBB34 \uBE60\uB974\uAC8C \uB2EC\uB824\uC640 \uC870\uAE08 \uC788\uB2E4
+    \uAC00\uBC84\uB824\uC11C \uC0AC\uC9C4\uC744 \uAE09\uD558\uAC8C \uCC0D\uC5B4\uC57C\uD55C\uB2E4.."
   - 
   - 
   - 
@@ -40073,18 +40085,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e86b904b363d2154eb9676ca4f7fa863, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 13
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uBD89\uC740 \uAC70\uBD81\uC774"
 --- !u!222 &1669996887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40110,8 +40122,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66.4, y: 131.1}
-  m_SizeDelta: {x: 110.7, y: 28.174}
+  m_AnchoredPosition: {x: -76.975, y: 127}
+  m_SizeDelta: {x: 89.55, y: 28.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1672012479
 GameObject:
@@ -40983,18 +40995,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e86b904b363d2154eb9676ca4f7fa863, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 13
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uBD89\uC740 \uAC70\uBD81\uC774"
 --- !u!222 &1725241253
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41020,8 +41032,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140.9, y: -40.8}
-  m_SizeDelta: {x: 149.04, y: 27.7823}
+  m_AnchoredPosition: {x: 141.63313, y: -40}
+  m_SizeDelta: {x: 123.588, y: 30.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1725476442
 PrefabInstance:
@@ -43485,7 +43497,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uC774 \uB3D9\uBB3C \uB610\uD55C \uB2E4\uC74C\uACFC \uAC19\uC740 \uD2B9\uC131\uC744
+    \uAC00\uC9C0\uACE0 \uC788\uC73C\uBA70"
 --- !u!222 &1804833026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43511,8 +43524,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190, y: -84}
-  m_SizeDelta: {x: 121.6531, y: 69.891}
+  m_AnchoredPosition: {x: -200.518, y: -85.824}
+  m_SizeDelta: {x: 104.961, y: 96.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1805715025
 GameObject:
@@ -46868,10 +46881,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e86b904b363d2154eb9676ca4f7fa863, type: 3}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -46879,7 +46892,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uC774 \uB3D9\uBB3C\uC740 \uB2E4\uC74C\uACFC \uAC19\uC740 \uD2B9\uC131\uC744
+    \uAC00\uC9C0\uACE0 \uC788\uC73C\uBA70 \uC5B4\uCABC\n"
 --- !u!222 &1938110021
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46905,8 +46919,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.3, y: 67.3}
-  m_SizeDelta: {x: 110.6968, y: 58.739}
+  m_AnchoredPosition: {x: -70.83, y: 53.133}
+  m_SizeDelta: {x: 109.637, y: 106.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938213465 stripped
 MonoBehaviour:
