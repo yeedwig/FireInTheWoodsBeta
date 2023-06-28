@@ -580,6 +580,8 @@ public class MainCharacter : MonoBehaviour
         canAction = true;
         attackSpeedUp = 0.0f; //저장할때 업그레이드도 저장될거면 이거를 빼야할거 같긴함, 아래 업그레이드 관련된거들도
         moveSpeed = defaultMoveSpeed;
+        prevX=1.0f;
+        prevY=-1.0f;
     }
 
     void Update()

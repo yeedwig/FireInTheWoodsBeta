@@ -13,8 +13,8 @@ public class AnimalManager : MonoBehaviour
     //시간 간격을 확인하기 위한 변수들
     private float currTime;
     //10으로변경할것
-    [SerializeField] int timeDelay = 1;
-    public int RandomAnimalID = -1;
+    [SerializeField] int timeDelay;
+    public int RandomAnimalID;
 
     private Animals animalInstance; //객체를 가져오기 위한 변수
     private AnimalMovement animalMovement; //움직임 스크립트 받아옴
@@ -22,7 +22,9 @@ public class AnimalManager : MonoBehaviour
 
     //이로치 발견시 값들 넣기 위한 객체들 선언
     public GameObject itemBook;
-
+    void Start(){
+        timeDelay=10;
+    }
     void Update()
     {
         currTime +=Time.deltaTime; //시간 계산
@@ -44,14 +46,28 @@ public class AnimalManager : MonoBehaviour
                     //객체 출현시 기본, 색 변화, 이로치 중에서 선택
                     //1번 생성되면 2번 생성가능, 2번 생성되면 3번 생성 가능
                     int selectingNum = Random.Range(0,100);
-                    if(animalInstance.typeAppeared[0]||animalInstance.typeAppeared[1])
+                    if(!animalInstance.typeAppeared[0])
                     {
-                        //테스트 용으로 확률 바꿈 나중에는 원상복귀 시킬것
-                        if(selectingNum<10)
+                        typeSelect=0;
+                    }
+                    else if(!animalInstance.typeAppeared[1])
+                    {
+                        if(selectingNum<60)
                         {
                             typeSelect=0;
                         }
-                        else if(selectingNum<15)
+                        else
+                        {
+                            typeSelect=1;
+                        }
+                    }
+                    else
+                    {
+                        if(selectingNum<30)
+                        {
+                            typeSelect=0;
+                        }
+                        else if(selectingNum<70)
                         {
                             typeSelect=1;
                         }
@@ -60,22 +76,11 @@ public class AnimalManager : MonoBehaviour
                             typeSelect=2;
                         }
                     }
-                    else
-                    {
-                        if(selectingNum<50)
-                        {
-                            typeSelect=0;
-                        }
-                        else
-                        {
-                            typeSelect=1;
-                        }
-                    }
 
                     //확률을 30프로까지 내림
-                    if(animalInstance.appearPercent>=30){
+                    /*if(animalInstance.appearPercent>=30){
                         animalInstance.appearPercent-=10;
-                    }
+                    }*/
                     //실행
                     animalInstance.currentType=typeSelect;
                     //이로치 처음 발견시 확인

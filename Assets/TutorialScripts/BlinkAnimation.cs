@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class BlinkAnimation : MonoBehaviour
 {
-    private float time;
+    private float time; //깜빡이는 시간 조절을 위한 변수
+
+    //투명도 변환을 위한 변수들
     public SpriteRenderer renderer;
     public Image image;
     public ColorBlock colorBlock;
@@ -13,13 +15,12 @@ public class BlinkAnimation : MonoBehaviour
     void Start() {
         renderer=GetComponent<SpriteRenderer>();
         image=GetComponent<Image>();
-        
     }
 
     void Update()
     {
+        //UI일 경우 아래와 같이 변환
         if(renderer==null){
-        
             if(time<0.35f)
             {
                 image.color= new Color(image.color.r,image.color.g,image.color.b,1-2*time);
@@ -32,6 +33,7 @@ public class BlinkAnimation : MonoBehaviour
                 }
             }
         }
+        //객체일 경우 아래와 같이 변환
         else{
             if(time<0.35f)
             {
@@ -45,7 +47,6 @@ public class BlinkAnimation : MonoBehaviour
                 }
             }
         }
-        
         time+=Time.deltaTime;
     }
     

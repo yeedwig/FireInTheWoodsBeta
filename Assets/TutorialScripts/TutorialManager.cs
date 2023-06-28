@@ -8,14 +8,18 @@ using UnityEngine.UI;
 public class TutorialManager : MonoBehaviour
 {
 
-    [SerializeField] private GameObject settingWindow;
-    public static bool tutorialDone=false;
+    
+    public static bool tutorialDone; //튜토리얼 완료됬는지 확인 변수
+    private int tutorialLevel; // 현재 튜토리얼 단계 변수
+
+    //마지막 단계에서 적 소멸 확인하는데 사용하는 변수
+    private float lv1Timer;
+    private int enemyCount,enemyDied;
 
     public GameObject[] cutScene;
     public GameObject cutSceneBackground;
     public GameObject cutSceneFront;
-
-    private int tutorialLevel;
+    [SerializeField] private GameObject settingWindow;
     [SerializeField] private GameObject panel;
     [SerializeField] private Text dialogue;
     [SerializeField] private GameObject tutorialAnimals;
@@ -33,28 +37,27 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject timerArrow;
     [SerializeField] private GameObject yellowArrow;
     [SerializeField] private GameObject killsArrow;
-
-
     public GameObject item1;
     public GameObject fire;
-
     [SerializeField] GameObject[] humma1;
     [SerializeField] GameObject[] startPosition;
-    private float lv1Timer=15.0f;
-    private int enemyCount=0,enemyDied=0;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         tutorialDone=false;
         tutorialLevel=-10;
+        lv1Timer=15.0f;
+        enemyCount=0;
+        enemyDied=0;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //튜토리얼 단계들
         if(!settingWindow.activeInHierarchy){
             if(tutorialLevel==-10){
+                cutSceneBackground.SetActive(true);
+                cutSceneFront.SetActive(true);
                 inventory.SetActive(false);
                 cutScene[0].SetActive(true);
                 panel.SetActive(true);

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Loading : MonoBehaviour
 {
+    //사용 객체
     [SerializeField] private Image loadBar;
     
     void Start()
@@ -13,9 +14,11 @@ public class Loading : MonoBehaviour
         StartCoroutine(LoadAsyncScene());
     }
     
+    //로딩창 함수
     IEnumerator LoadAsyncScene(){
         yield return null;
         AsyncOperation asyncScene;
+        //씬 이동 종류 확인 구문
         if(GameStart.newGame){
             if(TutorialManager.tutorialDone){
                 asyncScene = SceneManager.LoadSceneAsync("FireScene");
@@ -23,7 +26,6 @@ public class Loading : MonoBehaviour
             else{
                 asyncScene = SceneManager.LoadSceneAsync("Tutorial");
             }
-            
         }
         else
         {
