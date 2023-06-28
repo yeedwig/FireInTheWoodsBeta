@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//움직이는 부분은 내가 몰라서 최적화 불가능함 일단
+//내가 아는 선에서 최적화 완료
 public class AnimalMovement : MonoBehaviour
 {
     private int sequenceNum = 1;
@@ -36,18 +36,15 @@ public class AnimalMovement : MonoBehaviour
     private bool itemDrop = false;
     [SerializeField] float itemDropProbability;
 
-
+    [SerializeField] GameObject animalManager;
     private bool checkStarted = false;
 
     void drop()
     {
         droppedItem = droppingItems[Random.Range(0,NumberOfItems)];
-        /*droppedItem.transform.position = this.transform.position;
-        droppedItem.SetActive(true);*/
         GameObject item;
         item=Instantiate(droppedItem,this.transform.position,Quaternion.identity);
         Destroy(item,10.0f);
-        
     }
 
     //wait -> move -> sit ->drop -> move 식으로 만들고 싶음
@@ -128,7 +125,7 @@ public class AnimalMovement : MonoBehaviour
             }
             this.transform.position = startPosition;
             sequenceNum=1;
-            GameObject.Find("AnimalManager").GetComponent<AnimalManager>().seats[this.GetComponent<Animals>().arrivingPosition]=false;
+            animalManager.GetComponent<AnimalManager>().seats[this.GetComponent<Animals>().arrivingPosition]=false;
             checkStarted = false;
         }
 

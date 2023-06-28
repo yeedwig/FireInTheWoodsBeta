@@ -2271,6 +2271,7 @@ MonoBehaviour:
   droppingItems: []
   NumberOfItems: 0
   itemDropProbability: 0
+  animalManager: {fileID: 1811517569}
 --- !u!114 &60671858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3679,6 +3680,7 @@ MonoBehaviour:
   - {fileID: 1312175728}
   NumberOfItems: 3
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &106817551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5052,6 +5054,7 @@ MonoBehaviour:
   - {fileID: 1037620029}
   NumberOfItems: 2
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &143481470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7444,6 +7447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03db410814000b6428453844968a3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectManager: {fileID: 703196171}
 --- !u!1 &264669042
 GameObject:
   m_ObjectHideFlags: 0
@@ -13632,6 +13636,7 @@ MonoBehaviour:
   - {fileID: 1932882746}
   NumberOfItems: 2
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!95 &583763000
 Animator:
   serializedVersion: 4
@@ -14096,6 +14101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03db410814000b6428453844968a3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectManager: {fileID: 703196171}
 --- !u!1 &599473546
 GameObject:
   m_ObjectHideFlags: 0
@@ -14737,6 +14743,7 @@ MonoBehaviour:
   droppingItems: []
   NumberOfItems: 0
   itemDropProbability: 0
+  animalManager: {fileID: 1811517569}
 --- !u!114 &650977396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16156,6 +16163,52 @@ Transform:
   m_Father: {fileID: 1445793548}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &703196171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 703196173}
+  - component: {fileID: 703196172}
+  m_Layer: 0
+  m_Name: EffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &703196172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703196171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277cbc2abcd2a62488f4ff90776f370f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encyclopediaBlink: {fileID: 1257796439}
+  itemBookBlink: {fileID: 1149552604}
+--- !u!4 &703196173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703196171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4612615, y: -6.8081775, z: 280.05093}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705802961
 GameObject:
   m_ObjectHideFlags: 0
@@ -16416,6 +16469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03db410814000b6428453844968a3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectManager: {fileID: 703196171}
 --- !u!1 &709316540
 GameObject:
   m_ObjectHideFlags: 0
@@ -20568,6 +20622,7 @@ MonoBehaviour:
   droppingItems: []
   NumberOfItems: 0
   itemDropProbability: 0
+  animalManager: {fileID: 1811517569}
 --- !u!114 &866942539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27080,6 +27135,7 @@ MonoBehaviour:
   droppingItems: []
   NumberOfItems: 0
   itemDropProbability: 0
+  animalManager: {fileID: 1811517569}
 --- !u!61 &1113948914
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27736,6 +27792,82 @@ Transform:
   m_Father: {fileID: 354630278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1149552604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149552605}
+  - component: {fileID: 1149552607}
+  - component: {fileID: 1149552606}
+  m_Layer: 5
+  m_Name: ItemBookBlink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1149552605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149552604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1996360748}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 308.12, y: -0.0000076293945}
+  m_SizeDelta: {x: 72.625, y: 65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1149552606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149552604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ecdf511cea2c5fd43b751658ba865a9c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1149552607
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149552604}
+  m_CullTransparentMesh: 1
 --- !u!1 &1154564419
 GameObject:
   m_ObjectHideFlags: 0
@@ -28761,6 +28893,7 @@ MonoBehaviour:
   - {fileID: 1932882746}
   NumberOfItems: 3
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1237019355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29114,6 +29247,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257332794}
+  m_CullTransparentMesh: 1
+--- !u!1 &1257796439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257796440}
+  - component: {fileID: 1257796442}
+  - component: {fileID: 1257796441}
+  m_Layer: 5
+  m_Name: EncyclopediaBlink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1257796440
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257796439}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1996360748}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 308.12, y: -82.5}
+  m_SizeDelta: {x: 72.625, y: 65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1257796441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257796439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ecdf511cea2c5fd43b751658ba865a9c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1257796442
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257796439}
   m_CullTransparentMesh: 1
 --- !u!1 &1258004620
 GameObject:
@@ -30458,6 +30667,7 @@ MonoBehaviour:
   - {fileID: 1312175728}
   NumberOfItems: 3
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1360800835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31568,6 +31778,7 @@ MonoBehaviour:
   - {fileID: 370036312}
   NumberOfItems: 2
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1402963079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34718,6 +34929,7 @@ MonoBehaviour:
   - {fileID: 888137997}
   NumberOfItems: 3
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1488870216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35876,6 +36088,7 @@ MonoBehaviour:
   - {fileID: 1312175728}
   NumberOfItems: 2
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1517224078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36432,12 +36645,8 @@ MonoBehaviour:
   - "\uC544\uC8FC \uADC0\uC5EC\uC6CC \uBCF4\uC774\uB294 \uCE5C\uAD6C\uC9C0\uB9CC
     \uC815\uB839\uACFC \uACC4\uC57D\uD55C \uC0AC\uC2B4\uC744 \uBCF4\uBA74 \uB300\uBD80\uBD84
     \uB180\uB77C\uC11C \uB3C4\uB9DD\uAC04\uB2E4\uB294 \uC18C\uBB38\uC774 \uC788\uB2E4."
-  - "\uC0AC\uC2B4\uB4E4\uC740 \uC790\uC2E0\uB4E4\uC744 \uC9C0\uCF1C\uC8FC\uB294 \uAC83\uC5D0
-    \uAC10\uC0AC\uD574\uD558\uBA70 \uC885\uC885 \uBFD4\uC744 \uC120\uBB3C\uB85C \uC8FC\uACE0
-    \uAC00\uAE30\uB3C4 \uD55C\uB2E4."
-  - "\uC18D\uB3C4\uAC00 \uB9E4\uC6B0 \uBE60\uB978 \uC815\uB839\uC73C\uB85C \uB098\uBB47\uAC00\uC9C0,
-    \uAE43\uD138, \uBFD4\uC744 \uC870\uD569\uD558\uBA74 \uC0AC\uC2B4\uACFC \uAC19\uC774
-    \uBE68\uB77C\uC9C8 \uC218 \uC788\uB2E4\uACE0 \uD55C\uB2E4.."
+  - 
+  - 
   - "\uB108\uBB34 \uBE60\uB974\uAC8C \uB2EC\uB824\uC640 \uC870\uAE08 \uC788\uB2E4
     \uAC00\uBC84\uB824\uC11C \uC0AC\uC9C4\uC744 \uAE09\uD558\uAC8C \uCC0D\uC5B4\uC57C\uD55C\uB2E4.."
   - 
@@ -40838,6 +41047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03db410814000b6428453844968a3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectManager: {fileID: 703196171}
 --- !u!1 &1714700124
 GameObject:
   m_ObjectHideFlags: 0
@@ -41343,6 +41553,7 @@ MonoBehaviour:
   - {fileID: 565708628}
   NumberOfItems: 2
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1744460327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42727,6 +42938,7 @@ MonoBehaviour:
   - {fileID: 370036312}
   NumberOfItems: 2
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1762345293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43143,6 +43355,7 @@ MonoBehaviour:
   - {fileID: 888137997}
   NumberOfItems: 3
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1793713822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43801,6 +44014,7 @@ MonoBehaviour:
   RandomAnimalID: -1
   typeSelect: 0
   itemBook: {fileID: 180627987}
+  effectManager: {fileID: 703196171}
 --- !u!4 &1811517571
 Transform:
   m_ObjectHideFlags: 0
@@ -44196,6 +44410,7 @@ MonoBehaviour:
   - {fileID: 1932882746}
   NumberOfItems: 3
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1817875468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44701,6 +44916,7 @@ MonoBehaviour:
   - {fileID: 1312175728}
   NumberOfItems: 2
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &1846236462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48104,6 +48320,8 @@ RectTransform:
   - {fileID: 180627988}
   - {fileID: 464892393}
   - {fileID: 619213611}
+  - {fileID: 1257796440}
+  - {fileID: 1149552605}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52697,6 +52915,7 @@ MonoBehaviour:
   - {fileID: 1312175728}
   NumberOfItems: 3
   itemDropProbability: 100
+  animalManager: {fileID: 1811517569}
 --- !u!114 &2112129507
 MonoBehaviour:
   m_ObjectHideFlags: 0

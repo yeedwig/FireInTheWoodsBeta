@@ -22,6 +22,9 @@ public class AnimalManager : MonoBehaviour
 
     //이로치 발견시 값들 넣기 위한 객체들 선언
     public GameObject itemBook;
+
+    public GameObject effectManager;
+
     void Start(){
         timeDelay=10;
     }
@@ -77,6 +80,7 @@ public class AnimalManager : MonoBehaviour
                         }
                     }
 
+                    
                     //확률을 30프로까지 내림
                     /*if(animalInstance.appearPercent>=30){
                         animalInstance.appearPercent-=10;
@@ -85,9 +89,10 @@ public class AnimalManager : MonoBehaviour
                     animalInstance.currentType=typeSelect;
                     //이로치 처음 발견시 확인
                     if(!animalInstance.typeAppeared[typeSelect]&&typeSelect==2){
+                        effectManager.GetComponent<EffectManager>().NewitemBookFound();
                         irochiUpgrade(animalInstance.name);
                     }
-                    animalInstance.typeAppeared[typeSelect]=true;
+                    
 
                     //객체 save(게임 종료시 저장하는 방식이 좋을 것 같음 나중에 수정 예정)
                     /*string json = JsonUtility.ToJson(animalInstance);
