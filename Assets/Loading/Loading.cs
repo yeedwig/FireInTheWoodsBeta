@@ -17,7 +17,13 @@ public class Loading : MonoBehaviour
         yield return null;
         AsyncOperation asyncScene;
         if(GameStart.newGame){
-            asyncScene = SceneManager.LoadSceneAsync("Tutorial");
+            if(TutorialManager.tutorialDone){
+                asyncScene = SceneManager.LoadSceneAsync("FireScene");
+            }
+            else{
+                asyncScene = SceneManager.LoadSceneAsync("Tutorial");
+            }
+            
         }
         else
         {

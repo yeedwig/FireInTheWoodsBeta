@@ -9,6 +9,7 @@ public class TutorialManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject settingWindow;
+    public static bool tutorialDone=false;
 
     public GameObject[] cutScene;
     public GameObject cutSceneBackground;
@@ -45,6 +46,7 @@ public class TutorialManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tutorialDone=false;
         tutorialLevel=-10;
     }
 
@@ -326,6 +328,7 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==43){
+                tutorialDone=true;
                 SceneManager.LoadScene("Loading");
             }
         }
