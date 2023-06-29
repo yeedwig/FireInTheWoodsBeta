@@ -25,11 +25,21 @@ public class AnimalManager : MonoBehaviour
 
     public GameObject effectManager;
 
+    public GameObject mainCharacterGO;
+    public MainCharacter mainCharacter;
+
     void Start(){
         timeDelay=10;
+        mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
     }
     void Update()
     {
+        //테스트용
+        if(Input.GetKeyDown(KeyCode.P)){
+            irochiUpgrade("Weasel");
+        }
+
+
         currTime +=Time.deltaTime; //시간 계산
         if(currTime>timeDelay) //변경
         {
@@ -92,14 +102,7 @@ public class AnimalManager : MonoBehaviour
                         effectManager.GetComponent<EffectManager>().NewitemBookFound();
                         irochiUpgrade(animalInstance.name);
                     }
-                    
-
-                    //객체 save(게임 종료시 저장하는 방식이 좋을 것 같음 나중에 수정 예정)
-                    /*string json = JsonUtility.ToJson(animalInstance);
-                    string fileName=animalInstance.name;
-                    string path = Application.dataPath + "/GameData/" + fileName + ".Json";
-                    File.WriteAllText(path,json);*/
-                    
+                
                     animalInstance.currentState=true;
                     seats[animalInstance.arrivingPosition]=true;
                     animalInstance.gameObject.SetActive(true);
@@ -127,7 +130,7 @@ public class AnimalManager : MonoBehaviour
                 break;
 
             case("Deer"):
-                //속도업
+                mainCharacter.plusSpeedByItem+=5.0f;
                 break;
             
             case("Rabbit"):
@@ -139,7 +142,7 @@ public class AnimalManager : MonoBehaviour
                 break;
             
             case("WartHog"):
-                //공격력업
+                mainCharacter.plusDamageByItem+=50;
                 break;
 
             case("Owl"):
@@ -159,11 +162,12 @@ public class AnimalManager : MonoBehaviour
                 break;
 
             case("Weasel"):
-                //공속업
+                Debug.Log("ok");
+                mainCharacter.plusAttackSpeedByItem-=0.1f;
                 break;
             
             case("Wolf"):
-                //공격력업
+                mainCharacter.plusDamageByItem+=50;
                 break;
 
             case("Fox"):

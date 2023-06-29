@@ -26,6 +26,9 @@ public class ShadowGate : MonoBehaviour
     private float attackTimer;
     [SerializeField] float attackTime;
 
+    [SerializeField] private GameObject mainCharacterGO;
+    private MainCharacter mainCharacter;
+
 
     void Start()
     {
@@ -34,6 +37,7 @@ public class ShadowGate : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         appearState = 0;
         health = startHP;
+        mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
     }
     IEnumerator startingAnimation()
     {
@@ -44,15 +48,7 @@ public class ShadowGate : MonoBehaviour
 
     public void Damage(float damage)
     {
-        health -= damage;
-        if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==3)
-        {
-            health -= 20.0f;
-        }
-        else if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==4)
-        {
-            health -= 10.0f;
-        }
+        health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
         
         
         if(health > 0)

@@ -37,7 +37,6 @@ public class MainCharacter : MonoBehaviour
     private float timeToPicture = 0.25f;
     private float takePictureTimer = 0f;
 
-
     //Attack
     [SerializeField] int attackType = -1;
     [SerializeField] GameObject[] LeftBackAttackAreas;
@@ -86,16 +85,30 @@ public class MainCharacter : MonoBehaviour
     //시각 관련
     [SerializeField] private UnityEngine.Rendering.Universal.Light2D mainLight;
     public bool canSee;
-    
+
+    //공격력 증가 관련
+    public float plusDamageByAnimalContract=0;
+    public float plusDamageByItem=0;
+
+    //이속 증가 관련
+    public float plusSpeedByAnimalContract=0;
+    public float plusSpeedByItem=0;
+
+    //공속 증가 관련
+    public float plusAttackSpeedByAnimalContract=0;
+    public float plusAttackSpeedByItem=0;
+
     void reset()
     {
-        defaultMoveSpeed = 10.0f;
-        moveSpeed = defaultMoveSpeed + moveSpeedUp;
         attackWaitTime = 2.0f - attackSpeedUp;
         if(currentAnimalMode!=2&&currentAnimalMode!=4){
             autoHealOn=false;
         }
 
+        //공격력, 이속, 공속 초기화
+        plusDamageByAnimalContract=0;
+        plusSpeedByAnimalContract=0;
+        plusAttackSpeedByAnimalContract=0;
     }
     public void SetMovement(bool state)
     {
@@ -104,17 +117,6 @@ public class MainCharacter : MonoBehaviour
     public void SetAction(bool state)
     {
         canAction = state;
-    }
-    
-    public void moveSpeedUpgrade(float speedUp)
-    {
-        moveSpeedUp = speedUp;
-        moveSpeed = defaultMoveSpeed + moveSpeedUp;
-    }
-
-    public void attackSpeedUpgrade(float speedUp)
-    {
-        attackSpeedUp = speedUp;
     }
 
     void Move()
@@ -150,6 +152,7 @@ public class MainCharacter : MonoBehaviour
             }
 
             anim.SetBool("Walking", true);
+            moveSpeed=defaultMoveSpeed+plusSpeedByAnimalContract+plusSpeedByItem;
             rb.MovePosition(rb.position + vector * moveSpeed * Time.deltaTime);
         }
         else
@@ -384,36 +387,38 @@ public class MainCharacter : MonoBehaviour
             canAttack = false;
             StartCoroutine(attackAnimation());
 
+            
             if(attackType == 0) //Default
             {
                 //timer setting도 type별로 여기서 진행
-                attackWaitTime = 0.5f - attackSpeedUp;
+                attackWaitTime = 0.5f +plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 attackAppearTime = 0.25f;
+                
                 DefaultAttack();
             }
             if(attackType == 1) //Ray
             {
                 //달리면서 공격을쓰면 달리는 모션이 그래도 됨
                 attackAppearTime = 2.0f;
-                attackWaitTime = 1.0f - attackSpeedUp;
+                attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 RayAttack();
             }
             if(attackType == 2) //Sword
             {
                 attackAppearTime = 1.0f;
-                attackWaitTime = 1.0f - attackSpeedUp;
+                attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 SwordAttack();
             }
             if(attackType == 3) //Far
             {
                 attackAppearTime = 0.25f;
-                attackWaitTime = 0.2f - attackSpeedUp;
+                attackWaitTime = 0.5f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 FarAwayAttack();
             }
             if(attackType == 4) //Shooting
             {
                 attackAppearTime = 0.25f;
-                attackWaitTime = 0.5f - attackSpeedUp;
+                attackWaitTime = 0.5f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 ShootingAttack();
             }
             
@@ -421,7 +426,7 @@ public class MainCharacter : MonoBehaviour
             {
                 canMove = true;
                 attackAppearTime = 5.0f;
-                attackWaitTime = 3.0f - attackSpeedUp;
+                attackWaitTime = 3.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 TornadoAttack();
             }
 
@@ -516,15 +521,14 @@ public class MainCharacter : MonoBehaviour
         {
             //movement Speed UP
             reset();
-            defaultMoveSpeed = 15.0f;
-            moveSpeed = defaultMoveSpeed + moveSpeedUp;
+            plusSpeedByAnimalContract=10.0f;
         }
 
         else if(modeNum == 1)//Falcon
         {
             //set Attack Timer Delay down -> Attack Speed up
             reset();
-            attackWaitTime = 1.0f;
+            plusAttackSpeedByAnimalContract=-0.2f;
         }
 
         else if(modeNum == 2)//Turtle
@@ -534,24 +538,22 @@ public class MainCharacter : MonoBehaviour
                 autoHealOn=true;
                 StartCoroutine(autoHeal());
             }
-            defaultMoveSpeed = 8.0f;
-            moveSpeed = defaultMoveSpeed + moveSpeedUp;
-            
-            
+            plusSpeedByAnimalContract=-1.0f;
         }
 
         else if(modeNum == 3)//Bear
         {
             reset();
-            //Set Add damage higher -> Attack UP
+            plusDamageByAnimalContract=50.0f;
         }
 
         else if(modeNum == 4)//Tiger
         {
             reset();
-            moveSpeed = 15.0f;
-            attackWaitTime = 1.5f;
-            moveSpeed=9.0f;
+            plusDamageByAnimalContract=25.0f;
+            plusSpeedByAnimalContract=5.0f;
+            plusAttackSpeedByAnimalContract=-0.1f;
+
             if(!autoHealOn)
             {
                 StartCoroutine(autoHeal());

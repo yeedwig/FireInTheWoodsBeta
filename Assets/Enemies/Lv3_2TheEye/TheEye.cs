@@ -47,6 +47,9 @@ public class TheEye : MonoBehaviour
     [SerializeField] private GameObject radiusFireLight;
     [SerializeField] private GameObject globalLight;
 
+    [SerializeField] private GameObject mainCharacterGO;
+    private MainCharacter mainCharacter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,20 +64,13 @@ public class TheEye : MonoBehaviour
         originalRadMinIntensity = radiusFireLight.GetComponent<LightFlicker>().minIntensity;
 
         originalGlobalIntensity = globalLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity;
+        mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
         
     }
 
     public void Damage(float damage)
     {
-        health -= damage;
-        if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==3)
-        {
-            health -= 20.0f;
-        }
-        else if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==4)
-        {
-            health -= 10.0f;
-        }
+        health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
         
         
         if(health > 0)

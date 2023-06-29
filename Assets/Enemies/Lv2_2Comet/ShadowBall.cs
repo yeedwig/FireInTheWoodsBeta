@@ -14,6 +14,9 @@ public class ShadowBall : MonoBehaviour
 
     public float dirX;
     public float dirY;
+
+    [SerializeField] private GameObject mainCharacterGO;
+    private MainCharacter mainCharacter;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +25,13 @@ public class ShadowBall : MonoBehaviour
         anim = GetComponent<Animator>();
 
         Invoke("DestroyProjectile", lifeTime);
+        mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
 
     }
 
     public void Damage(float damage)
     {
-        health -= damage;
-        if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==3)
-        {
-            health -= 20.0f;
-        }
-        else if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==4)
-        {
-            health -= 10.0f;
-        }
+        health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
         
         if(health <= 0)
         {

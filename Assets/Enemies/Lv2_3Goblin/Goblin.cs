@@ -27,6 +27,9 @@ public class Goblin : MonoBehaviour
     public AudioClip clip;
     public AudioClip clip1;
 
+    [SerializeField] private GameObject mainCharacterGO;
+    private MainCharacter mainCharacter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,19 +38,12 @@ public class Goblin : MonoBehaviour
         health = startHP;
         startPosition = this.transform.position;
         pathIndex = 0;
+        mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
     }
 
     public void Damage(float damage)
     {
-        health -= damage;
-        if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==3)
-        {
-            health -= 20.0f;
-        }
-        else if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==4)
-        {
-            health -= 10.0f;
-        }
+        health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
         
         
         if(health > 0)

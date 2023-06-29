@@ -28,6 +28,9 @@ public class Angel : MonoBehaviour
     private int pathIndex;
     private Vector3 startPosition;
 
+    [SerializeField] private GameObject mainCharacterGO;
+    private MainCharacter mainCharacter;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -37,21 +40,14 @@ public class Angel : MonoBehaviour
         health = startHP;
         startPosition = this.transform.position;
         pathIndex = 0;
+        mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
     }
 
     public void Damage(float damage)
     {
         if(running == true)
         {
-            health -= damage;
-            if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==3)
-            {
-                health -= 20.0f;
-            }
-            else if(GameObject.Find("MainCharacter").GetComponent<MainCharacter>().currentAnimalMode==4)
-            {      
-                health -= 10.0f;
-            }
+            health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
         
         
             if(health > 0)
