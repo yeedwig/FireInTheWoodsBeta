@@ -21,6 +21,7 @@ public class Loading : MonoBehaviour
         //씬 이동 종류 확인 구문
         if(GameStart.newGame){
             if(TutorialManager.tutorialDone){
+                TutorialManager.tutorialDone=false;
                 asyncScene = SceneManager.LoadSceneAsync("FireScene");
             }
             else{

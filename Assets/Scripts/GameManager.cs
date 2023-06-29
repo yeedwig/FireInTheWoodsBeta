@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public float executeDamage = 1000.0f;
 
     public bool invincible = false;
+    public bool dead = false;
     public bool cleared = false; //클리어 여부
 
     //일시정지 했는지 확인
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject soundSetting;
 
     [SerializeField] private Text killCount;
+
+    public GameObject gameEnd;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +56,10 @@ public class GameManager : MonoBehaviour
     }
 
     void checkDead(){
-        if(health<0.0f) health=0.0f;
+        if(health<0.0f&&!dead){
+            dead=true;
+            gameEnd.GetComponent<GameEndManager>().GameOverStart();
+        }
     }
 
     public void takeDamage(float damage)
