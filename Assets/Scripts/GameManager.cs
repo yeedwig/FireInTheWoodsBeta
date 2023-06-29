@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     //일시정지 했는지 확인
     public bool pause = false;
-    [SerializeField] private GameObject inventory;
+    [SerializeField] public GameObject inventory;
     [SerializeField] private GameObject settingWindow;
     [SerializeField] private GameObject soundSetting;
 
