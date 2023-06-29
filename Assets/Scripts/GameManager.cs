@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     }
 
     void checkDead(){
-        if(health<0.0f&&!dead){
+        if(health<0.0f&&!dead&&!cleared){
             dead=true;
             gameEnd.GetComponent<GameEndManager>().GameOverStart();
         }
@@ -168,10 +168,12 @@ public class GameManager : MonoBehaviour
             }
         }
         else{
-            level=100;
-            if(health==0){
-                SceneManager.LoadScene("Ending");
+            level=-1;
+            if(!dead){
+                dead=true;
+                gameEnd.GetComponent<GameEndManager>().GameClearedStart();
             }
+            
         }
         
         

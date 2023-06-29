@@ -10,6 +10,9 @@ public class GameEndManager : MonoBehaviour
     public GameObject gameOverText;
     public GameObject retry;
     public GameObject exit;
+
+    public GameObject gameClearedImage;
+
     public Image image;
     public ColorBlock colorBlock;
 
@@ -19,6 +22,11 @@ public class GameEndManager : MonoBehaviour
         time=0;
         image=gameOverImage.GetComponent<Image>();
         StartCoroutine(GameOver());
+    }
+    public void GameClearedStart(){
+        time=0;
+        image=gameClearedImage.GetComponent<Image>();
+        StartCoroutine(GameClear());
     }
 
     IEnumerator GameOver(){
@@ -47,8 +55,15 @@ public class GameEndManager : MonoBehaviour
     }
 
 
+    IEnumerator GameClear(){
+        yield return new WaitForSeconds(10.0f);
+        while(time*0.1f<1.2f){
+            image.color= new Color(image.color.r,image.color.g,image.color.b,time*0.1f);
+            yield return new WaitForSeconds(0.05f);
+            time++;
+        }
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("Ending");
 
-    /*IEnumerator GameClear(){
-
-    }*/
+    }
 }

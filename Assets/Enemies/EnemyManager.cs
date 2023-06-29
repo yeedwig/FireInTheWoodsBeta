@@ -24,6 +24,11 @@ public class EnemyManager : MonoBehaviour
     
     [SerializeField] GameObject[] startPosition;
     private float lv1Timer=0,lv2Timer=0,lv3Timer=0,lv4Timer=0,lv5Timer=0,lv6Timer=0,lv7Timer=0;
+
+
+    [SerializeField] GameObject endingHumma;
+    [SerializeField] GameObject[] endingPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -182,18 +187,10 @@ public class EnemyManager : MonoBehaviour
             level7Gen(40.0f);
         }
 
-
-
-
-
-
-
-
-
         //ending
-        else if(level==100){
-            if(lv1Timer>1.0f){
-                enemy=Instantiate(humma1,startPosition[Random.Range(0,6)].transform.position,Quaternion.identity);
+        else if(level==-1){
+            if(lv1Timer>0.1f){
+                enemy=Instantiate(endingHumma,endingPosition[Random.Range(0,16)].transform.position,Quaternion.identity);
                 lv1Timer=0;
             }
         }
