@@ -41,10 +41,12 @@ public class TutorialManager : MonoBehaviour
     public GameObject fire;
     [SerializeField] GameObject[] humma1;
     [SerializeField] GameObject[] startPosition;
+
+    [SerializeField] GameObject skipButton;
     
     void Start()
     {
-        tutorialDone=false;
+        tutorialDone=true;
         tutorialLevel=-10;
         lv1Timer=15.0f;
         enemyCount=0;
@@ -143,7 +145,7 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==5){
-                dialogue.text="저희가 영혼을 담아준 카메라 덕분에 촬영한 동물의 사진 뿐만 아니라 동물에 대한 다양한 정보들도 담기게 돼요.";
+                dialogue.text="저희가 영혼을 담아준 카메라 덕분에 다양한 정보들도 얻을 수 있으니 꼭 적어두세요.";
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==6){
@@ -331,12 +333,12 @@ public class TutorialManager : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.Return)) tutorialLevel++;
             }
             else if(tutorialLevel==43){
-                tutorialDone=true;
                 SceneManager.LoadScene("Loading");
             }
         }
-        
+    }
 
-    
+    public void Skip(){
+        tutorialLevel=43;
     }
 }

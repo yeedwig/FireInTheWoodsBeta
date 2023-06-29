@@ -17,6 +17,7 @@ public class GameStart : MonoBehaviour
     {
         newGame=true;
         pause = false;
+        TutorialManager.tutorialDone=false;
     }
 
     void Update()

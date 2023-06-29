@@ -127,7 +127,7 @@ public class AnimalManager : MonoBehaviour
                 break;
 
             case("Deer"):
-                itemBook.GetComponent<ItemBook>().foundCombinations[13]=true;
+                //속도업
                 break;
             
             case("Rabbit"):
@@ -155,7 +155,7 @@ public class AnimalManager : MonoBehaviour
                 break;
             
             case("Buck"):
-                //속도업
+                itemBook.GetComponent<ItemBook>().foundCombinations[13]=true;
                 break;
 
             case("Weasel"):

@@ -56,10 +56,11 @@ public class GameManager : MonoBehaviour
     }
 
     void checkDead(){
-        if(health<0.0f&&!dead&&!cleared){
+        if(health<0.0f&&!dead&&!cleared&&!TutorialManager.tutorialDone){
             dead=true;
             gameEnd.GetComponent<GameEndManager>().GameOverStart();
         }
+        if(health<0) health=-1.0f;
     }
 
     public void takeDamage(float damage)
