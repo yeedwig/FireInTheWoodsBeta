@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool invincible = false;
     public bool dead = false;
     public bool cleared = false; //클리어 여부
+    public int irochiCount;
 
     //일시정지 했는지 확인
     public bool pause = false;
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Second());
         pause=false;
         kills=0;
+        irochiCount=0;
     }
 
     // Update is called once per frame
@@ -125,7 +127,35 @@ public class GameManager : MonoBehaviour
     private void changeLevel()
     {
         if(!cleared){
-            if(kills<20)
+            if(irochiCount<1){
+                level=1;
+            }
+            else if(irochiCount<3){
+                if(level!=2){
+                    level=2;
+                }
+            }
+            else if(irochiCount<5){
+                if(level!=3){
+                    level=3;
+                }
+            }
+            else if(irochiCount<10){
+                if(level!=3){
+                    level=3;
+                }
+            }
+            else if(irochiCount<19){
+                if(level!=4){
+                    level=4;
+                }
+            }
+            else if(irochiCount==19){
+                if(level!=5){
+                    level=5;
+                }
+            }
+            /*if(kills<20)
             {
                 level=1;
             }
@@ -172,7 +202,7 @@ public class GameManager : MonoBehaviour
                     level=8;
                     SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[2]);
                 }
-            }
+            }*/
         }
         else{
             level=-1;

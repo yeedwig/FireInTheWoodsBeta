@@ -5407,6 +5407,7 @@ MonoBehaviour:
   invincible: 0
   dead: 0
   cleared: 0
+  irochiCount: 0
   pause: 0
   inventory: {fileID: 1996360746}
   encyclopedia: {fileID: 1535388452}
@@ -7702,6 +7703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalManager: {fileID: 1811517569}
   effectManager: {fileID: 703196171}
+  GameManager: {fileID: 153827343}
 --- !u!1 &264669042
 GameObject:
   m_ObjectHideFlags: 0
@@ -14621,6 +14623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalManager: {fileID: 1811517569}
   effectManager: {fileID: 703196171}
+  GameManager: {fileID: 153827343}
 --- !u!1 &599473546
 GameObject:
   m_ObjectHideFlags: 0
@@ -17165,6 +17168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalManager: {fileID: 1811517569}
   effectManager: {fileID: 703196171}
+  GameManager: {fileID: 153827343}
 --- !u!1 &709316540
 GameObject:
   m_ObjectHideFlags: 0
@@ -42548,6 +42552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalManager: {fileID: 1811517569}
   effectManager: {fileID: 703196171}
+  GameManager: {fileID: 153827343}
 --- !u!1 &1714700124
 GameObject:
   m_ObjectHideFlags: 0

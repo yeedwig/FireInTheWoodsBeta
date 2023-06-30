@@ -6,6 +6,8 @@ public class PictureArea : MonoBehaviour
 {
     public GameObject animalManager;
     public GameObject effectManager;
+    public GameObject GameManager;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.GetComponent<Animals>() != null)
@@ -15,6 +17,7 @@ public class PictureArea : MonoBehaviour
                 effectManager.GetComponent<EffectManager>().NewEncyclopediaFound();
                 if(other.GetComponent<Animals>().currentType==2){
                     animalManager.GetComponent<AnimalManager>().irochiUpgrade(other.name);
+                    GameManager.GetComponent<GameManager>().irochiCount++;
                 }
                 
             }
