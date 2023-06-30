@@ -129,13 +129,13 @@ public class GameManager : MonoBehaviour
             {
                 level=1;
             }
-            else if(kills<40)
+            else if(kills<50)
             {
                 if(level!=2){
                     level=2;
                 }
             }
-            else if(kills<50)
+            else if(kills<55)
             {
                 if(level!=3){
                     level=3;

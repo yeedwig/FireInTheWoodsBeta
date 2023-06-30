@@ -16,7 +16,7 @@ public class ActionController : MonoBehaviour
                 count=6;
             } 
             else if(other.name=="Berries(Clone)"){
-                count=3;
+                count=6;
             } 
             else{
                 count=1;

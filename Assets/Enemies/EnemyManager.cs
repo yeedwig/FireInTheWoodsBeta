@@ -152,9 +152,9 @@ public class EnemyManager : MonoBehaviour
         }
 
         else if(level==3){
-            level1Gen(13.0f);
-            level2Gen(25.0f);
-            level3Gen(30.0f);
+            level1Gen(15.0f);
+            level2Gen(28.0f);
+            level3Gen(40.0f);
         }
 
         else if(level==4){

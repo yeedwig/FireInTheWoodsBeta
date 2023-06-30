@@ -2278,6 +2278,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
   - {fileID: 693214067}
+  - {fileID: 1932267139}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!114 &60671858
@@ -3850,6 +3851,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1932882746}
   - {fileID: 1312175728}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &106817551
@@ -5242,6 +5244,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1037620029}
   - {fileID: 1932882746}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &143481470
@@ -14156,6 +14159,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1932882746}
   - {fileID: 565708628}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!95 &583763000
@@ -15429,6 +15433,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
   - {fileID: 858342176}
+  - {fileID: 1932267139}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!114 &650977396
@@ -21442,6 +21447,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
   - {fileID: 858342176}
+  - {fileID: 1932267139}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!114 &866942539
@@ -28029,6 +28035,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1720365225}
   - {fileID: 888137997}
+  - {fileID: 1932267139}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!61 &1113948914
@@ -29865,6 +29872,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
   - {fileID: 1932882746}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1237019355
@@ -31705,6 +31713,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1547435337}
   - {fileID: 1312175728}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1360800835
@@ -32820,6 +32829,7 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 954392801}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1402963079
@@ -36139,6 +36149,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1720365225}
   - {fileID: 888137997}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1488870216
@@ -37303,6 +37314,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
   - {fileID: 954392801}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1517224078
@@ -43059,6 +43071,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 565708628}
   - {fileID: 954392801}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1744460327
@@ -44443,6 +44456,7 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 370036312}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1762345293
@@ -44890,6 +44904,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1650549391}
   - {fileID: 888137997}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1793713822
@@ -45946,6 +45961,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 252452039}
   - {fileID: 1932882746}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1817875468
@@ -46483,6 +46499,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
   - {fileID: 1547435337}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1846236462
@@ -54774,6 +54791,7 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 858342176}
   - {fileID: 1312175728}
+  - {fileID: 1932267139}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &2112129507

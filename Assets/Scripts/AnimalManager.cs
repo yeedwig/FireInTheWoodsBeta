@@ -34,10 +34,7 @@ public class AnimalManager : MonoBehaviour
     }
     void Update()
     {
-        //테스트용
-        if(Input.GetKeyDown(KeyCode.P)){
-            irochiUpgrade("Weasel");
-        }
+        
 
 
         currTime +=Time.deltaTime; //시간 계산
@@ -65,7 +62,7 @@ public class AnimalManager : MonoBehaviour
                     }
                     else if(!animalInstance.typeAppeared[1])
                     {
-                        if(selectingNum<60)
+                        if(selectingNum<40)
                         {
                             typeSelect=0;
                         }
@@ -76,11 +73,11 @@ public class AnimalManager : MonoBehaviour
                     }
                     else
                     {
-                        if(selectingNum<30)
+                        if(selectingNum<20)
                         {
                             typeSelect=0;
                         }
-                        else if(selectingNum<70)
+                        else if(selectingNum<60)
                         {
                             typeSelect=1;
                         }
