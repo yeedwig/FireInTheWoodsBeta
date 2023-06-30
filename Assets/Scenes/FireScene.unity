@@ -2099,6 +2099,8 @@ MonoBehaviour:
   plusDamageByItem: 0
   plusSpeedByAnimalContract: 0
   plusSpeedByItem: 0
+  plusAttackSpeedByAnimalContract: 0
+  plusAttackSpeedByItem: 0
 --- !u!114 &37344559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2272,8 +2274,10 @@ MonoBehaviour:
   - {fileID: 926974702}
   awayNumberOfPoints: 4
   speed: 1
-  droppingItems: []
-  NumberOfItems: 0
+  droppingItems:
+  - {fileID: 1932267139}
+  - {fileID: 1312175728}
+  - {fileID: 693214067}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!114 &60671858
@@ -3846,7 +3850,6 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1932882746}
   - {fileID: 1312175728}
-  NumberOfItems: 3
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &106817551
@@ -5238,7 +5241,7 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 1037620029}
-  NumberOfItems: 2
+  - {fileID: 1932882746}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &143481470
@@ -6267,7 +6270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemBook: {fileID: 180627987}
   encyclopedia: {fileID: 1535388452}
-  foundCombinations: 010101010101010101010101010101
+  foundCombinations: 000000000001010000000000000000
   itemObjects:
   - {fileID: 267480794}
   - {fileID: 1349770982}
@@ -14150,7 +14153,7 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 1932882746}
-  NumberOfItems: 2
+  - {fileID: 565708628}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!95 &583763000
@@ -15420,8 +15423,10 @@ MonoBehaviour:
   - {fileID: 332650662}
   awayNumberOfPoints: 4
   speed: 2
-  droppingItems: []
-  NumberOfItems: 0
+  droppingItems:
+  - {fileID: 1932267139}
+  - {fileID: 1312175728}
+  - {fileID: 858342176}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!114 &650977396
@@ -16622,6 +16627,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692581141}
   m_CullTransparentMesh: 1
+--- !u!1 &693214067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1834265429384611921, guid: 4cccf4851e5292d4398c1659350c570a, type: 3}
+  m_PrefabInstance: {fileID: 1314301894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &693246012
 Mesh:
   m_ObjectHideFlags: 0
@@ -21426,8 +21436,10 @@ MonoBehaviour:
   - {fileID: 544978748}
   awayNumberOfPoints: 4
   speed: 2
-  droppingItems: []
-  NumberOfItems: 0
+  droppingItems:
+  - {fileID: 1932267139}
+  - {fileID: 1312175728}
+  - {fileID: 858342176}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!114 &866942539
@@ -23789,6 +23801,11 @@ Transform:
   m_Father: {fileID: 304027838}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &954392801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1834265429384611921, guid: 4cccf4851e5292d4398c1659350c570a, type: 3}
+  m_PrefabInstance: {fileID: 709570129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &961447114
 GameObject:
   m_ObjectHideFlags: 0
@@ -28006,8 +28023,10 @@ MonoBehaviour:
   - {fileID: 1129485150}
   awayNumberOfPoints: 4
   speed: 3
-  droppingItems: []
-  NumberOfItems: 0
+  droppingItems:
+  - {fileID: 1932267139}
+  - {fileID: 1720365225}
+  - {fileID: 888137997}
   itemDropProbability: 0
   animalManager: {fileID: 1811517569}
 --- !u!61 &1113948914
@@ -29844,7 +29863,6 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
   - {fileID: 1932882746}
-  NumberOfItems: 3
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1237019355
@@ -31685,7 +31703,6 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1547435337}
   - {fileID: 1312175728}
-  NumberOfItems: 3
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1360800835
@@ -32800,8 +32817,7 @@ MonoBehaviour:
   speed: 2
   droppingItems:
   - {fileID: 1932267139}
-  - {fileID: 370036312}
-  NumberOfItems: 2
+  - {fileID: 954392801}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1402963079
@@ -36121,7 +36137,6 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 1720365225}
   - {fileID: 888137997}
-  NumberOfItems: 3
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1488870216
@@ -37285,7 +37300,7 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
-  NumberOfItems: 2
+  - {fileID: 954392801}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1517224078
@@ -41086,6 +41101,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 870027178508542864, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
   m_PrefabInstance: {fileID: 72787472}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1650549391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1834265429384611921, guid: 4cccf4851e5292d4398c1659350c570a, type: 3}
+  m_PrefabInstance: {fileID: 1356584639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1651448091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43036,7 +43056,7 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 565708628}
-  NumberOfItems: 2
+  - {fileID: 954392801}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1744460327
@@ -44421,7 +44441,6 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 370036312}
-  NumberOfItems: 2
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1762345293
@@ -44867,9 +44886,8 @@ MonoBehaviour:
   speed: 3
   droppingItems:
   - {fileID: 1932267139}
-  - {fileID: 1720365225}
+  - {fileID: 1650549391}
   - {fileID: 888137997}
-  NumberOfItems: 3
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1793713822
@@ -45926,7 +45944,6 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 252452039}
   - {fileID: 1932882746}
-  NumberOfItems: 3
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1817875468
@@ -46463,7 +46480,7 @@ MonoBehaviour:
   droppingItems:
   - {fileID: 1932267139}
   - {fileID: 1312175728}
-  NumberOfItems: 2
+  - {fileID: 1547435337}
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &1846236462
@@ -54755,7 +54772,6 @@ MonoBehaviour:
   - {fileID: 1932267139}
   - {fileID: 858342176}
   - {fileID: 1312175728}
-  NumberOfItems: 3
   itemDropProbability: 100
   animalManager: {fileID: 1811517569}
 --- !u!114 &2112129507

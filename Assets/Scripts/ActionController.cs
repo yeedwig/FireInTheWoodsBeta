@@ -8,10 +8,12 @@ public class ActionController : MonoBehaviour
 {
     [SerializeField] private Inventory theInventory;
     private bool pickupActivated = false;  // 아이템 습득 가능할시 True 
-
+    private int count =1;
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Item")){
-            theInventory.AcquireItem(other.GetComponent<ItemPickUp>().item);
+            if(other.name=="Branch") count=5;
+            else count=1;
+            theInventory.AcquireItem(other.GetComponent<ItemPickUp>().item,count);
             other.transform.gameObject.SetActive(false);
         }
     }

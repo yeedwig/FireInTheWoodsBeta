@@ -32,7 +32,6 @@ public class AnimalMovement : MonoBehaviour
     //animal이 drop하는 물건
     [SerializeField] GameObject[] droppingItems;
     GameObject droppedItem;
-    public int NumberOfItems;
     private bool itemDrop = false;
     [SerializeField] float itemDropProbability;
 
@@ -41,10 +40,10 @@ public class AnimalMovement : MonoBehaviour
 
     void drop()
     {
-        droppedItem = droppingItems[Random.Range(0,NumberOfItems)];
+        droppedItem = droppingItems[Random.Range(0,droppingItems.Length)];
         GameObject item;
         item=Instantiate(droppedItem,this.transform.position,Quaternion.identity);
-        Destroy(item,10.0f);
+        Destroy(item,20.0f);
     }
 
     //wait -> move -> sit ->drop -> move 식으로 만들고 싶음

@@ -43,7 +43,7 @@ public class SaveAndLoad : MonoBehaviour
         ib = itemBook.GetComponent<ItemBook>();
         if(!GameStart.newGame){
             GameStart.newGame=true;
-            Load();
+            //Load();
         }
     }
 
@@ -100,14 +100,14 @@ public class SaveAndLoad : MonoBehaviour
         yield return null;
     }
 
-    void Load()
+    /*void Load()
     {
         StartCoroutine(LoadAnimals());
         StartCoroutine(LoadGameManager());
         //StartCoroutine(LoadMainCharacter());
         StartCoroutine(LoadItemBook());
         StartCoroutine(LoadItems());
-    }
+    }*/
 
     IEnumerator LoadAnimals(){
         for(int i=0;i<animals.Length;i++){
