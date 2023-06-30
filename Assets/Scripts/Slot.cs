@@ -98,7 +98,7 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
                 {
                     GameObject.Find("fire").GetComponent<FireManager>().inputItem += item.itemName;
                     GameObject.Find("fire").GetComponent<FireManager>().count++;
-                    SetSlotCount(0);
+                    SetSlotCount(-1);
                 }
                     
             }

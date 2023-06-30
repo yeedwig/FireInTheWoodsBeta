@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     //일시정지 했는지 확인
     public bool pause = false;
     [SerializeField] public GameObject inventory;
+    [SerializeField] public GameObject encyclopedia;
+    [SerializeField] public GameObject itemBook;
     [SerializeField] private GameObject settingWindow;
     [SerializeField] private GameObject soundSetting;
 
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
         checkDead();
         checkPause();
         changeLevel();
+        settingCheck();
         killCount.text=kills.ToString();
     }
 
@@ -93,25 +96,28 @@ public class GameManager : MonoBehaviour
 
 
     //esc 일시정지
-    public void checkPause(){
+    public void settingCheck(){
         if(Input.GetKeyDown(KeyCode.Escape)){
-            if(!pause)
-            {
-                pause=true;
-                Time.timeScale=0;
-                inventory.SetActive(false);
-                settingWindow.SetActive(true);
-                
-            }
-            else
-            {
-                pause=false;
-                Time.timeScale=1;
+            if(settingWindow.activeInHierarchy){
                 inventory.SetActive(true);
                 soundSetting.SetActive(false);
                 settingWindow.SetActive(false);
-                
             }
+            else{
+                inventory.SetActive(false);
+                settingWindow.SetActive(true);
+            }
+        }
+    }
+
+    void checkPause(){
+        if(settingWindow.activeInHierarchy||encyclopedia.activeInHierarchy||itemBook.activeInHierarchy){
+            pause=true;
+            Time.timeScale=0;
+        }
+        else{
+            pause=false;
+            Time.timeScale=1;
         }
     }
 
@@ -119,11 +125,11 @@ public class GameManager : MonoBehaviour
     private void changeLevel()
     {
         if(!cleared){
-            if(kills<10)
+            if(kills<20)
             {
                 level=1;
             }
-            else if(kills<30)
+            else if(kills<40)
             {
                 if(level!=2){
                     level=2;

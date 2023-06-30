@@ -46,11 +46,13 @@ public class EnemyManager : MonoBehaviour
     void level2Gen(float time){
         if(lv2Timer>=time){
             int randomNum = Random.Range(0,6);
-            enemy=Instantiate(level2Enemies[Random.Range(0,2)],startPosition[randomNum].transform.position,Quaternion.identity);
+            int type=Random.Range(0,2);
+            enemy=Instantiate(level2Enemies[type],startPosition[randomNum].transform.position,Quaternion.identity);
             if(randomNum > 2)
             {
                 enemy.GetComponent<SpriteRenderer>().flipX = true;
             }
+            
             lv2Timer=0;
         }
     }
@@ -141,12 +143,12 @@ public class EnemyManager : MonoBehaviour
         lv6Timer+=Time.deltaTime;
         lv7Timer+=Time.deltaTime;
         if(level==1){
-            level1Gen(10.0f);
+            level1Gen(12.0f);
         }
 
         else if(level==2){
-            level1Gen(12.0f);
-            level2Gen(24.0f);
+            level1Gen(13.0f);
+            level2Gen(25.0f);
         }
 
         else if(level==3){
