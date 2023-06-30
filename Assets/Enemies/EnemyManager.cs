@@ -58,6 +58,20 @@ public class EnemyManager : MonoBehaviour
     }
     void level3Gen(float time){
         if(lv3Timer>=time){
+            enemy=Instantiate(level3Enemies[0],TheHandStartPosition[Random.Range(0,4)].transform.position,Quaternion.identity);
+            lv3Timer=0;
+        }
+    }
+
+    void level4Gen(float time){
+        if(lv4Timer>=time){
+            enemy=Instantiate(level3Enemies[1],cometStartPosition.transform.position,Quaternion.identity);
+            lv4Timer=0;
+        }
+    }
+
+    /*void level3Gen(float time){
+        if(lv3Timer>=time){
             int select = Random.Range(0,2);
             if(select==0)
             {
@@ -129,7 +143,7 @@ public class EnemyManager : MonoBehaviour
                   fearTimer=0;  
             }
         }
-    }
+    }*/
     // Update is called once per frame
     void Update()
     {
@@ -152,19 +166,19 @@ public class EnemyManager : MonoBehaviour
         }
 
         else if(level==3){
-            level1Gen(15.0f);
-            level2Gen(28.0f);
-            level3Gen(40.0f);
+            level1Gen(13.0f);
+            level2Gen(25.0f);
+            level3Gen(20.0f);
         }
 
         else if(level==4){
-            level1Gen(14.0f);
-            level2Gen(26.0f);
-            level3Gen(40.0f);
-            level4Gen(40.0f);
+            level1Gen(15.0f);
+            level2Gen(30.0f);
+            level3Gen(30.0f);
+            level4Gen(80.0f);
         }
 
-        else if(level==5){
+        /*else if(level==5){
             level1Gen(15.0f);
             level2Gen(26.0f);
             level3Gen(42.0f);
@@ -187,7 +201,7 @@ public class EnemyManager : MonoBehaviour
             level5Gen(40.0f);
             level6Gen(40.0f);
             level7Gen(40.0f);
-        }
+        }*/
 
         //ending
         else if(level==-1){

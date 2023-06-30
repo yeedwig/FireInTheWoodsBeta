@@ -32,8 +32,7 @@ public class AnimalMovement : MonoBehaviour
     //animal이 drop하는 물건
     [SerializeField] GameObject[] droppingItems;
     GameObject droppedItem;
-    private bool itemDrop = false;
-    [SerializeField] float itemDropProbability;
+    private bool dropCheck=false;
 
     [SerializeField] GameObject animalManager;
     private bool checkStarted = false;
@@ -97,16 +96,16 @@ public class AnimalMovement : MonoBehaviour
             this.transform.position = Vector3.MoveTowards(actualPosition, awayPathPoints[pathIndex].transform.position, speed * Time.deltaTime);
             if(actualPosition == awayPathPoints[pathIndex].transform.position && pathIndex != awayNumberOfPoints -1)
             {
-                
                 pathIndex++;
-                if(itemDrop == true && pathIndex == awayNumberOfPoints / 2)
+                //if(pathIndex == awayNumberOfPoints / 2)
+                if(pathIndex == 1&&dropCheck)
                 {
+                    dropCheck=false;
                     drop();
                 }
             }
             else if(actualPosition == awayPathPoints[pathIndex].transform.position && pathIndex == awayNumberOfPoints -1)
             {
-                
                 sequenceNum++;
             } 
         }
@@ -137,16 +136,13 @@ public class AnimalMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         //GetComponent<Animator>().runtimeAnimatorController;
         //= ver2 as RuntimeAnimatorController;
+        dropCheck=false;
         
-        itemDrop = false;
         pathIndex = 0;
         sequenceNum = 1;
 
         //아이템을 드랍할건지 안할건지 결정
-        if( itemDropProbability> Random.Range(0,100))
-        {
-            itemDrop = true;
-        }
+        
 
 
     }
@@ -160,6 +156,10 @@ public class AnimalMovement : MonoBehaviour
                 checkStarted = true;
                 int typeSelect = this.GetComponent<Animals>().currentType;
                 GetComponent<Animator>().runtimeAnimatorController = animations[typeSelect] as RuntimeAnimatorController;
+                int test = Random.Range(0,100);
+                if(test<80) dropCheck=true;
+                else dropCheck=false;
+                
             }
             AnimalSequence();
         }

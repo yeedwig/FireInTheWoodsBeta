@@ -34,14 +34,14 @@ public class AnimalManager : MonoBehaviour
     }
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.P)){
+            irochiUpgrade("Warthog");
+        }
 
 
         currTime +=Time.deltaTime; //시간 계산
         if(currTime>timeDelay) //변경
         {
-            currTime=0;
-            
             //배열 안에서 ID를 구하고 해당 객체를 받아옴
             RandomAnimalID = Random.Range(0,animalsInNormal.Length);
             animalInstance = animalsInNormal[RandomAnimalID].GetComponent<Animals>();
@@ -49,6 +49,7 @@ public class AnimalManager : MonoBehaviour
             //현재 실행 중인 놈이 아니고 자리가 차 있지 않으면
             if(!animalInstance.currentState&&!seats[animalInstance.arrivingPosition])
             {
+                currTime=0;
                 //객체당 확률 확인
                 int probability = Random.Range(0,100);
                 if(probability<animalInstance.appearPercent)
@@ -95,20 +96,10 @@ public class AnimalManager : MonoBehaviour
                     //실행
                     animalInstance.currentType=typeSelect;
                     //이로치 처음 발견시 확인
-                    if(!animalInstance.typeAppeared[typeSelect]&&typeSelect==2){
-                        effectManager.GetComponent<EffectManager>().NewitemBookFound();
-                        irochiUpgrade(animalInstance.name);
-                    }
                 
                     animalInstance.currentState=true;
                     seats[animalInstance.arrivingPosition]=true;
                     animalInstance.gameObject.SetActive(true);
-                }
-                else
-                {
-                    //만약 객체가 안나온다고 판정되면 바로 다시 currTime을 올려 조건문을 돌림
-                    currTime=10.0f;
-                    
                 }               
             }
         }
@@ -116,6 +107,7 @@ public class AnimalManager : MonoBehaviour
 
     public void irochiUpgrade(string name)
     {
+        effectManager.GetComponent<EffectManager>().NewitemBookFound();
         switch (name)
         {
             case("Bear"):
@@ -127,7 +119,7 @@ public class AnimalManager : MonoBehaviour
                 break;
 
             case("Deer"):
-                mainCharacter.plusSpeedByItem+=5.0f;
+                mainCharacter.plusSpeedByItem+=3.0f;
                 break;
             
             case("Rabbit"):

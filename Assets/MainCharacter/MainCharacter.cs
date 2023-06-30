@@ -399,13 +399,13 @@ public class MainCharacter : MonoBehaviour
             if(attackType == 1) //Ray
             {
                 //달리면서 공격을쓰면 달리는 모션이 그래도 됨
-                attackAppearTime = 2.0f;
+                attackAppearTime = 1.0f;
                 attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 RayAttack();
             }
             if(attackType == 2) //Sword
             {
-                attackAppearTime = 1.0f;
+                attackAppearTime = 0.7f;
                 attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 SwordAttack();
             }
