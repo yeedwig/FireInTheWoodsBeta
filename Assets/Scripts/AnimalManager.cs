@@ -27,6 +27,7 @@ public class AnimalManager : MonoBehaviour
 
     public GameObject mainCharacterGO;
     public MainCharacter mainCharacter;
+    public GameObject camera;
 
     void Start(){
         timeDelay=10;
@@ -63,7 +64,7 @@ public class AnimalManager : MonoBehaviour
                     }
                     else if(!animalInstance.typeAppeared[1])
                     {
-                        if(selectingNum<40)
+                        if(selectingNum<30)
                         {
                             typeSelect=0;
                         }
@@ -72,13 +73,13 @@ public class AnimalManager : MonoBehaviour
                             typeSelect=1;
                         }
                     }
-                    else
+                    else if(!animalInstance.typeAppeared[2])
                     {
-                        if(selectingNum<20)
+                        if(selectingNum<10)
                         {
                             typeSelect=0;
                         }
-                        else if(selectingNum<60)
+                        else if(selectingNum<20)
                         {
                             typeSelect=1;
                         }
@@ -86,6 +87,9 @@ public class AnimalManager : MonoBehaviour
                         {
                             typeSelect=2;
                         }
+                    }
+                    else{
+                        typeSelect=Random.Range(0,3);
                     }
 
                     
@@ -107,11 +111,11 @@ public class AnimalManager : MonoBehaviour
 
     public void irochiUpgrade(string name)
     {
-        effectManager.GetComponent<EffectManager>().NewitemBookFound();
         switch (name)
         {
             case("Bear"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[14]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
             
             case("Raccoon"):
@@ -124,30 +128,35 @@ public class AnimalManager : MonoBehaviour
             
             case("Rabbit"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[1]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
 
             case("HedgeHog"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[7]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
             
             case("WartHog"):
-                mainCharacter.plusDamageByItem+=50;
+                mainCharacter.plusDamageByItem+=25;
                 break;
 
             case("Owl"):
-                //어두운 곳 밝게
+                //시야 범위 넓힘 또는 불 범위 넓어짐
                 break;
             
             case("Beaver"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[8]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
 
             case("Mole"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[9]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
             
             case("Buck"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[13]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
 
             case("Weasel"):
@@ -156,35 +165,42 @@ public class AnimalManager : MonoBehaviour
                 break;
             
             case("Wolf"):
-                mainCharacter.plusDamageByItem+=50;
+                mainCharacter.plusDamageByItem+=25;
                 break;
 
             case("Fox"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[3]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
             
             case("Falcon"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[12]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
 
             case("Magpie"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[0]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
             
             case("Duck"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[2]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
 
             case("Skunk"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[4]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
             
             case("Turtle"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[10]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
 
             case("Tiger"):
                 itemBook.GetComponent<ItemBook>().foundCombinations[11]=true;
+                effectManager.GetComponent<EffectManager>().NewitemBookFound();
                 break;
             
             default:

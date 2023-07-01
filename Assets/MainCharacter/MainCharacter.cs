@@ -426,7 +426,7 @@ public class MainCharacter : MonoBehaviour
             {
                 canMove = true;
                 attackAppearTime = 5.0f;
-                attackWaitTime = 3.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+                attackWaitTime = 2.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 TornadoAttack();
             }
 
@@ -521,7 +521,7 @@ public class MainCharacter : MonoBehaviour
         {
             //movement Speed UP
             reset();
-            plusSpeedByAnimalContract=10.0f;
+            plusSpeedByAnimalContract=5.0f;
         }
 
         else if(modeNum == 1)//Falcon
@@ -544,14 +544,14 @@ public class MainCharacter : MonoBehaviour
         else if(modeNum == 3)//Bear
         {
             reset();
-            plusDamageByAnimalContract=50.0f;
+            plusDamageByAnimalContract=30.0f;
         }
 
         else if(modeNum == 4)//Tiger
         {
             reset();
-            plusDamageByAnimalContract=25.0f;
-            plusSpeedByAnimalContract=5.0f;
+            plusDamageByAnimalContract=20.0f;
+            plusSpeedByAnimalContract=3.0f;
             plusAttackSpeedByAnimalContract=-0.1f;
 
             if(!autoHealOn)

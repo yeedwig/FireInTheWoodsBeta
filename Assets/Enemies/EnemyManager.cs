@@ -167,15 +167,15 @@ public class EnemyManager : MonoBehaviour
 
         else if(level==3){
             level1Gen(13.0f);
-            level2Gen(25.0f);
-            level3Gen(20.0f);
+            level2Gen(28.0f);
+            level3Gen(25.0f);
         }
 
         else if(level==4){
             level1Gen(15.0f);
             level2Gen(30.0f);
             level3Gen(30.0f);
-            level4Gen(80.0f);
+            level4Gen(60.0f);
         }
 
         /*else if(level==5){
