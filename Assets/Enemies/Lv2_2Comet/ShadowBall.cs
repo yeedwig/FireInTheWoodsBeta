@@ -30,7 +30,7 @@ public class ShadowBall : MonoBehaviour
 
     public void Damage(float damage)
     {
-        health -= damage;
+        health-=damage;
         
         if(health <= 0)
         {
@@ -56,11 +56,11 @@ public class ShadowBall : MonoBehaviour
             anim.SetBool("Reached", true);
             Destroy(this.gameObject,3.0f);
         }
-        /*
+        
         else if(other.gameObject.tag == "Execute")
         {
-            Destroy(gameObject);
-        }*/
+            Damage(GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage);
+        }
         else if(other.gameObject.tag == "Barrier")
         {
             Destroy(gameObject);

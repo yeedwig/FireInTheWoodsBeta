@@ -49,9 +49,14 @@ public class Worm : MonoBehaviour
         mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
     }
 
-    public void Damage(float damage)
+    public void Damage(float damage,bool check=true)
     {
-        health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
+        if(check){
+            health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
+        }
+        else{
+            health -=damage;
+        }
         
         
         if(health > 0)
@@ -138,7 +143,7 @@ public class Worm : MonoBehaviour
         }
         else if(other.gameObject.tag == "Execute")
         {
-            Damage(GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage);
+            Damage(GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage,false);
         }
         else if(other.gameObject.tag == "Barrier")
         {

@@ -50,11 +50,12 @@ public class AnimalManager : MonoBehaviour
             //현재 실행 중인 놈이 아니고 자리가 차 있지 않으면
             if(!animalInstance.currentState&&!seats[animalInstance.arrivingPosition])
             {
-                currTime=0;
+                
                 //객체당 확률 확인
                 int probability = Random.Range(0,100);
                 if(probability<animalInstance.appearPercent)
                 {
+                    currTime=0;
                     //객체 출현시 기본, 색 변화, 이로치 중에서 선택
                     //1번 생성되면 2번 생성가능, 2번 생성되면 3번 생성 가능
                     int selectingNum = Random.Range(0,100);
@@ -64,7 +65,7 @@ public class AnimalManager : MonoBehaviour
                     }
                     else if(!animalInstance.typeAppeared[1])
                     {
-                        if(selectingNum<30)
+                        if(selectingNum<20)
                         {
                             typeSelect=0;
                         }
@@ -94,9 +95,9 @@ public class AnimalManager : MonoBehaviour
 
                     
                     //확률을 30프로까지 내림
-                    /*if(animalInstance.appearPercent>=30){
+                    if(animalInstance.appearPercent>=30){
                         animalInstance.appearPercent-=10;
-                    }*/
+                    }
                     //실행
                     animalInstance.currentType=typeSelect;
                     //이로치 처음 발견시 확인

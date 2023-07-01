@@ -2095,7 +2095,7 @@ MonoBehaviour:
   moveSpeedUp: 0
   mainLight: {fileID: 1460916839}
   canSee: 0
-  plusDamageByAnimalContract: 1
+  plusDamageByAnimalContract: 0
   plusDamageByItem: 0
   plusSpeedByAnimalContract: 0
   plusSpeedByItem: 0
