@@ -65,38 +65,28 @@ public class AnimalManager : MonoBehaviour
                     }
                     else if(!animalInstance.typeAppeared[1])
                     {
-                        if(selectingNum<20)
-                        {
-                            typeSelect=0;
-                        }
-                        else
-                        {
-                            typeSelect=1;
-                        }
+                        typeSelect=1;
                     }
                     else if(!animalInstance.typeAppeared[2])
                     {
-                        if(selectingNum<10)
-                        {
-                            typeSelect=0;
-                        }
-                        else if(selectingNum<20)
-                        {
-                            typeSelect=1;
-                        }
-                        else
-                        {
-                            typeSelect=2;
-                        }
+                        
+                        typeSelect=2;
                     }
                     else{
                         typeSelect=Random.Range(0,3);
                     }
 
+                    //시간 테스트용 나중에 삭제 ㄱ
+                    /*if(!animalInstance.typeAppeared[typeSelect]){
+                        animalInstance.typeAppeared[typeSelect]=true;
+                        if(typeSelect==2) GameObject.Find("GameManager").GetComponent<GameManager>().irochiCount++;
+                    }*/
+                    
+
                     
                     //확률을 30프로까지 내림
-                    if(animalInstance.appearPercent>=30){
-                        animalInstance.appearPercent-=10;
+                    if(animalInstance.appearPercent>=40){
+                        animalInstance.appearPercent-=20;
                     }
                     //실행
                     animalInstance.currentType=typeSelect;

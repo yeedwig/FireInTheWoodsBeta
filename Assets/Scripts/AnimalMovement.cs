@@ -42,7 +42,7 @@ public class AnimalMovement : MonoBehaviour
         droppedItem = droppingItems[Random.Range(0,droppingItems.Length)];
         GameObject item;
         item=Instantiate(droppedItem,this.transform.position,Quaternion.identity);
-        Destroy(item,60.0f);
+        Destroy(item,300.0f);
     }
 
     //wait -> move -> sit ->drop -> move 식으로 만들고 싶음

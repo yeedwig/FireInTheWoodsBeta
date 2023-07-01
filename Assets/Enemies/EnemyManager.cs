@@ -29,12 +29,14 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject endingHumma;
     [SerializeField] GameObject[] endingPosition;
 
+    private int prevLevel;
+
     // Start is called before the first frame update
     void Start()
     {
         theFearAlive=0;
         fearTimer=0;
-        
+        prevLevel=1;
     }
 
     void level1Gen(float time){
@@ -156,26 +158,30 @@ public class EnemyManager : MonoBehaviour
         lv5Timer+=Time.deltaTime;
         lv6Timer+=Time.deltaTime;
         lv7Timer+=Time.deltaTime;
+        if(level!=prevLevel){
+            //breakTime();
+            prevLevel=level;
+        } 
         if(level==1){
-            level1Gen(12.0f);
+            level1Gen(11.0f);
         }
 
         else if(level==2){
-            level1Gen(13.0f);
+            level1Gen(12.0f);
             level2Gen(25.0f);
         }
 
         else if(level==3){
             level1Gen(13.0f);
-            level2Gen(28.0f);
-            level3Gen(25.0f);
+            level2Gen(26.0f);
+            level3Gen(20.0f);
         }
 
         else if(level==4){
-            level1Gen(15.0f);
-            level2Gen(30.0f);
-            level3Gen(30.0f);
-            level4Gen(60.0f);
+            level1Gen(13.0f);
+            level2Gen(26.0f);
+            level3Gen(25.0f);
+            level4Gen(50.0f);
         }
 
         /*else if(level==5){
@@ -210,8 +216,14 @@ public class EnemyManager : MonoBehaviour
                 lv1Timer=0;
             }
         }
-
-
-        
+    }
+    public void breakTime(){
+        lv1Timer=-20.0f;
+        lv2Timer=-20.0f;
+        lv3Timer=-20.0f;
+        lv4Timer=-20.0f;
+        lv5Timer=-20.0f;
+        lv6Timer=-20.0f;
+        lv7Timer=-20.0f;
     }
 }

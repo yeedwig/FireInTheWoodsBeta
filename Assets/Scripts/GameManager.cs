@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         pause=false;
         kills=0;
         irochiCount=0;
+        
     }
 
     // Update is called once per frame
@@ -119,7 +120,7 @@ public class GameManager : MonoBehaviour
         }
         else{
             pause=false;
-            Time.timeScale=1;
+            Time.timeScale=1.0f;
         }
     }
 
@@ -127,20 +128,15 @@ public class GameManager : MonoBehaviour
     private void changeLevel()
     {
         if(!cleared){
-            if(irochiCount<1){
+            if(irochiCount<2){
                 level=1;
             }
-            else if(irochiCount<3){
+            else if(irochiCount<8){
                 if(level!=2){
                     level=2;
                 }
             }
-            else if(irochiCount<5){
-                if(level!=3){
-                    level=3;
-                }
-            }
-            else if(irochiCount<10){
+            else if(irochiCount<15){
                 if(level!=3){
                     level=3;
                 }
