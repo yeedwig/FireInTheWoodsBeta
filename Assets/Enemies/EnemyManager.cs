@@ -159,7 +159,7 @@ public class EnemyManager : MonoBehaviour
         lv6Timer+=Time.deltaTime;
         lv7Timer+=Time.deltaTime;
         if(level!=prevLevel){
-            //breakTime();
+            breakTime();
             prevLevel=level;
         } 
         if(level==1){
@@ -172,16 +172,16 @@ public class EnemyManager : MonoBehaviour
         }
 
         else if(level==3){
-            level1Gen(13.0f);
-            level2Gen(26.0f);
+            level1Gen(12.0f);
+            level2Gen(25.0f);
             level3Gen(20.0f);
         }
 
         else if(level==4){
-            level1Gen(13.0f);
-            level2Gen(26.0f);
-            level3Gen(25.0f);
-            level4Gen(50.0f);
+            level1Gen(10.0f);
+            level2Gen(25.0f);
+            level3Gen(18.0f);
+            level4Gen(40.0f);
         }
 
         /*else if(level==5){
@@ -218,12 +218,12 @@ public class EnemyManager : MonoBehaviour
         }
     }
     public void breakTime(){
-        lv1Timer=-20.0f;
-        lv2Timer=-20.0f;
-        lv3Timer=-20.0f;
-        lv4Timer=-20.0f;
-        lv5Timer=-20.0f;
-        lv6Timer=-20.0f;
-        lv7Timer=-20.0f;
+        lv1Timer=-100.0f;
+        lv2Timer=-100.0f;
+        lv3Timer=-100.0f;
+        lv4Timer=-100.0f;
+        lv5Timer=-100.0f;
+        lv6Timer=-100.0f;
+        lv7Timer=-100.0f;
     }
 }

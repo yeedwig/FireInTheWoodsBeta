@@ -56806,6 +56806,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2542578820738087045, guid: 74457068740a6f941a3c2c25ffe15ab8, type: 3}
+      propertyPath: startHP
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542578820738087045, guid: 74457068740a6f941a3c2c25ffe15ab8, type: 3}
       propertyPath: waitTime
       value: 10
       objectReference: {fileID: 0}

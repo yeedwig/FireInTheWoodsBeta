@@ -120,7 +120,13 @@ public class GameManager : MonoBehaviour
         }
         else{
             pause=false;
-            Time.timeScale=1.0f;
+            if(Input.GetKey(KeyCode.P)){
+                Time.timeScale=100.0f;
+            }
+            else{
+                Time.timeScale=1.0f;
+            }
+            
         }
     }
 
