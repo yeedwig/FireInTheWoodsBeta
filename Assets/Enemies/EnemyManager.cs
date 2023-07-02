@@ -89,18 +89,17 @@ public class EnemyManager : MonoBehaviour
             lv6Timer=0;
         }
     }
+    void level7Gen(float time){
+        if(lv7Timer>=time){
+            int pos = Random.Range(0,2);
+            enemy=Instantiate(TheEye,theEyeStartPosition[pos].transform.position,Quaternion.identity);
+            lv7Timer=0;
+        }
+    }
 
     
 
-
-    /*void level5Gen(float time){
-        if(lv5Timer>=time){
-            int pos = Random.Range(0,2);
-            enemy=Instantiate(TheEye,theEyeStartPosition[pos].transform.position,Quaternion.identity);
-            lv5Timer=0;
-        }
-    }
-    void level6Gen(float time){
+    /*void level6Gen(float time){
         if(lv6Timer>=time){
             int pos = Random.Range(0,2);
             enemy=Instantiate(TheAngel,theAngelStartPosition[pos].transform.position,Quaternion.identity);
@@ -152,7 +151,7 @@ public class EnemyManager : MonoBehaviour
         lv9Timer+=Time.deltaTime;
         if(level!=prevLevel){
             prevLevel=level;
-            
+            breakTime();
             
         } 
         if(level==1){
@@ -190,18 +189,18 @@ public class EnemyManager : MonoBehaviour
             level2Gen(20.0f);
             level3Gen(15.0f);
             level4Gen(30.0f);
-            level5Gen(20.0f);
-            level6Gen(25.0f);
+            level5Gen(25.0f);
+            level6Gen(20.0f);
         }
-        /*else if(level==7){
-            level1Gen(15.0f);
-            level2Gen(26.0f);
-            level3Gen(46.0f);
-            level4Gen(46.0f);
-            level5Gen(40.0f);
-            level6Gen(40.0f);
-            level7Gen(40.0f);
-        }*/
+        else if(level==8){
+            level1Gen(6.0f);
+            level2Gen(20.0f);
+            level3Gen(13.0f);
+            level4Gen(30.0f);
+            level5Gen(23.0f);
+            level6Gen(17.0f);
+            level7Gen(50.0f);
+        }
 
         //ending
         else if(level==-1){
@@ -210,5 +209,14 @@ public class EnemyManager : MonoBehaviour
                 lv1Timer=0;
             }
         }
+    }
+    public void breakTime(){
+        lv1Timer=0.0f;
+        lv2Timer=0.0f;
+        lv3Timer=0.0f;
+        lv4Timer=0.0f;
+        lv5Timer=0.0f;
+        lv6Timer=0.0f;
+        lv7Timer=0.0f;
     }
 }

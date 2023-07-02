@@ -38,7 +38,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Second());
+        //테스트 중
+        //StartCoroutine(Second());
         pause=false;
         kills=0;
         irochiCount=0;
@@ -261,11 +262,15 @@ public class GameManager : MonoBehaviour
     }
 
     public IEnumerator TimerForStage(){
+        int returnStage=stage;
         while(stageTimer>0){
             yield return new WaitForSeconds(1.0f);
             stageTimer--;
         }
-        stage++;
+        stage=0;
+        yield return new WaitForSeconds(300.0f);
+        stage=returnStage+1;
+
         
     }
 

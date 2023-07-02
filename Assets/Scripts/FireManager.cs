@@ -21,7 +21,7 @@ public class FireManager : MonoBehaviour
     public int count;
 
     [SerializeField] private GameObject barrier;
-    public int barrierLife = 5;
+    public int barrierLife = 0;
 
     [SerializeField] private GameObject execute;
 
@@ -75,7 +75,7 @@ public class FireManager : MonoBehaviour
                         GameObject.Find("GameManager").GetComponent<GameManager>().Heal(50.0f);
                     }
                     if(result=="addMaxHealth"&&itemCheck[6]){
-                        GameObject.Find("GameManager").GetComponent<GameManager>().addMaxHealth(25.0f);
+                        GameObject.Find("GameManager").GetComponent<GameManager>().addMaxHealth(20.0f);
                     }
                     if(result=="executeDamage"&&itemCheck[7]){
                         if(!execute.activeInHierarchy){
@@ -84,8 +84,12 @@ public class FireManager : MonoBehaviour
                         GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage+=5.0f;
                     }
                     if(result=="barrier"&&itemCheck[8]){
-                        barrier.SetActive(true);
-                        StartCoroutine(barrierControl());
+                        barrierLife+=5;
+                        if(!barrier.activeInHierarchy){
+                            barrier.SetActive(true);
+                            StartCoroutine(barrierControl());
+                        }
+                        
                     }
                     if(result=="invincible"&&itemCheck[9]){
                         StartCoroutine(GameObject.Find("GameManager").GetComponent<GameManager>().makeInvincible());
@@ -114,12 +118,10 @@ public class FireManager : MonoBehaviour
     }
 
     private IEnumerator barrierControl(){
-        while(barrierLife>=0){
+        while(barrierLife>0){
             yield return new WaitForSeconds(1.0f);
         }
         barrier.SetActive(false);
-        barrierLife=5;
-        
     }
 
 
