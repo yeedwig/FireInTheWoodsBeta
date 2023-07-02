@@ -23,6 +23,7 @@ public class FireManager : MonoBehaviour
     [SerializeField] private GameObject barrier;
     public int barrierLife = 5;
 
+    [SerializeField] private GameObject execute;
 
     // Start is called before the first frame update
     void Start()
@@ -71,13 +72,15 @@ public class FireManager : MonoBehaviour
 
                     //불 관련
                     if(result=="addHealth"&&itemCheck[5]){
-                        Debug.Log("added");
                         GameObject.Find("GameManager").GetComponent<GameManager>().Heal(50.0f);
                     }
                     if(result=="addMaxHealth"&&itemCheck[6]){
                         GameObject.Find("GameManager").GetComponent<GameManager>().addMaxHealth(50.0f);
                     }
                     if(result=="executeDamage"&&itemCheck[7]){
+                        if(!execute.activeInHierarchy){
+                            execute.SetActive(true);
+                        }
                         GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage+=10.0f;
                     }
                     if(result=="barrier"&&itemCheck[8]){

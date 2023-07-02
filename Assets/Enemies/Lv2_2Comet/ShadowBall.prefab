@@ -126,6 +126,8 @@ MonoBehaviour:
   attackDamage: 5
   dirX: 1
   dirY: -1
+  clip: {fileID: 8300000, guid: 95ccc9808ac93104792f74a6baeee04d, type: 3}
+  clip1: {fileID: 8300000, guid: d80cfcfeced997540a09555f94b33698, type: 3}
 --- !u!50 &437876383267614835
 Rigidbody2D:
   serializedVersion: 4

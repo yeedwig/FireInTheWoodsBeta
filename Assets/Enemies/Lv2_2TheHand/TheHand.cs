@@ -46,11 +46,14 @@ public class TheHand : MonoBehaviour
         mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
     }
 
-    public void Damage(float damage)
+    public void Damage(float damage,bool check=true)
     {
-        health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
-        
-        
+        if(check){
+            health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
+        }
+        else{
+            health -=damage;
+        }
         if(health > 0)
         {
             SoundManager.instance.SFXPlay("EnemyHitSound",clip);
@@ -59,9 +62,11 @@ public class TheHand : MonoBehaviour
         }
         else if(health <= 0)
         {
-            SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
             anim.SetBool("Dead", true);
-            if(!Dead) GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            if(!Dead){
+                SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
+                GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            } 
             Dead = true;
             this.GetComponent<BoxCollider2D>().enabled = false;
             Destroy(this.gameObject,2.0f);

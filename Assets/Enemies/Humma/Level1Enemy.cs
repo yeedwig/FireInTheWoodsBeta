@@ -65,9 +65,11 @@ public class Level1Enemy : MonoBehaviour
         }
         else if(health <= 0)
         {
-            SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
             anim.SetBool("Dead", true);
-            if(!Dead) GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            if(!Dead){
+                SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
+                GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            } 
             Dead = true;
             attackDamage = 0;
             Destroy(this.gameObject,2.0f);

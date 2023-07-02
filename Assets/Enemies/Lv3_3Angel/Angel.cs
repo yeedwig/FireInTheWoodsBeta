@@ -31,6 +31,9 @@ public class Angel : MonoBehaviour
     [SerializeField] private GameObject mainCharacterGO;
     private MainCharacter mainCharacter;
 
+    public AudioClip clip;
+    public AudioClip clip1;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -57,6 +60,7 @@ public class Angel : MonoBehaviour
         
             if(health > 0)
             {
+                SoundManager.instance.SFXPlay("EnemyHitSound",clip);
                 anim.SetBool("Dead", false);
                 StartCoroutine(damagedAnimation());
             }
@@ -64,7 +68,10 @@ public class Angel : MonoBehaviour
             else if(health <= 0)
             {
                 anim.SetBool("Dead", true);
-                if(!Dead) GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+                if(!Dead){
+                    SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
+                    GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+                } 
                 Dead = true;
                 attackDamage = 0;
                 Destroy(this.gameObject,2.0f);

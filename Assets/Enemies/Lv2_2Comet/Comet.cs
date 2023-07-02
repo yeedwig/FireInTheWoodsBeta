@@ -27,6 +27,10 @@ public class Comet : MonoBehaviour
     [SerializeField] private GameObject mainCharacterGO;
     private MainCharacter mainCharacter;
 
+    //사운드 관련
+    public AudioClip clip;
+    public AudioClip clip1;
+
 
     void Start()
     {
@@ -38,13 +42,17 @@ public class Comet : MonoBehaviour
         mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
     }
 
-    public void Damage(float damage)
+    public void Damage(float damage,bool check=true)
     {
-        health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
-        
-        
+        if(check){
+            health -= (damage+mainCharacter.plusDamageByAnimalContract+mainCharacter.plusDamageByItem);
+        }
+        else{
+            health -=damage;
+        }
         if(health > 0)
         {
+            SoundManager.instance.SFXPlay("EnemyHitSound",clip);
             anim.SetBool("Dead", false);
             StartCoroutine(damagedAnimation());
             //anim.SetBool("Attacked", false);
@@ -52,7 +60,10 @@ public class Comet : MonoBehaviour
         else if(health <= 0)
         {
             anim.SetBool("Dead", true);
-            if(!Dead) GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            if(!Dead){
+                SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
+                GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            } 
             Dead = true;
             Destroy(this.gameObject,2.0f);
         }

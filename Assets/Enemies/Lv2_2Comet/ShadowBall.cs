@@ -9,11 +9,14 @@ public class ShadowBall : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float lifeTime;
     [SerializeField] private float attackDamage = 5;
-    private float health = 5.0f;
+    private float health = 20.0f;
     private Animator anim;
 
     public float dirX;
     public float dirY;
+
+    public AudioClip clip;
+    public AudioClip clip1;
 
     
     // Start is called before the first frame update

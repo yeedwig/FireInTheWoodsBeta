@@ -39,7 +39,13 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public void SetSlotCount(int _count)
     {
         itemCount += _count;
-        text_Count.text = itemCount.ToString();
+        if(itemCount<=99){
+            text_Count.text = itemCount.ToString();
+        }
+        else{
+            text_Count.text="99";
+        }
+        
 
         if (itemCount <= 0)
             ClearSlot();

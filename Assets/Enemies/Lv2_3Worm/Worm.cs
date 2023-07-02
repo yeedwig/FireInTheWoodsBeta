@@ -37,6 +37,9 @@ public class Worm : MonoBehaviour
     [SerializeField] private GameObject mainCharacterGO;
     private MainCharacter mainCharacter;
 
+    public AudioClip clip;
+    public AudioClip clip1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +64,7 @@ public class Worm : MonoBehaviour
         
         if(health > 0)
         {
+            SoundManager.instance.SFXPlay("EnemyHitSound",clip);
             anim.SetBool("Dead", false);
             StartCoroutine(damagedAnimation());
             //anim.SetBool("Attacked", false);
@@ -68,7 +72,10 @@ public class Worm : MonoBehaviour
         else if(health <= 0)
         {
             anim.SetBool("Dead", true);
-            if(!Dead) GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            if(!Dead){
+                SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
+                GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+            } 
             Dead = true;
             attackDamage = 0;
             Destroy(this.gameObject,2.0f);
