@@ -49,7 +49,6 @@ public class MainCharacter : MonoBehaviour
     private float attackAppearTimer =  0f;
     private float attackWaitTimer = 0f;
     [SerializeField] private float attackWaitTime = 2.0f;
-    public float addDamage = 0.5f;
 
     //Shooting Attack
     [SerializeField] private GameObject bulletPrefab;
