@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public bool cleared = false; //클리어 여부
     public int irochiCount;
 
+    
+
     //일시정지 했는지 확인
     public bool pause = false;
     [SerializeField] public GameObject inventory;
@@ -28,6 +30,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text killCount;
 
     public GameObject gameEnd;
+
+    public int stageTimer = 300;
+    public bool defenseStage=false;
+    public int stage=0;
 
     // Start is called before the first frame update
     void Start()
@@ -134,29 +140,68 @@ public class GameManager : MonoBehaviour
     private void changeLevel()
     {
         if(!cleared){
-            if(irochiCount<2){
-                level=1;
-            }
-            else if(irochiCount<8){
-                if(level!=2){
-                    level=2;
+            if(!defenseStage){
+                if(irochiCount<2){
+                    level=1;
+                }
+                else if(irochiCount<8){
+                    if(level!=2){
+                        level=2;
+                    }
+                }
+                else if(irochiCount<15){
+                    if(level!=3){
+                        level=3;
+                    }
+                }
+                else if(irochiCount<19){
+                    if(level!=4){
+                        level=4;
+                    }
+                }
+                else if(irochiCount==19){
+                    SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
+                    defenseStage=true;
                 }
             }
-            else if(irochiCount<15){
-                if(level!=3){
-                    level=3;
+            else{
+                if(stage==0){
+                    if(level!=5){
+                        level=5;
+                    }
+                    if(Input.GetKeyDown(KeyCode.O)) stage++;
+                }
+                else if(stage==1){
+                    if(level!=6){
+                        level=6;
+                        stageTimer=300;
+                        StartCoroutine(TimerForStage());
+                    }
+                }
+                else if(stage==2){
+                    if(level!=7){
+                        level=7;
+                        stageTimer=300;
+                        StartCoroutine(TimerForStage());
+                    }
+                }
+                else if(stage==3){
+                    if(level!=8){
+                        level=8;
+                        stageTimer=300;
+                        StartCoroutine(TimerForStage());
+                    }
+                }
+                else if(stage==4){
+                    if(level!=9){
+                        level=9;
+                        stageTimer=300;
+                        StartCoroutine(TimerForStage());
+                    }
                 }
             }
-            else if(irochiCount<19){
-                if(level!=4){
-                    level=4;
-                }
-            }
-            else if(irochiCount==19){
-                if(level!=5){
-                    level=5;
-                }
-            }
+            
+            
             /*if(kills<20)
             {
                 level=1;
@@ -183,7 +228,7 @@ public class GameManager : MonoBehaviour
             {
                 if(level!=5){
                     level=5;
-                    SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
+                    
                 }
             }
 
@@ -211,11 +256,16 @@ public class GameManager : MonoBehaviour
             if(!dead){
                 dead=true;
                 gameEnd.GetComponent<GameEndManager>().GameClearedStart();
-            }
-            
+            } 
+        }  
+    }
+
+    public IEnumerator TimerForStage(){
+        while(stageTimer>0){
+            yield return new WaitForSeconds(1.0f);
+            stageTimer--;
         }
-        
-        
+        stage++;
         
     }
 

@@ -8,8 +8,8 @@ public class ShadowBall : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float lifeTime;
-    [SerializeField] private float attackDamage = 5;
-    private float health = 20.0f;
+    [SerializeField] private float attackDamage = 10;
+    private float health = 50.0f;
     private Animator anim;
 
     public float dirX;

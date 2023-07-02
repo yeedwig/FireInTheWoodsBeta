@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
     private float fearTimer;
     
     [SerializeField] GameObject[] startPosition;
-    private float lv1Timer=0,lv2Timer=0,lv3Timer=0,lv4Timer=0,lv5Timer=0,lv6Timer=0,lv7Timer=0;
+    private float lv1Timer=0,lv2Timer=0,lv3Timer=0,lv4Timer=0,lv5Timer=0,lv6Timer=0,lv7Timer=0,lv8Timer=0,lv9Timer=0,lv10Timer=0;
 
 
     [SerializeField] GameObject endingHumma;
@@ -72,38 +72,28 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    /*void level3Gen(float time){
-        if(lv3Timer>=time){
-            int select = Random.Range(0,2);
-            if(select==0)
-            {
-                enemy=Instantiate(level3Enemies[0],TheHandStartPosition[Random.Range(0,4)].transform.position,Quaternion.identity);
+    void level5Gen(float time){
+        if(lv5Timer>=time){
+            int pos = Random.Range(0,4);
+            enemy=Instantiate(level4Enemies[0],wormStartPosition[pos].transform.position,Quaternion.identity);
+            if(pos>=2){
+                enemy.GetComponent<SpriteRenderer>().flipX = true;
             }
-            else{
-                enemy=Instantiate(level3Enemies[1],cometStartPosition.transform.position,Quaternion.identity);
-            }
-            lv3Timer=0;
-        }
-    }
-    void level4Gen(float time){
-        if(lv4Timer>=time){
-            int select = Random.Range(0,2);
-            if(select==0)
-            {
-                int pos = Random.Range(0,4);
-                enemy=Instantiate(level4Enemies[0],wormStartPosition[pos].transform.position,Quaternion.identity);
-                if(pos>=2){
-                    enemy.GetComponent<SpriteRenderer>().flipX = true;
-                }
-            }
-            else{
-                enemy=Instantiate(level4Enemies[1],goblinStartPosition.transform.position,Quaternion.identity);
-            }
-            lv4Timer=0;
+            lv5Timer=0;
         }
     }
 
-    void level5Gen(float time){
+    void level6Gen(float time){
+        if(lv6Timer>=time){
+            enemy=Instantiate(level4Enemies[1],goblinStartPosition.transform.position,Quaternion.identity);
+            lv6Timer=0;
+        }
+    }
+
+    
+
+
+    /*void level5Gen(float time){
         if(lv5Timer>=time){
             int pos = Random.Range(0,2);
             enemy=Instantiate(TheEye,theEyeStartPosition[pos].transform.position,Quaternion.identity);
@@ -158,9 +148,12 @@ public class EnemyManager : MonoBehaviour
         lv5Timer+=Time.deltaTime;
         lv6Timer+=Time.deltaTime;
         lv7Timer+=Time.deltaTime;
+        lv8Timer+=Time.deltaTime;
+        lv9Timer+=Time.deltaTime;
         if(level!=prevLevel){
-            breakTime();
             prevLevel=level;
+            
+            
         } 
         if(level==1){
             level1Gen(11.0f);
@@ -183,23 +176,24 @@ public class EnemyManager : MonoBehaviour
             level3Gen(18.0f);
             level4Gen(40.0f);
         }
+        //레벨 5는 저장 및 대기 시간용
 
-        /*else if(level==5){
-            level1Gen(15.0f);
-            level2Gen(26.0f);
-            level3Gen(42.0f);
-            level4Gen(42.0f);
-            level5Gen(30.0f);
-        }
         else if(level==6){
-            level1Gen(15.0f);
-            level2Gen(26.0f);
-            level3Gen(44.0f);
-            level4Gen(44.0f);
-            level5Gen(32.0f);
-            level6Gen(32.0f);
+            level1Gen(7.0f);
+            level2Gen(20.0f);
+            level3Gen(15.0f);
+            level4Gen(30.0f);
+            level5Gen(20.0f);
         }
         else if(level==7){
+            level1Gen(7.0f);
+            level2Gen(20.0f);
+            level3Gen(15.0f);
+            level4Gen(30.0f);
+            level5Gen(20.0f);
+            level6Gen(25.0f);
+        }
+        /*else if(level==7){
             level1Gen(15.0f);
             level2Gen(26.0f);
             level3Gen(46.0f);
@@ -216,14 +210,5 @@ public class EnemyManager : MonoBehaviour
                 lv1Timer=0;
             }
         }
-    }
-    public void breakTime(){
-        lv1Timer=-100.0f;
-        lv2Timer=-100.0f;
-        lv3Timer=-100.0f;
-        lv4Timer=-100.0f;
-        lv5Timer=-100.0f;
-        lv6Timer=-100.0f;
-        lv7Timer=-100.0f;
     }
 }

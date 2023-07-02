@@ -75,13 +75,13 @@ public class FireManager : MonoBehaviour
                         GameObject.Find("GameManager").GetComponent<GameManager>().Heal(50.0f);
                     }
                     if(result=="addMaxHealth"&&itemCheck[6]){
-                        GameObject.Find("GameManager").GetComponent<GameManager>().addMaxHealth(50.0f);
+                        GameObject.Find("GameManager").GetComponent<GameManager>().addMaxHealth(25.0f);
                     }
                     if(result=="executeDamage"&&itemCheck[7]){
                         if(!execute.activeInHierarchy){
                             execute.SetActive(true);
                         }
-                        GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage+=10.0f;
+                        GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage+=5.0f;
                     }
                     if(result=="barrier"&&itemCheck[8]){
                         barrier.SetActive(true);

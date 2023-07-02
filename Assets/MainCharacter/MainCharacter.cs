@@ -487,10 +487,10 @@ public class MainCharacter : MonoBehaviour
     IEnumerator autoHeal(){
                 while(currentAnimalMode==2||currentAnimalMode==4){
                     if(currentAnimalMode==2){
-                        GameObject.Find("GameManager").GetComponent<GameManager>().Heal(5.0f);
+                        GameObject.Find("GameManager").GetComponent<GameManager>().Heal(10.0f);
                     }
                     else{
-                        GameObject.Find("GameManager").GetComponent<GameManager>().Heal(3.0f);
+                        GameObject.Find("GameManager").GetComponent<GameManager>().Heal(5.0f);
                     }
                     yield return new WaitForSeconds(1.0f);
                 }
