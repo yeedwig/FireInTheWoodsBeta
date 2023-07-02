@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 //최적화 최종으로 완료
 public class GameStart : MonoBehaviour
@@ -33,7 +34,15 @@ public class GameStart : MonoBehaviour
     //하던 게임 시작
     public void onLoadClick(){
         newGame=false;
-        SceneManager.LoadScene("Loading");
+        string path = Application.dataPath+"/GameData/"+"GameManager"+".json";
+        FileInfo fi = new FileInfo(path);
+        if(!fi.Exists){
+            Debug.Log("없습니다");
+        }
+        else{
+            SceneManager.LoadScene("Loading");
+        }
+        
     }
 
     //게임 종료

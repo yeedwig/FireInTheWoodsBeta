@@ -38,7 +38,7 @@ public class MainCharacter : MonoBehaviour
     private float takePictureTimer = 0f;
 
     //Attack
-    [SerializeField] int attackType = -1;
+    public int attackType = -1;
     [SerializeField] GameObject[] LeftBackAttackAreas;
     [SerializeField] GameObject[] RightBackAttackAreas;
     [SerializeField] GameObject[] LeftFrontAttackAreas;
@@ -58,7 +58,7 @@ public class MainCharacter : MonoBehaviour
     [SerializeField] private GameObject tornadoAttack;
 
     //Animal Mode
-    [SerializeField] private int animalMode = -1;
+    public int animalMode = -1;
     [SerializeField] private GameObject[] animalModes;
     public int currentAnimalMode = -1;
     private bool autoHealOn = false;

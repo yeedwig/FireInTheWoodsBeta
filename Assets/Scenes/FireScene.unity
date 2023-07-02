@@ -2067,7 +2067,6 @@ MonoBehaviour:
   - {fileID: 2069109196}
   attackAppearTime: 0.25
   attackWaitTime: 0
-  addDamage: 0.5
   bulletPrefab: {fileID: 1477713611191340297, guid: 65ceb6c2cdfff8447bfa90bdd36ee1f1, type: 3}
   firePosition:
   - {fileID: 2125649841}

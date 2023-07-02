@@ -52,7 +52,7 @@ public class SaveAndLoad : MonoBehaviour
     public void Save()
     {
         StartCoroutine(SaveGameManager());
-        //StartCoroutine(SaveMainCharacter()); 
+        StartCoroutine(SaveMainCharacter()); 
         StartCoroutine(SaveItems());
     }
 
@@ -63,14 +63,21 @@ public class SaveAndLoad : MonoBehaviour
         File.WriteAllText(path,json);
         yield return null;
     }
-
-    /*IEnumerator SaveMainCharacter(){
-        string json = JsonUtility.ToJson(mc);
+    public class playerData
+    {
+        public int attackType;
+        public int animalMode;
+    }
+    IEnumerator SaveMainCharacter(){
+        playerData forSave = new playerData();
+        forSave.attackType=mc.attackType;
+        forSave.animalMode=mc.currentAnimalMode;
+        string json = JsonUtility.ToJson(forSave);
         string fileName="MainCharacter";
         string path = Application.dataPath + "/GameData/" + fileName + ".Json";
         File.WriteAllText(path,json);
         yield return null;
-    }*/
+    }
     public class itemData
     {
         public string name;
@@ -79,12 +86,14 @@ public class SaveAndLoad : MonoBehaviour
     IEnumerator SaveItems(){
         for(int i=0;i<items.Length;i++){
             itemData forSave = new itemData();
-            forSave.name=items[i].GetComponent<Slot>().item.itemName;
-            forSave.itemNum=items[i].GetComponent<Slot>().itemCount;
-            string json = JsonUtility.ToJson(forSave);
-            string fileName="Slot"+i.ToString();
-            string path = Application.dataPath + "/GameData/" + fileName + ".Json";
-            File.WriteAllText(path,json);  
+            if(items[i].GetComponent<Slot>().item!=null){
+                forSave.name=items[i].GetComponent<Slot>().item.itemName;
+                forSave.itemNum=items[i].GetComponent<Slot>().itemCount;
+                string json = JsonUtility.ToJson(forSave);
+                string fileName="Slot"+i.ToString();
+                string path = Application.dataPath + "/GameData/" + fileName + ".Json";
+                File.WriteAllText(path,json);  
+            }
         }
         yield return null;
     }
@@ -93,7 +102,7 @@ public class SaveAndLoad : MonoBehaviour
     {
         StartCoroutine(LoadAnimals());
         StartCoroutine(LoadGameManager());
-        //StartCoroutine(LoadMainCharacter());
+        StartCoroutine(LoadMainCharacter());
         StartCoroutine(LoadItemBook());
         StartCoroutine(LoadItems());
     }
@@ -124,14 +133,18 @@ public class SaveAndLoad : MonoBehaviour
         yield return null;
     }
 
-    /*IEnumerator LoadMainCharacter(){
+    IEnumerator LoadMainCharacter(){
         string path = Application.dataPath+"/GameData/"+"MainCharacter"+".json";
         string json = File.ReadAllText(path);
-        mcTemp=new MainCharacter();
-        JsonUtility.FromJsonOverwrite(json,mcTemp);
-        mc.cameraMode=mcTemp.cameraMode;
+        playerData forLoad = new playerData();
+        JsonUtility.FromJsonOverwrite(json,forLoad);
+        mc.attackType=forLoad.attackType;
+        mc.changeAnimalMode(forLoad.animalMode);
+        mc.plusDamageByItem=50.0f;
+        mc.plusSpeedByItem=3.0f;
+        mc.plusAttackSpeedByItem=-0.1f;
         yield return null;
-    }*/
+    }
 
     IEnumerator LoadItemBook(){
         for(int i=0;i<15;i++){
