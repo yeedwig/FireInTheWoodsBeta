@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public int stageTimer = 300;
     public bool defenseStage=false;
     public int stage=0;
+    [SerializeField] private Text timer;
 
     // Start is called before the first frame update
     void Start()
@@ -200,57 +201,21 @@ public class GameManager : MonoBehaviour
                         StartCoroutine(TimerForStage());
                     }
                 }
-            }
-            
-            
-            /*if(kills<20)
-            {
-                level=1;
-            }
-            else if(kills<50)
-            {
-                if(level!=2){
-                    level=2;
+                else if(stage==5){
+                    if(level!=10){
+                        level=10;
+                        stageTimer=300;
+                        StartCoroutine(TimerForStage());
+                    }
+                }
+                else if(stage==6){
+                    if(level!=11){
+                        level=11;
+                        //보스 체력바 공개
+                        
+                    }
                 }
             }
-            else if(kills<80)
-            {
-                if(level!=3){
-                    level=3;
-                }
-            }
-            else if(kills<100)
-            {
-                if(level!=4){
-                    level=4;
-                }
-            }
-            else if(kills<90)
-            {
-                if(level!=5){
-                    level=5;
-                    
-                }
-            }
-
-            else if(kills<110)
-            {
-                if(level!=6){
-                    level=6;
-                }
-            }
-            else if(kills<130)
-            {
-                if(level!=7){
-                    level=7;
-                }
-            }
-            else{
-                if(level!=8){
-                    level=8;
-                    SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[2]);
-                }
-            }*/
         }
         else{
             level=-1;
@@ -264,11 +229,18 @@ public class GameManager : MonoBehaviour
     public IEnumerator TimerForStage(){
         int returnStage=stage;
         while(stageTimer>0){
+            timer.text="<color=#ff0000>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
             yield return new WaitForSeconds(1.0f);
             stageTimer--;
         }
+        
         stage=0;
-        yield return new WaitForSeconds(300.0f);
+        stageTimer=180;
+        while(stageTimer>0){
+            timer.text="<color=#0000ff>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
+            yield return new WaitForSeconds(1.0f);
+            stageTimer--;
+        }
         stage=returnStage+1;
 
         

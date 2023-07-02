@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     private GameObject enemy;
+    private GameObject fearEnemy;
     [SerializeField] GameObject humma1;
     [SerializeField] GameObject[] level2Enemies;
     [SerializeField] GameObject[] level3Enemies;
@@ -96,45 +97,44 @@ public class EnemyManager : MonoBehaviour
             lv7Timer=0;
         }
     }
-
-    
-
-    /*void level6Gen(float time){
-        if(lv6Timer>=time){
+    void level8Gen(float time){
+        if(lv8Timer>=time){
             int pos = Random.Range(0,2);
             enemy=Instantiate(TheAngel,theAngelStartPosition[pos].transform.position,Quaternion.identity);
             if(pos==0){
                 enemy.GetComponent<SpriteRenderer>().flipX = true;
             }
-            lv6Timer=0;
+            lv8Timer=0;
         }
     }
-    void level7Gen(float time){
-        if(lv7Timer>=time){
+    void level9Gen(float time){
+        if(lv9Timer>=time){
+            
             if(theFearAlive==0){
-                enemy=Instantiate(TheFear,theFearPosition[Random.Range(0,6)].transform.position,Quaternion.identity);
+                fearEnemy=Instantiate(TheFear,theFearPosition[Random.Range(0,6)].transform.position,Quaternion.identity);
                 theFearAlive=1; 
             }
             else if(theFearAlive==1){
                 fearTimer+=Time.deltaTime;
                 if(fearTimer>4.0f&&fearTimer<5.0f){
-                    enemy.SetActive(false);
+                    fearEnemy.SetActive(false);
                     
                 }
                 else if(fearTimer>=5.0f){
                     fearTimer=0;
-                    enemy.SetActive(true);
-                    enemy.transform.position=theFearPosition[Random.Range(0,6)].transform.position;
+                    fearEnemy.SetActive(true);
+                    fearEnemy.transform.position=theFearPosition[Random.Range(0,5)].transform.position;
                 }
             }
-
-            if(enemy.GetComponent<TheFear>()!=null&&enemy.GetComponent<TheFear>().Dead==true){
+            if(fearEnemy.GetComponent<TheFear>()!=null&&fearEnemy.GetComponent<TheFear>().Dead==true){
                   theFearAlive=0;
-                  lv7Timer=0;
+                  lv9Timer=0;
                   fearTimer=0;  
             }
         }
-    }*/
+    }
+
+    
     // Update is called once per frame
     void Update()
     {
@@ -201,7 +201,31 @@ public class EnemyManager : MonoBehaviour
             level6Gen(17.0f);
             level7Gen(50.0f);
         }
-
+        else if(level==9){
+            level1Gen(6.0f);
+            level2Gen(20.0f);
+            level3Gen(13.0f);
+            level4Gen(30.0f);
+            level5Gen(23.0f);
+            level6Gen(17.0f);
+            level7Gen(40.0f);
+            level8Gen(20.0f);
+        }
+        else if(level==10){
+            level1Gen(6.0f);
+            level2Gen(19.0f);
+            level3Gen(15.0f);
+            level4Gen(35.0f);
+            level5Gen(25.0f);
+            level6Gen(20.0f);
+            level7Gen(45.0f);
+            level8Gen(25.0f);
+            level9Gen(40.0f);
+        }
+        else if(level==11){
+            //boss 구현
+            //클리어하면 gameManager의 cleared 변수 true로 수정
+        }
         //ending
         else if(level==-1){
             if(lv1Timer>0.1f){
@@ -218,5 +242,7 @@ public class EnemyManager : MonoBehaviour
         lv5Timer=0.0f;
         lv6Timer=0.0f;
         lv7Timer=0.0f;
+        lv8Timer=0.0f;
+        lv9Timer=0.0f;
     }
 }
