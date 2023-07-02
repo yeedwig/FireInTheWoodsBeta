@@ -36,11 +36,17 @@ public class GameManager : MonoBehaviour
     public int stage=0;
     [SerializeField] private Text timer;
 
+    //레벨5
+    public GameObject saveload;
+    public GameObject saveAlarm;
+    public Text saveText;
+
+    public bool autoFireDamage=true;
+
     // Start is called before the first frame update
     void Start()
     {
-        //테스트 중
-        //StartCoroutine(Second());
+        StartCoroutine(Second());
         pause=false;
         kills=0;
         irochiCount=0;
@@ -59,7 +65,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator Second(){
-        while(true){
+        while(autoFireDamage){
             yield return new WaitForSeconds(1.0f);
             takeDamage(1.0f);
         }
@@ -162,7 +168,6 @@ public class GameManager : MonoBehaviour
                     }
                 }
                 else if(irochiCount==19){
-                    SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
                     defenseStage=true;
                 }
             }
@@ -170,8 +175,9 @@ public class GameManager : MonoBehaviour
                 if(stage==0){
                     if(level!=5){
                         level=5;
+                        StartCoroutine(level5());
                     }
-                    if(Input.GetKeyDown(KeyCode.O)) stage++;
+                    
                 }
                 else if(stage==1){
                     if(level!=6){
@@ -226,6 +232,37 @@ public class GameManager : MonoBehaviour
         }  
     }
 
+    public IEnumerator level5(){
+        if(GameStart.newGame){
+            yield return new WaitForSeconds(30.0f);
+            saveAlarm.SetActive(true);
+            saveText.text="도감을 다 모으셨습니다. 밑에 확인 버튼을 누른 뒤 30초 후 모든 아이템들과 현재 상태가 저장됩니다. 이후 스테이지에서 탈락하거나 시작화면서 load할때 해당 상태에서 시작합니다. 바닥에 남아있는 아이템들을 다 먹어주시고 아이템 조합은 유지되는 스텟에만 해주세요! 무기 조합등은 저장 후 하시는 것이 좋답니다.";
+            while(saveAlarm.activeInHierarchy){
+                yield return new WaitForSeconds(1.0f);
+            }
+            stageTimer=30;
+            while(stageTimer>0){
+                timer.text="<color=#0000ff>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
+                yield return new WaitForSeconds(1.0f);
+                stageTimer--;
+            }
+            saveload.GetComponent<SaveAndLoad>().Save();
+        }
+        saveAlarm.SetActive(true);
+        saveText.text="취향에 맞는 무기를 사용하고 원하는 동물 정령과 계약하세요! 추가적으로 배리어와 ?? 등은 필요한 스테이지에 사용하시면 됩니다!";
+        while(saveAlarm.activeInHierarchy){
+            yield return new WaitForSeconds(1.0f);
+        }
+        stageTimer=120;
+        while(stageTimer>0){
+            timer.text="<color=#0000ff>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
+            yield return new WaitForSeconds(1.0f);
+            stageTimer--;
+        }
+        SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
+        stage++;
+    }
+    
     public IEnumerator TimerForStage(){
         int returnStage=stage;
         while(stageTimer>0){
@@ -242,9 +279,10 @@ public class GameManager : MonoBehaviour
             stageTimer--;
         }
         stage=returnStage+1;
-
-        
     }
 
+    public void onClickClose(){
+        saveAlarm.SetActive(false);
+    }
 
 }

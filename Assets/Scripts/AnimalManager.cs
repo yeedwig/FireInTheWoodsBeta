@@ -29,6 +29,8 @@ public class AnimalManager : MonoBehaviour
     public MainCharacter mainCharacter;
     public GameObject camera;
 
+    public GameObject gameManager;
+
     void Start(){
         timeDelay=10;
         mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
@@ -131,7 +133,7 @@ public class AnimalManager : MonoBehaviour
                 break;
             
             case("WartHog"):
-                mainCharacter.plusDamageByItem+=25;
+                mainCharacter.plusDamageByItem+=50;
                 break;
 
             case("Owl"):
@@ -159,7 +161,7 @@ public class AnimalManager : MonoBehaviour
                 break;
             
             case("Wolf"):
-                mainCharacter.plusDamageByItem+=25;
+                gameManager.GetComponent<GameManager>().autoFireDamage=false;
                 break;
 
             case("Fox"):

@@ -47,6 +47,7 @@ public class GameEndManager : MonoBehaviour
     }
 
     public void onClickRetry(){
+        GameStart.newGame=false;
         SceneManager.LoadScene("Loading");
     }
 

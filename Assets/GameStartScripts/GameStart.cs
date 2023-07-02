@@ -33,13 +33,14 @@ public class GameStart : MonoBehaviour
 
     //하던 게임 시작
     public void onLoadClick(){
-        newGame=false;
+        
         string path = Application.dataPath+"/GameData/"+"GameManager"+".json";
         FileInfo fi = new FileInfo(path);
         if(!fi.Exists){
             Debug.Log("없습니다");
         }
         else{
+            newGame=false;
             SceneManager.LoadScene("Loading");
         }
         

@@ -44,7 +44,6 @@ public class SaveAndLoad : MonoBehaviour
             itemDic.Add(itemArray[i].itemName,itemArray[i]);
         }
         if(!GameStart.newGame){
-            GameStart.newGame=true;
             Load();
         }
     }
@@ -85,13 +84,14 @@ public class SaveAndLoad : MonoBehaviour
     }
     IEnumerator SaveItems(){
         for(int i=0;i<items.Length;i++){
+            string fileName="Slot"+i.ToString();
+            string path = Application.dataPath + "/GameData/" + fileName + ".Json";
+            File.Delete(path);
             itemData forSave = new itemData();
             if(items[i].GetComponent<Slot>().item!=null){
                 forSave.name=items[i].GetComponent<Slot>().item.itemName;
                 forSave.itemNum=items[i].GetComponent<Slot>().itemCount;
                 string json = JsonUtility.ToJson(forSave);
-                string fileName="Slot"+i.ToString();
-                string path = Application.dataPath + "/GameData/" + fileName + ".Json";
                 File.WriteAllText(path,json);  
             }
         }
@@ -123,13 +123,14 @@ public class SaveAndLoad : MonoBehaviour
         JsonUtility.FromJsonOverwrite(json,gmTemp);
         gm.health=gmTemp.maxHealth;
         gm.kills=gmTemp.kills;
-        gm.level=5;
+        gm.stage=0;
         gm.maxHealth=gmTemp.maxHealth;
         gm.executeDamage=gmTemp.executeDamage;
         gm.invincible=false;
         gm.pause=false;
         gm.irochiCount=19;
         gm.defenseStage=true;
+        gm.autoFireDamage=false;
         yield return null;
     }
 
@@ -156,12 +157,16 @@ public class SaveAndLoad : MonoBehaviour
     IEnumerator LoadItems(){
         for(int i=0;i<items.Length;i++){
             string path = Application.dataPath+"/GameData/"+"Slot"+i.ToString()+".json";
-            string json = File.ReadAllText(path);
-            itemData forLoad = new itemData();
-            JsonUtility.FromJsonOverwrite(json,forLoad);
-            Debug.Log(forLoad.name);
-            Debug.Log(forLoad.itemNum);
-            items[i].GetComponent<Slot>().AddItem(itemDic[forLoad.name],forLoad.itemNum);
+            FileInfo fi = new FileInfo(path);
+            if(fi.Exists){
+                string json = File.ReadAllText(path);
+                itemData forLoad = new itemData();
+                JsonUtility.FromJsonOverwrite(json,forLoad);
+                Debug.Log(forLoad.name);
+                Debug.Log(forLoad.itemNum);
+                items[i].GetComponent<Slot>().AddItem(itemDic[forLoad.name],forLoad.itemNum);
+            }
+            
         }
         yield return null;
     }
