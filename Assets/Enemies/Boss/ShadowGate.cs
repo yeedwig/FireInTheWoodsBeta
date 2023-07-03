@@ -7,6 +7,7 @@ public class ShadowGate : MonoBehaviour
     [SerializeField] private GameObject Boss;
     [SerializeField] private GameObject soldierPrefab;
     [SerializeField] private Transform firePosition;
+
     public bool Dead = false;
     private Animator anim;
     private BoxCollider2D bc;
@@ -69,6 +70,7 @@ public class ShadowGate : MonoBehaviour
             if(!Dead){
                 SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
                 GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+                Boss.GetComponent<Boss>().DamageBoss(1000);
             } 
             Dead = true;
             //보스에 공격 가하기

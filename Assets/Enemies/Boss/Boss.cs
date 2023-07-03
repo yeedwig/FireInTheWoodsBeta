@@ -4,15 +4,107 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    [SerializeField] private GameObject[] ShadowGatesPrefab;
+    [SerializeField] private Transform[] GatePosition;
+    [SerializeField] private float BossMAXHP = 10000;
+    private float BossHP;
+
+    private bool gate1Instantiated = false;
+    private bool gate2Instantiated = false;
+    private bool gate3Instantiated = false;
+    private bool gate4Instantiated = false;
+    
+    private bool Angry;
+    private bool Damaged;
+    private Animator anim;
+    public GameObject GameManager;
+    private float Phase;
+
+    //Timer
+    private float phaseTime;
+    [SerializeField] private float phaseTimer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        BossHP = BossMAXHP;
+        Phase = 1;
+    }
+
+    public void DamageBoss(float Damage)
+    {
+        BossHP -= Damage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        /*
+        phaseTimer += 1;
+        if(phaseTimer > phaseTime)
+        {
+            if(Phase == 1)
+            {
+
+            }
+        }*/
+        Debug.Log(Phase);
+        Debug.Log(BossHP);
+
+        if(Phase == 1 && gate1Instantiated == false)
+        {
+            Instantiate(ShadowGatesPrefab[0], GatePosition[0].position, GatePosition[0].rotation);
+            gate1Instantiated = true;
+        }
+        if(BossHP == 9000 && Phase == 1)
+        {
+            anim.SetBool("Damaged", true);
+            Phase += 1;
+        }
+
+        if(Phase == 2 && gate2Instantiated == false)
+        {
+            Instantiate(ShadowGatesPrefab[0], GatePosition[0].position, GatePosition[0].rotation);
+            Instantiate(ShadowGatesPrefab[1], GatePosition[1].position, GatePosition[1].rotation);
+            gate2Instantiated = true;
+        }
+        if(BossHP == 7000 && Phase == 2)
+        {
+            anim.SetBool("Damaged", true);
+            Phase += 1;
+        }
+
+        if(Phase == 3 && gate3Instantiated == false)
+        {
+            Instantiate(ShadowGatesPrefab[0], GatePosition[0].position, GatePosition[0].rotation);
+            Instantiate(ShadowGatesPrefab[1], GatePosition[1].position, GatePosition[1].rotation);
+            Instantiate(ShadowGatesPrefab[2], GatePosition[2].position, GatePosition[2].rotation);
+            gate3Instantiated = true;
+        }
+        if(BossHP == 4000 && Phase == 3)
+        {
+            anim.SetBool("Damaged", true);
+            Phase += 1;
+        }
+
+        if(Phase == 4 && gate4Instantiated == false)
+        {
+            Instantiate(ShadowGatesPrefab[0], GatePosition[0].position, GatePosition[0].rotation);
+            Instantiate(ShadowGatesPrefab[1], GatePosition[1].position, GatePosition[1].rotation);
+            Instantiate(ShadowGatesPrefab[2], GatePosition[2].position, GatePosition[2].rotation);
+            Instantiate(ShadowGatesPrefab[3], GatePosition[3].position, GatePosition[3].rotation);
+            gate4Instantiated = true;
+        }
+        if(BossHP == 0 && Phase == 4)
+        {
+            anim.SetBool("Damaged", true);
+            Phase += 1;
+        }
+
+        if(Phase == 5)
+        {
+            //여기서 엔딩 구현
+        }
     }
 }
