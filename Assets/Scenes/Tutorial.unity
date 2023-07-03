@@ -459,7 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d804443b5b30ecb4287f10dc87e9209c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  realDamage: 0
+  mainCharacter: {fileID: 0}
 --- !u!1 &13897512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1606,6 @@ MonoBehaviour:
   - {fileID: 2069109196}
   attackAppearTime: 0.25
   attackWaitTime: 0
-  addDamage: 0.5
   bulletPrefab: {fileID: 1477713611191340297, guid: 65ceb6c2cdfff8447bfa90bdd36ee1f1, type: 3}
   firePosition:
   - {fileID: 2125649841}
@@ -1970,6 +1970,7 @@ MonoBehaviour:
   count: 0
   barrier: {fileID: 0}
   barrierLife: 5
+  execute: {fileID: 0}
 --- !u!114 &81113370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2984,6 +2985,14 @@ MonoBehaviour:
   soundSetting: {fileID: 275349866}
   killCount: {fileID: 1431608024}
   gameEnd: {fileID: 0}
+  stageTimer: 300
+  defenseStage: 0
+  stage: 0
+  timer: {fileID: 0}
+  saveload: {fileID: 0}
+  saveAlarm: {fileID: 0}
+  saveText: {fileID: 0}
+  autoFireDamage: 1
 --- !u!1 &162592161
 GameObject:
   m_ObjectHideFlags: 0
@@ -7598,7 +7607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.91, y: -373}
+  m_AnchoredPosition: {x: 3.91, y: -392}
   m_SizeDelta: {x: 1746.26, y: 154.78998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &466367527
@@ -9722,8 +9731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.375, y: 0.98498535}
-  m_SizeDelta: {x: 1926.75, y: 1078.0399}
+  m_AnchoredPosition: {x: -3.375, y: 41.74}
+  m_SizeDelta: {x: 1926.75, y: 1159.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649919767
 MonoBehaviour:
@@ -11460,8 +11469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 789.22, y: 461}
-  m_SizeDelta: {x: 243.11, y: 63.37}
+  m_AnchoredPosition: {x: 17, y: 421}
+  m_SizeDelta: {x: 330, y: 330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802903566
 MonoBehaviour:
@@ -11484,9 +11493,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -11539,8 +11548,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: aae7da0b3bca0bd409c8125b8ca57007, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -30548,8 +30557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 857, y: -430}
-  m_SizeDelta: {x: 19.543, y: 20.428}
+  m_AnchoredPosition: {x: 819.7, y: -427.2}
+  m_SizeDelta: {x: 130.69, y: 125.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748903460
 MonoBehaviour:
