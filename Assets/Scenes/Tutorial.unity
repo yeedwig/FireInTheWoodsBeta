@@ -4191,6 +4191,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -4903,6 +4907,10 @@ PrefabInstance:
     - target: {fileID: 870027178508542870, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8861,6 +8869,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -11485,7 +11497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -13540,6 +13552,10 @@ PrefabInstance:
     - target: {fileID: 870027178508542870, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
@@ -16902,6 +16918,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -18229,6 +18249,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -18619,6 +18643,10 @@ PrefabInstance:
     - target: {fileID: 870027178508542870, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
@@ -19038,6 +19066,10 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 153827343}
+    - target: {fileID: 8121947694105900525, guid: 3dab91488480a364ab5a8d4338cb1f5d, type: 3}
+      propertyPath: mainCharacterGO
+      value: 
+      objectReference: {fileID: 37344552}
     - target: {fileID: 8121947694105900525, guid: 3dab91488480a364ab5a8d4338cb1f5d, type: 3}
       propertyPath: towardsPathPoints.Array.data[0]
       value: 
@@ -21446,6 +21478,10 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 153827343}
+    - target: {fileID: 8121947694105900525, guid: 3dab91488480a364ab5a8d4338cb1f5d, type: 3}
+      propertyPath: mainCharacterGO
+      value: 
+      objectReference: {fileID: 37344552}
     - target: {fileID: 8121947694105900525, guid: 3dab91488480a364ab5a8d4338cb1f5d, type: 3}
       propertyPath: towardsPathPoints.Array.data[0]
       value: 
@@ -25651,6 +25687,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -29587,6 +29627,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -31671,6 +31715,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -32184,6 +32232,10 @@ PrefabInstance:
     - target: {fileID: 870027178508542870, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
@@ -35351,6 +35403,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -37109,6 +37165,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -37469,6 +37529,10 @@ PrefabInstance:
     - target: {fileID: 870027178508542870, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
@@ -38681,6 +38745,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870027178508542871, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2375074209383570313, guid: 7a6829f2ab0233c43b61dabc6591db57, type: 3}
       propertyPath: m_SizeDelta.x
       value: 7.288
@@ -38907,6 +38975,10 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 153827343}
+    - target: {fileID: 8121947694105900525, guid: 3dab91488480a364ab5a8d4338cb1f5d, type: 3}
+      propertyPath: mainCharacterGO
+      value: 
+      objectReference: {fileID: 37344552}
     - target: {fileID: 8121947694105900525, guid: 3dab91488480a364ab5a8d4338cb1f5d, type: 3}
       propertyPath: towardsPathPoints.Array.data[0]
       value: 
