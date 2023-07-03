@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TigerSpirit
+  m_Controller: {fileID: 9100000, guid: 380d67801c17642499988061e81530c9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ca8f100bee8865849841a30647c400b9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f9a5612adc5060d4faeacb4401b2fe89, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b6a30ad4cd3ef1940b90c11a4260642b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 83a083c4a1ab66f4884119b1073431e2, type: 2}
