@@ -43,7 +43,7 @@ public class AnimalManager : MonoBehaviour
 
 
         currTime +=Time.deltaTime; //시간 계산
-        if(currTime>timeDelay) //변경
+        if(currTime>timeDelay&&gameManager.GetComponent<GameManager>().level<6) //변경
         {
             //배열 안에서 ID를 구하고 해당 객체를 받아옴
             RandomAnimalID = Random.Range(0,animalsInNormal.Length);
