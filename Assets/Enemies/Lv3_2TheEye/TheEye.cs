@@ -88,17 +88,17 @@ public class TheEye : MonoBehaviour
             if(!Dead){
                 SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
                 GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+                canSee = true;
+                    
+                mainFireLight.GetComponent<LightFlicker>().maxIntensity = originalMainMaxIntensity;
+                mainFireLight.GetComponent<LightFlicker>().minIntensity = originalMainMinIntensity;
+                    
+                radiusFireLight.GetComponent<LightFlicker>().maxIntensity = originalRadMaxIntensity;
+                radiusFireLight.GetComponent<LightFlicker>().minIntensity = originalRadMinIntensity;
+
+                globalLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = originalGlobalIntensity;
             } 
             Dead = true;
-            canSee = true;
-                    
-            mainFireLight.GetComponent<LightFlicker>().maxIntensity = originalMainMaxIntensity;
-            mainFireLight.GetComponent<LightFlicker>().minIntensity = originalMainMinIntensity;
-                    
-            radiusFireLight.GetComponent<LightFlicker>().maxIntensity = originalRadMaxIntensity;
-            radiusFireLight.GetComponent<LightFlicker>().minIntensity = originalRadMinIntensity;
-
-            globalLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = originalGlobalIntensity;
             Destroy(this.gameObject,2.0f);
         }
     } 
