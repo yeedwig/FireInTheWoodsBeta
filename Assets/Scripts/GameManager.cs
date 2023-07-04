@@ -61,12 +61,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(GameStart.newGame){
+        /* if(GameStart.newGame){
             Debug.Log("새로운 게임");
         }
         else{
             Debug.Log("로드된 게임");
-        }
+        }*/
         
         overHealth();
         checkDead();

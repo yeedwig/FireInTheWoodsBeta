@@ -79,13 +79,13 @@ public class AnimalManager : MonoBehaviour
                     }
 
                     //시간 테스트용 나중에 삭제 ㄱ
-                    /*if(!animalInstance.typeAppeared[typeSelect]){
+                    if(!animalInstance.typeAppeared[typeSelect]){
                         animalInstance.typeAppeared[typeSelect]=true;
                         if(typeSelect==2){
                             GameObject.Find("GameManager").GetComponent<GameManager>().irochiCount++;
                             irochiUpgrade(animalInstance.name);
                         } 
-                    }*/
+                    }
                     
 
                     

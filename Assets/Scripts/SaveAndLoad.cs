@@ -58,7 +58,7 @@ public class SaveAndLoad : MonoBehaviour
     IEnumerator SaveGameManager(){
         string json = JsonUtility.ToJson(gm);
         string fileName="GameManager";
-        string path = Application.dataPath + "/GameData/" + fileName + ".Json";
+        string path = Application.persistentDataPath +fileName + ".Json";
         File.WriteAllText(path,json);
         yield return null;
     }
@@ -73,7 +73,7 @@ public class SaveAndLoad : MonoBehaviour
         forSave.animalMode=mc.currentAnimalMode;
         string json = JsonUtility.ToJson(forSave);
         string fileName="MainCharacter";
-        string path = Application.dataPath + "/GameData/" + fileName + ".Json";
+        string path = Application.persistentDataPath + fileName + ".Json";
         File.WriteAllText(path,json);
         yield return null;
     }
@@ -85,7 +85,7 @@ public class SaveAndLoad : MonoBehaviour
     IEnumerator SaveItems(){
         for(int i=0;i<items.Length;i++){
             string fileName="Slot"+i.ToString();
-            string path = Application.dataPath + "/GameData/" + fileName + ".Json";
+            string path = Application.persistentDataPath +fileName + ".Json";
             File.Delete(path);
             itemData forSave = new itemData();
             if(items[i].GetComponent<Slot>().item!=null){
@@ -117,7 +117,7 @@ public class SaveAndLoad : MonoBehaviour
     }
 
     IEnumerator LoadGameManager(){
-        string path = Application.dataPath+"/GameData/"+"GameManager"+".json";
+        string path =Application.persistentDataPath+"GameManager"+".json";
         string json = File.ReadAllText(path);
         gmTemp=new GameManager();
         JsonUtility.FromJsonOverwrite(json,gmTemp);
@@ -135,7 +135,7 @@ public class SaveAndLoad : MonoBehaviour
     }
 
     IEnumerator LoadMainCharacter(){
-        string path = Application.dataPath+"/GameData/"+"MainCharacter"+".json";
+        string path = Application.persistentDataPath+"MainCharacter"+".json";
         string json = File.ReadAllText(path);
         playerData forLoad = new playerData();
         JsonUtility.FromJsonOverwrite(json,forLoad);
@@ -156,7 +156,7 @@ public class SaveAndLoad : MonoBehaviour
 
     IEnumerator LoadItems(){
         for(int i=0;i<items.Length;i++){
-            string path = Application.dataPath+"/GameData/"+"Slot"+i.ToString()+".json";
+            string path =Application.persistentDataPath+"Slot"+i.ToString()+".json";
             FileInfo fi = new FileInfo(path);
             if(fi.Exists){
                 string json = File.ReadAllText(path);
