@@ -31,6 +31,8 @@ public class AnimalManager : MonoBehaviour
 
     public GameObject gameManager;
 
+    public GameObject present;
+
     void Start(){
         timeDelay=10;
         mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
@@ -79,13 +81,13 @@ public class AnimalManager : MonoBehaviour
                     }
 
                     //시간 테스트용 나중에 삭제 ㄱ
-                    if(!animalInstance.typeAppeared[typeSelect]){
+                    /*if(!animalInstance.typeAppeared[typeSelect]){
                         animalInstance.typeAppeared[typeSelect]=true;
                         if(typeSelect==2){
                             GameObject.Find("GameManager").GetComponent<GameManager>().irochiCount++;
                             irochiUpgrade(animalInstance.name);
                         } 
-                    }
+                    }*/
                     
 
                     
@@ -115,7 +117,7 @@ public class AnimalManager : MonoBehaviour
                 break;
             
             case("Raccoon"):
-                //아이템 보따리
+                present.SetActive(true);
                 break;
 
             case("Deer"):
@@ -203,4 +205,6 @@ public class AnimalManager : MonoBehaviour
                 break;
         }
     }
+
+    
 }

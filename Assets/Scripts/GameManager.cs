@@ -17,9 +17,7 @@ public class GameManager : MonoBehaviour
     public bool cleared = false; //클리어 여부
     public int irochiCount;
 
-    
-
-    
+       
 
     //일시정지 했는지 확인
     public bool pause = false;
@@ -47,6 +45,9 @@ public class GameManager : MonoBehaviour
 
     public Text healthUI;
     private int returnStage=0;
+    public Text currentLevel; 
+
+    private bool bgmChanged=false;
 
     // Start is called before the first frame update
     void Start()
@@ -55,18 +56,23 @@ public class GameManager : MonoBehaviour
         pause=false;
         kills=0;
         irochiCount=0;
+        bgmChanged=false;
         
     }
 
     // Update is called once per frame
     void Update()
     {   
-        /* if(GameStart.newGame){
-            Debug.Log("새로운 게임");
+        if(level==5){
+            currentLevel.text="Ready";
+        }
+        else if(level==11)
+        {
+            currentLevel.text="BOSS";
         }
         else{
-            Debug.Log("로드된 게임");
-        }*/
+            currentLevel.text="Level "+level.ToString();
+        }
         
         overHealth();
         checkDead();
@@ -188,6 +194,10 @@ public class GameManager : MonoBehaviour
                 if(stage==0){
                     if(level!=5){
                         level=5;
+                        if(!bgmChanged){
+                            bgmChanged=true;
+                            SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
+                        }
                         StartCoroutine(level5());// 수정해야됨
                     }
                     
@@ -229,6 +239,7 @@ public class GameManager : MonoBehaviour
                 }
                 else if(stage==6){
                     if(level!=11){
+                        SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[2]);
                         timer.text="";
                         level=11;                        
                     }
@@ -247,7 +258,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator level5(){
         if(GameStart.newGame){
             GameStart.newGame=false;
-            SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[1]);
+            
             yield return new WaitForSeconds(30.0f);
             saveAlarm.SetActive(true);
             saveText.text="도감을 다 모으셨습니다. 밑에 확인 버튼을 누른 뒤 30초 후 모든 아이템들과 현재 상태가 저장됩니다. 이후 스테이지에서 탈락하거나 시작화면서 load할때 해당 상태에서 시작합니다. 바닥에 남아있는 아이템들을 다 먹어주시고 아이템 조합은 유지되는 스텟에만 해주세요! 무기 조합등은 저장 후 하시는 것이 좋답니다.";

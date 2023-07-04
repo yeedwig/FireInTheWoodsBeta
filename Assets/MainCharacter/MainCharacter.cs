@@ -102,6 +102,8 @@ public class MainCharacter : MonoBehaviour
     public Text attackSpeedUI;
     public Text speedUI;
 
+    public GameObject present;
+
     void reset()
     {
         attackWaitTime = 2.0f - attackSpeedUp;
@@ -718,6 +720,12 @@ public class MainCharacter : MonoBehaviour
         if(canMove == true)//|| (attackType == 5 && cameraMode == false))
         {
             Move();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.name=="present"){
+            present.SetActive(false);
         }
     }
 
