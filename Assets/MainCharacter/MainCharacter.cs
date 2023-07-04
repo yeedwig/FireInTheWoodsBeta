@@ -97,6 +97,11 @@ public class MainCharacter : MonoBehaviour
     public float plusAttackSpeedByAnimalContract=0;
     public float plusAttackSpeedByItem=0;
 
+    //스탯창 관련
+    public Text damageUI;
+    public Text attackSpeedUI;
+    public Text speedUI;
+
     void reset()
     {
         attackWaitTime = 2.0f - attackSpeedUp;
@@ -481,6 +486,39 @@ public class MainCharacter : MonoBehaviour
     public void changeAttackType(int typeNum)
     {
         attackType = typeNum;
+        if(attackType == 0) //Default
+        {
+            //timer setting도 type별로 여기서 진행
+            attackWaitTime = 0.5f +plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+            attackAppearTime = 0.25f;
+        }
+        if(attackType == 1) //Ray
+        {
+            //달리면서 공격을쓰면 달리는 모션이 그래도 됨
+            attackAppearTime = 1.0f;
+            attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        if(attackType == 2) //Sword
+        {
+            attackAppearTime = 0.7f;
+            attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        if(attackType == 3) //Far
+        {
+            attackAppearTime = 0.25f;
+            attackWaitTime = 0.5f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        if(attackType == 4) //Shooting
+        {
+            attackAppearTime = 0.25f;
+            attackWaitTime = 0.5f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        
+        if(attackType == 5)
+        {
+            attackAppearTime = 5.0f;
+            attackWaitTime = 2.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
     }
 
     IEnumerator autoHeal(){
@@ -573,6 +611,32 @@ public class MainCharacter : MonoBehaviour
             canSee = true;
         }
     }
+    void changeStat(){
+        if(attackType==0){
+            damageUI.text = (50+plusDamageByAnimalContract+plusDamageByItem).ToString("F2");
+            attackSpeedUI.text=(1/(attackWaitTime+attackAppearTime)).ToString("F2");
+        }
+        else if(attackType==1){
+            damageUI.text = (75+plusDamageByAnimalContract+plusDamageByItem).ToString("F2");
+            attackSpeedUI.text=(1/(attackWaitTime+attackAppearTime)).ToString("F2");
+        }
+        else if(attackType==2){
+            damageUI.text = (75+plusDamageByAnimalContract+plusDamageByItem).ToString("F2");
+            attackSpeedUI.text=(1/(attackWaitTime+attackAppearTime)).ToString("F2");
+        }
+        else if(attackType==3){
+            damageUI.text = (50+plusDamageByAnimalContract+plusDamageByItem).ToString("F2");
+            attackSpeedUI.text=(1/(attackWaitTime+attackAppearTime)).ToString("F2");
+        }
+        else if(attackType==4){
+            damageUI.text = (50+plusDamageByAnimalContract+plusDamageByItem).ToString("F2");
+            attackSpeedUI.text=(1/(attackWaitTime+attackAppearTime)).ToString("F2");
+        }
+        else if(attackType==5){
+            damageUI.text = (1+(plusDamageByAnimalContract+plusDamageByItem)*0.05).ToString("F2");
+            attackSpeedUI.text=(250/(attackWaitTime+attackAppearTime)).ToString("F2");
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -583,10 +647,47 @@ public class MainCharacter : MonoBehaviour
         moveSpeed = defaultMoveSpeed;
         prevX=1.0f;
         prevY=-1.0f;
+        if(attackType == 0) //Default
+        {
+            //timer setting도 type별로 여기서 진행
+            attackWaitTime = 0.5f +plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+            attackAppearTime = 0.25f;
+        }
+        if(attackType == 1) //Ray
+        {
+            //달리면서 공격을쓰면 달리는 모션이 그래도 됨
+            attackAppearTime = 1.0f;
+            attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        if(attackType == 2) //Sword
+        {
+            attackAppearTime = 0.7f;
+            attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        if(attackType == 3) //Far
+        {
+            attackAppearTime = 0.25f;
+            attackWaitTime = 0.5f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        if(attackType == 4) //Shooting
+        {
+            attackAppearTime = 0.25f;
+            attackWaitTime = 0.5f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
+        
+        if(attackType == 5)
+        {
+            attackAppearTime = 5.0f;
+            attackWaitTime = 2.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+        }
     }
 
     void Update()
     {
+        changeStat();
+        //damageUI.text = health.ToString();
+        //attackSpeedUI.text = (1/attackWaitTime).ToString("F2");
+        speedUI.text = moveSpeed.ToString();
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         vector.Set(horizontal, vertical);

@@ -121,6 +121,7 @@ public class SaveAndLoad : MonoBehaviour
         string json = File.ReadAllText(path);
         gmTemp=new GameManager();
         JsonUtility.FromJsonOverwrite(json,gmTemp);
+        gm.autoFireDamage=false;
         gm.health=gmTemp.maxHealth;
         gm.kills=gmTemp.kills;
         gm.stage=0;
@@ -130,7 +131,6 @@ public class SaveAndLoad : MonoBehaviour
         gm.pause=false;
         gm.irochiCount=19;
         gm.defenseStage=true;
-        gm.autoFireDamage=false;
         yield return null;
     }
 

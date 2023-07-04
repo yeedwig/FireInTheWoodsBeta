@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     
 
+    
+
     //일시정지 했는지 확인
     public bool pause = false;
     [SerializeField] public GameObject inventory;
@@ -43,6 +45,8 @@ public class GameManager : MonoBehaviour
 
     public bool autoFireDamage=true;
 
+    public Text healthUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +66,7 @@ public class GameManager : MonoBehaviour
         changeLevel();
         settingCheck();
         killCount.text=kills.ToString();
+        healthUI.text = health.ToString()+"/"+maxHealth.ToString();
     }
 
     IEnumerator Second(){
