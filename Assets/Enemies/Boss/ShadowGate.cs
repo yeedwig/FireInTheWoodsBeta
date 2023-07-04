@@ -41,10 +41,13 @@ public class ShadowGate : MonoBehaviour
         appearState = 0;
         health = startHP;
         mainCharacter=mainCharacterGO.GetComponent<MainCharacter>();
+        StartCoroutine(startingAnimation());
+        
     }
     IEnumerator startingAnimation()
     {
-        yield return new WaitForSeconds(3.0f);
+        anim.SetBool("Appear", true);
+        yield return new WaitForSeconds(1.5f);
         anim.SetBool("Appear", false);
         appearState = 1;
     }
@@ -90,11 +93,6 @@ public class ShadowGate : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(state);
-        if(Dead == false && appearState == 0)
-        {
-            StartCoroutine(startingAnimation());
-        }
         if(Dead == false && appearState == 1)
         {     
             attackTimer += Time.deltaTime;

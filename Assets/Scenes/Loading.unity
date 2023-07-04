@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 219331038}
   - component: {fileID: 219331037}
   - component: {fileID: 219331036}
+  - component: {fileID: 219331039}
   m_Layer: 0
   m_Name: Star (3)
   m_TagString: Untagged
@@ -355,6 +356,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219331039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219331035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb9285f0594994794346ed81ea237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDelay: 1
+  minDelay: 0.5
+  maxIntensity: 9
+  minIntensity: 4
 --- !u!1 &325061779
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +543,7 @@ GameObject:
   - component: {fileID: 569645514}
   - component: {fileID: 569645513}
   - component: {fileID: 569645512}
+  - component: {fileID: 569645515}
   m_Layer: 0
   m_Name: Star (1)
   m_TagString: Untagged
@@ -679,6 +697,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569645515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569645511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb9285f0594994794346ed81ea237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDelay: 1
+  minDelay: 0.5
+  maxIntensity: 9
+  minIntensity: 4
 --- !u!1 &657737206
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,6 +953,7 @@ GameObject:
   - component: {fileID: 883738235}
   - component: {fileID: 883738234}
   - component: {fileID: 883738233}
+  - component: {fileID: 883738236}
   m_Layer: 0
   m_Name: Star (2)
   m_TagString: Untagged
@@ -1072,6 +1107,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &883738236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883738232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb9285f0594994794346ed81ea237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDelay: 1
+  minDelay: 0.5
+  maxIntensity: 9
+  minIntensity: 4
 --- !u!1 &1058732050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1134,7 @@ GameObject:
   - component: {fileID: 1058732053}
   - component: {fileID: 1058732052}
   - component: {fileID: 1058732051}
+  - component: {fileID: 1058732054}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -1236,6 +1288,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058732054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058732050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb9285f0594994794346ed81ea237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDelay: 1
+  minDelay: 0.5
+  maxIntensity: 9
+  minIntensity: 4
 --- !u!1 &1200446041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1391,7 @@ GameObject:
   - component: {fileID: 1403695325}
   - component: {fileID: 1403695324}
   - component: {fileID: 1403695323}
+  - component: {fileID: 1403695326}
   m_Layer: 0
   m_Name: Star (4)
   m_TagString: Untagged
@@ -1476,6 +1545,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1403695326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403695322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb9285f0594994794346ed81ea237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDelay: 1
+  minDelay: 0.5
+  maxIntensity: 9
+  minIntensity: 4
 --- !u!1 &1556920696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1572,7 @@ GameObject:
   - component: {fileID: 1556920699}
   - component: {fileID: 1556920698}
   - component: {fileID: 1556920697}
+  - component: {fileID: 1556920700}
   m_Layer: 0
   m_Name: Star (6)
   m_TagString: Untagged
@@ -1640,6 +1726,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 23.117}
+--- !u!114 &1556920700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556920696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb9285f0594994794346ed81ea237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDelay: 1
+  minDelay: 0.5
+  maxIntensity: 9
+  minIntensity: 4
 --- !u!1 &1744197864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,6 +2119,7 @@ GameObject:
   - component: {fileID: 1986819121}
   - component: {fileID: 1986819120}
   - component: {fileID: 1986819119}
+  - component: {fileID: 1986819122}
   m_Layer: 0
   m_Name: Star (5)
   m_TagString: Untagged
@@ -2170,3 +2273,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1986819122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986819118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb9285f0594994794346ed81ea237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDelay: 1
+  minDelay: 0.5
+  maxIntensity: 9
+  minIntensity: 4
