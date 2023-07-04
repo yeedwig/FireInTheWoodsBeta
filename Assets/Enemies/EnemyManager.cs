@@ -32,6 +32,8 @@ public class EnemyManager : MonoBehaviour
 
     private int prevLevel;
 
+    public GameObject boss;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -223,8 +225,7 @@ public class EnemyManager : MonoBehaviour
             level9Gen(40.0f);
         }
         else if(level==11){
-            //boss 구현
-            //클리어하면 gameManager의 cleared 변수 true로 수정
+            boss.SetActive(true);
         }
         //ending
         else if(level==-1){
