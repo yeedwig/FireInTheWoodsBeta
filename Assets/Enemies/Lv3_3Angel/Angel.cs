@@ -70,7 +70,7 @@ public class Angel : MonoBehaviour
                 anim.SetBool("Dead", true);
                 if(!Dead){
                     SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
-                    GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+                    GameManager.GetComponent<GameManager>().kills++;
                 } 
                 Dead = true;
                 attackDamage = 0;
@@ -176,7 +176,7 @@ public class Angel : MonoBehaviour
         }
         else if(other.gameObject.tag == "Execute")
         {
-            Damage(GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage,false);
+            Damage(GameManager.GetComponent<GameManager>().executeDamage,false);
         }
         else if(other.gameObject.tag == "Barrier")
         {

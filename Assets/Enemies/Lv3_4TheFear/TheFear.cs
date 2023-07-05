@@ -52,7 +52,7 @@ public class TheFear : MonoBehaviour
             anim.SetBool("Dead", true);
             if(!Dead){
                 SoundManager.instance.SFXPlay("EnemyDeadSound",clip1);
-                GameObject.Find("GameManager").GetComponent<GameManager>().kills++;
+                GameManager.GetComponent<GameManager>().kills++;
             }
             Dead = true;
             attackDamage = 0;
@@ -76,7 +76,7 @@ public class TheFear : MonoBehaviour
         if(attackTimer > attackTime)
         {
             attackTimer = 0;
-            GameObject.Find("GameManager").GetComponent<GameManager>().takeDamage(attackDamage);
+            GameManager.GetComponent<GameManager>().takeDamage(attackDamage);
         }
     }
 }

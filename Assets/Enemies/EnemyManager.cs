@@ -33,6 +33,7 @@ public class EnemyManager : MonoBehaviour
     private int prevLevel;
 
     public GameObject boss;
+    public GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -111,7 +112,6 @@ public class EnemyManager : MonoBehaviour
     }
     void level9Gen(float time){
         if(lv9Timer>=time){
-            
             if(theFearAlive==0){
                 fearEnemy=Instantiate(TheFear,theFearPosition[Random.Range(0,6)].transform.position,Quaternion.identity);
                 theFearAlive=1; 
@@ -140,7 +140,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int level = GameObject.Find("GameManager").GetComponent<GameManager>().level;
+        int level = gameManager.GetComponent<GameManager>().level;
         //Debug.Log(level);
         lv1Timer+=Time.deltaTime;
         lv2Timer+=Time.deltaTime;

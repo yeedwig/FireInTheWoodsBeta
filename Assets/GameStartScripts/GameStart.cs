@@ -24,8 +24,6 @@ public class GameStart : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) checkPause();
-        string path = Application.persistentDataPath+"GameManager"+".json";
-        Debug.Log(path);
     }
 
     //새로운 게임 시작
@@ -39,7 +37,6 @@ public class GameStart : MonoBehaviour
         string path = Application.persistentDataPath+"GameManager"+".json";
         FileInfo fi = new FileInfo(path);
         if(!fi.Exists){
-            Debug.Log("없습니다");
         }
         else{
             newGame=false;
