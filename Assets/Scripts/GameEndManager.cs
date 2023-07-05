@@ -18,6 +18,12 @@ public class GameEndManager : MonoBehaviour
 
     private float time;
 
+    public bool dieBeforeStage=false;
+
+    void Start(){
+        dieBeforeStage=false;
+    }
+
     public void GameOverStart(){
         time=0;
         image=gameOverImage.GetComponent<Image>();
@@ -47,7 +53,14 @@ public class GameEndManager : MonoBehaviour
     }
 
     public void onClickRetry(){
-        GameStart.newGame=false;
+        if(dieBeforeStage){
+            GameStart.newGame=false;
+        }
+        else{
+            GameStart.newGame=true;
+            TutorialManager.tutorialDone=true;
+        }
+        
         SceneManager.LoadScene("Loading");
     }
 

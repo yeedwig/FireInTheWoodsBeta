@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
     public bool cleared = false; //클리어 여부
     public int irochiCount;
 
-       
+    //타이머 모양
+    [SerializeField] private GameObject[] timerShape;
 
     //일시정지 했는지 확인
     public bool pause = false;
@@ -193,6 +194,7 @@ public class GameManager : MonoBehaviour
             else{
                 if(stage==0){
                     if(level!=5){
+                        gameEnd.GetComponent<GameEndManager>().dieBeforeStage=true;
                         level=5;
                         if(!bgmChanged){
                             bgmChanged=true;
@@ -240,6 +242,8 @@ public class GameManager : MonoBehaviour
                 else if(stage==6){
                     if(level!=11){
                         SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[2]);
+                        timerShape[0].SetActive(false);
+                        timerShape[1].SetActive(false);
                         timer.text="";
                         level=11;                        
                     }
@@ -266,6 +270,9 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(1.0f);
             }
             stageTimer=30;
+            //대기타이머
+            timerShape[1].SetActive(false);
+            timerShape[0].SetActive(true);
             while(stageTimer>0){
                 timer.text="<color=#0000ff>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
                 yield return new WaitForSeconds(1.0f);
@@ -280,8 +287,11 @@ public class GameManager : MonoBehaviour
             
         }
         stageTimer=180;
+        //대기 타이머
+        timerShape[1].SetActive(false);
+        timerShape[0].SetActive(true);
         while(stageTimer>0){
-            timer.text="<color=#0000ff>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
+            timer.text="<color=#1f6802>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
             yield return new WaitForSeconds(1.0f);
             stageTimer--;
         }
@@ -290,8 +300,11 @@ public class GameManager : MonoBehaviour
     
     public IEnumerator TimerForStage(){
         returnStage=stage;
+        //공격타이머
+        timerShape[0].SetActive(false);
+        timerShape[1].SetActive(true);
         while(stageTimer>0){
-            timer.text="<color=#ff0000>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
+            timer.text="<color=#ffffff>"+"0"+(stageTimer/60).ToString()+":"+(stageTimer%60/10).ToString()+(stageTimer%60%10).ToString()+"</color>";
             yield return new WaitForSeconds(1.0f);
             stageTimer--;
         }
