@@ -163,6 +163,7 @@ public class MainCharacter : MonoBehaviour
         }
         else
         {
+            rb.MovePosition(rb.position + vector * 0 * Time.deltaTime);
             if(prevY > 0)
             {
                 anim.SetFloat("DirX", prevX);
@@ -203,7 +204,7 @@ public class MainCharacter : MonoBehaviour
 
     void RayAttack() //attackType 1
     {
-        SoundManager.instance.SFXPlay("AttackCameraSound2",clip2);
+        SoundManager.instance.SFXPlay("AttackCameraSound2",clip6);
         if(prevX > 0 && prevY > 0) //대각선 오른쪽 뒤
         {
             RightBackAttackAreas[attackType].SetActive(attacking);
@@ -294,7 +295,7 @@ public class MainCharacter : MonoBehaviour
 
     void TornadoAttack()
     {
-        SoundManager.instance.SFXPlay("AttackCameraSound6",clip6);
+        SoundManager.instance.SFXPlay("AttackCameraSound6",clip2);
         tornadoAttack.SetActive(true);
     }
 
@@ -405,8 +406,8 @@ public class MainCharacter : MonoBehaviour
             if(attackType == 1) //Ray
             {
                 //달리면서 공격을쓰면 달리는 모션이 그래도 됨
-                attackAppearTime = 1.0f;
-                attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+                attackAppearTime = 0.7f;
+                attackWaitTime = 0.8f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 RayAttack();
             }
             if(attackType == 2) //Sword
@@ -497,8 +498,8 @@ public class MainCharacter : MonoBehaviour
         if(attackType == 1) //Ray
         {
             //달리면서 공격을쓰면 달리는 모션이 그래도 됨
-            attackAppearTime = 1.0f;
-            attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+            attackAppearTime = 0.7f;
+            attackWaitTime = 0.8f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
         }
         if(attackType == 2) //Sword
         {
@@ -658,8 +659,8 @@ public class MainCharacter : MonoBehaviour
         if(attackType == 1) //Ray
         {
             //달리면서 공격을쓰면 달리는 모션이 그래도 됨
-            attackAppearTime = 1.0f;
-            attackWaitTime = 1.0f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+            attackAppearTime = 0.7f;
+            attackWaitTime = 0.8f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
         }
         if(attackType == 2) //Sword
         {

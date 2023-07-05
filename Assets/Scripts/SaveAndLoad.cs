@@ -34,6 +34,8 @@ public class SaveAndLoad : MonoBehaviour
 
     public Camera cam;
 
+    public GameObject executeCircle;
+
 
     // Start is called before the first frame update
     void Start()
@@ -129,6 +131,7 @@ public class SaveAndLoad : MonoBehaviour
         gm.stage=0;
         gm.maxHealth=gmTemp.maxHealth;
         gm.executeDamage=gmTemp.executeDamage;
+        if(gm.executeDamage!=0) executeCircle.SetActive(true);
         gm.invincible=false;
         gm.pause=false;
         gm.irochiCount=19;
@@ -166,8 +169,6 @@ public class SaveAndLoad : MonoBehaviour
                 string json = File.ReadAllText(path);
                 itemData forLoad = new itemData();
                 JsonUtility.FromJsonOverwrite(json,forLoad);
-                Debug.Log(forLoad.name);
-                Debug.Log(forLoad.itemNum);
                 items[i].GetComponent<Slot>().AddItem(itemDic[forLoad.name],forLoad.itemNum);
             }
             

@@ -45,8 +45,6 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Phase);
-        //Debug.Log(BossHP);
         if(Phase == 1 && gate1Instantiated == false)
         {
             Instantiate(ShadowGatesPrefab[0], GatePosition[0].position, GatePosition[0].rotation);

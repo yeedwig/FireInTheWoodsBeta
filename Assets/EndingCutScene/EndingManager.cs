@@ -16,6 +16,7 @@ public class EndingManager : MonoBehaviour
     public float maxSpeed = 0.01f;
 
     private int endingLevel;
+    public int timer=0;
 
     void Start()
     {
@@ -82,12 +83,14 @@ public class EndingManager : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Return)) endingLevel++;
         }
         else if(endingLevel==9){
+            endingCredit.SetActive(true);
             cutScene[7].SetActive(false);
             cutSceneBackground.SetActive(false);
             cutSceneFront.SetActive(false);
             panel.SetActive(false);
             rb.AddForce(movement * maxSpeed);
-            if(endingCredit.transform.position.y>35.0f) endingLevel++;
+            timer++;
+            if(timer>=7000) endingLevel++;
         }
         else if(endingLevel==10)
         {

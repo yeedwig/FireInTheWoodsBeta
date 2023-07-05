@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         kills=0;
         irochiCount=0;
         bgmChanged=false;
+        level=0;
         
     }
 
@@ -147,6 +148,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+//아래부분 수정하기 꼭
     void checkPause(){
         if(settingWindow.activeInHierarchy||encyclopedia.activeInHierarchy||itemBook.activeInHierarchy){
             pause=true;
@@ -154,13 +156,7 @@ public class GameManager : MonoBehaviour
         }
         else{
             pause=false;
-            if(Input.GetKey(KeyCode.P)){
-                Time.timeScale=100.0f;
-            }
-            else{
-                Time.timeScale=1.0f;
-            }
-            
+            Time.timeScale=1.0f; 
         }
     }
 
@@ -170,7 +166,11 @@ public class GameManager : MonoBehaviour
         if(!cleared){
             if(!defenseStage){
                 if(irochiCount<2){
-                    level=1;
+                    if(level!=1){
+                        level=1;
+                        SoundManager.instance.BackgroundSoundPlay(SoundManager.instance.bgList[0]);
+                    }
+                    
                 }
                 else if(irochiCount<8){
                     if(level!=2){

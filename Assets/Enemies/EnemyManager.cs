@@ -226,15 +226,15 @@ public class EnemyManager : MonoBehaviour
         }
         else if(level==11){
             boss.SetActive(true);
-            level1Gen(15.0f);
-            level2Gen(25.0f);
-            level3Gen(20.0f);
-            level4Gen(40.0f);
+            level1Gen(20.0f);
+            level2Gen(30.0f);
+            level3Gen(25.0f);
+            level4Gen(45.0f);
             level5Gen(30.0f);
-            level6Gen(25.0f);
-            level7Gen(50.0f);
-            level8Gen(30.0f);
-            level9Gen(45.0f);
+            level6Gen(30.0f);
+            level7Gen(55.0f);
+            level8Gen(35.0f);
+            level9Gen(50.0f);
 
         }
         //ending
