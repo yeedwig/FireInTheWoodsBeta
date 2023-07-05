@@ -81,7 +81,7 @@ public class FireManager : MonoBehaviour
                         if(!execute.activeInHierarchy){
                             execute.SetActive(true);
                         }
-                        GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage+=5.0f;
+                        GameObject.Find("GameManager").GetComponent<GameManager>().executeDamage+=2.5f;
                     }
                     if(result=="barrier"&&itemCheck[8]){
                         barrierLife+=5;

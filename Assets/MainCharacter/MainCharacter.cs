@@ -424,7 +424,7 @@ public class MainCharacter : MonoBehaviour
             if(attackType == 4) //Shooting
             {
                 attackAppearTime = 0.25f;
-                attackWaitTime = 0.5f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
+                attackWaitTime = 0.8f + plusAttackSpeedByAnimalContract+plusAttackSpeedByItem;
                 ShootingAttack();
             }
             

@@ -171,6 +171,7 @@ public class Angel : MonoBehaviour
         if(other.gameObject.tag == "Fire")
         {
             //sp.sortingOrder = 5;
+            GameObject.Find("GameManager").GetComponent<GameManager>().takeDamage(attackDamage);
             anim.SetBool("Reached", true);
             Destroy(this.gameObject,3.0f);
         }

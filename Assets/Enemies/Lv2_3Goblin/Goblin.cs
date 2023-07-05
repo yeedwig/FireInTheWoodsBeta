@@ -10,7 +10,7 @@ public class Goblin : MonoBehaviour
     private SpriteRenderer sp;
     private int status = 0;
     public float health;
-    public float startHP = 100;
+    public float startHP = 200;
     public bool Dead = false;
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TheFear : MonoBehaviour
 {
-    public float attackDamage = 20.0f;
+    public float attackDamage = 50.0f;
     private Animator anim;
     public GameObject GameManager;
     private SpriteRenderer sp;
