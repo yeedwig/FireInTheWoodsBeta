@@ -10,12 +10,18 @@ public class EndingManager : MonoBehaviour
     public GameObject cutSceneFront;
     [SerializeField] private GameObject panel;
     [SerializeField] private Text dialogue;
+    public GameObject endingCredit;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+    public float maxSpeed = 0.01f;
 
     private int endingLevel;
 
     void Start()
     {
         endingLevel=0;
+        rb = endingCredit.GetComponent<Rigidbody2D>();
+        movement = new Vector2(0,1);
     }
 
     
@@ -77,11 +83,11 @@ public class EndingManager : MonoBehaviour
         }
         else if(endingLevel==9){
             cutScene[7].SetActive(false);
-            cutScene[8].SetActive(true);
             cutSceneBackground.SetActive(false);
             cutSceneFront.SetActive(false);
             panel.SetActive(false);
-            if(Input.GetKeyDown(KeyCode.Return)) endingLevel++;
+            rb.AddForce(movement * maxSpeed);
+            if(endingCredit.transform.position.y>35.0f) endingLevel++;
         }
         else if(endingLevel==10)
         {
