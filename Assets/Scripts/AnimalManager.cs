@@ -27,7 +27,7 @@ public class AnimalManager : MonoBehaviour
 
     public GameObject mainCharacterGO;
     public MainCharacter mainCharacter;
-    public GameObject camera;
+    public Camera camera;
 
     public GameObject gameManager;
 
@@ -139,7 +139,7 @@ public class AnimalManager : MonoBehaviour
                 break;
 
             case("Owl"):
-                //시야 범위 넓힘 또는 불 범위 넓어짐
+                camera.orthographicSize = 30;
                 break;
             
             case("Beaver"):

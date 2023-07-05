@@ -32,6 +32,8 @@ public class SaveAndLoad : MonoBehaviour
     public Item[] itemArray;
     public Dictionary<string, Item> itemDic = new Dictionary<string, Item>();
 
+    public Camera cam;
+
 
     // Start is called before the first frame update
     void Start()
@@ -131,6 +133,8 @@ public class SaveAndLoad : MonoBehaviour
         gm.pause=false;
         gm.irochiCount=19;
         gm.defenseStage=true;
+        cam.orthographicSize=30;
+
         yield return null;
     }
 

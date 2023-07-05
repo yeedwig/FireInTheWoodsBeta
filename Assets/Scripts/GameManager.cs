@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
         else if(level==11)
         {
-            currentLevel.text="BOSS";
+            currentLevel.text=" BOSS";
         }
         else{
             currentLevel.text="Level "+level.ToString();
